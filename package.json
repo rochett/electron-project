@@ -1,0 +1,74 @@
+{
+    "name": "electron-project",
+    "description": "Electron + Create React App + Electron Builder",
+    "version": "0.1.0",
+    "private": true,
+    "author": {
+        "name": "Rochett Tavares",
+        "email": "rochett.tavares@gmail.com",
+        "url": "https://github.com/rochett"
+    },
+    "build": {
+        "appId": "rochett/com.github//:https",
+        "productName": "ElectronProject",
+        "copyright": "Copyright © 2019 ${author}",
+        "mac": {
+            "category": "public.app-category.utilities"
+        },
+        "files": [
+            "build/**/*",
+            "node_modules/**/*"
+        ],
+        "directories": {
+            "buildResources": "assets"
+        }
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.25",
+        "@fortawesome/free-brands-svg-icons": "^5.11.2",
+        "@fortawesome/free-regular-svg-icons": "^5.11.2",
+        "@fortawesome/free-solid-svg-icons": "^5.11.2",
+        "@fortawesome/react-fontawesome": "^0.1.7",
+        "bootstrap": "^4.3.1",
+        "electron-is-dev": "^1.0.1",
+        "electron-modal-window": "^1.0.0",
+        "jquery": "^1.9.1",
+        "mdbreact": "^4.22.1",
+        "react": "^16.8.3",
+        "react-bootstrap": "^1.0.0-beta.14",
+        "react-dom": "^16.8.3",
+        "react-modal": "^3.11.1",
+        "reactstrap": "^8.1.1"
+    },
+    "homepage": "./",
+    "main": "public/electron.js",
+    "scripts": {
+        "start-web": "react-scripts start",
+        "build-web": "react-scripts build",
+        "postinstall": "electron-builder install-app-deps",
+        "preelectron-pack": "npm run build-web",
+        "start-win": "concurrently \"npm run start-web\" \"wait-on http://localhost:3000 && electron .\"",
+        "build-wina": "build --win",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder",
+        "prebuild-win": "npm run build-web",
+        "build-win": "electron-builder --win"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "concurrently": "^4.1.0",
+        "electron": "^7.1.1",
+        "electron-builder": "^21.2.0",
+        "react-scripts": "^2.1.5",
+        "typescript": "^3.3.3333",
+        "wait-on": "^3.2.0"
+    }
+}
