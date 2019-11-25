@@ -1,20 +1,21 @@
 import React  from 'react';
-import { Row, Col, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import imagem from '../image/bestmoviesofalltime.jpg';
-import ModalFilme from './modal/modalfilme';
-import ModalListaFilme from './modal/modallistafilme';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Row, Col} from 'react-bootstrap';
+import ModalRoteirista from './modal/modalroteirista';
+import ModalListaRoteirista from './modal/modallistaroteirista';
 
-function MenuFilmes() {     
+function MenuRoteiristas() {    
     
         return (
             <>
               <Card bg="dark" text="white" border="info" style={{ width: '18rem' }}>
               <Card.Header>
                 <Row>
-                  <Col xs={10}>Filmes</Col>
-                  <Col><FontAwesomeIcon icon={faVideo} /></Col>
+                  <Col xs={10}>Roteiristas</Col>
+                  <Col ><FontAwesomeIcon icon={faVideo} /></Col>
                   </Row>
                 </Card.Header>
                 <Card.Img variant="bottom" src={imagem} />                
@@ -33,10 +34,10 @@ function MenuFilmes() {
                   <Card.Body>       
                     <div className="row" width="100%">
                       <div className="col-6">
-                        <ModalFilme />
+                        <ModalRoteirista />
                       </div>
                       <div className="col-6" align="right">
-                        <ModalListaFilme />
+                        <ModalListaRoteirista />
                       </div>
                     </div>
                   </Card.Body>
@@ -47,4 +48,4 @@ function MenuFilmes() {
            
 }
 
-export default MenuFilmes;
+export default MenuRoteiristas;

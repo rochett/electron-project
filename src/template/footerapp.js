@@ -1,19 +1,19 @@
 import React  from 'react';
-import { Card } from 'react-bootstrap';
+import { Jumbotron, Container } from 'react-bootstrap';
 
 function FooterApp() {    
     
         return (
             <>
-                <Card bg="dark" text="white" style={{ width: '100%' }}>                
-                    <Card.Body>
-                        <Card.Title>Super Filmes 1.0</Card.Title>
-                        <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                <Jumbotron fluid style={{backgroundColor:'#343a40', color:'white'}}>
+                    <Container>
+                        <h1>Super Cinema 1.0</h1>
+                        <p>
+                        This is a modified jumbotron that occupies the entire horizontal space of
+                        its parent.
+                        </p>
+                    </Container>
+                </Jumbotron>
                 <br />
             </>
         );

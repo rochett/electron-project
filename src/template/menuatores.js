@@ -1,6 +1,6 @@
 import React  from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import filme from '../image/bestmoviesofalltime.jpg';
+import imagem from '../image/atoratriz.jpg';
 import ModalAtor from './modal/modalator';
 import ModalListaAtor from './modal/modallistaator';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ function MenuAtores() {
                   <Col ><FontAwesomeIcon icon={faUser} /></Col>
                   </Row>
                 </Card.Header>
-                <Card.Img variant="bottom" src={filme} />                
+                <Card.Img variant="bottom" src={imagem} />                
                   <Card.Body>
                     <Card.Title>Vincent Price</Card.Title>
                     <Card.Text>                      
