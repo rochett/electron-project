@@ -7,6 +7,18 @@ const { Menu } = require('electron');
 const path = require('path');
 const isDev = require('electron-is-dev');
 
+//Executar arquivo externo via electron
+// var exec = require('child_process').execFile;
+
+// var fun =function(){
+//    console.log("fun() start");
+//    exec('c:\\cosmos\\exe\\Ecffl.exe', function(err, data) {  
+//         console.log(err)
+//         console.log(data.toString());                       
+//     });  
+// }
+// fun();
+
 let mainWindow;
 
 function createWindow() {
@@ -35,8 +47,10 @@ function createWindow() {
                   let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable:false, skipTaskbar:false })
                   child.loadURL('https://github.com')
                   child.once('ready-to-show', () => {
-                    child.show()
+                    child.show()                    
                   })
+
+                  //fun(); - executar prorama externo via electron
     
                 }
                 

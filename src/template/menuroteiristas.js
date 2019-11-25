@@ -13,10 +13,7 @@ function MenuRoteiristas() {
             <>
               <Card bg="dark" text="white" border="info" style={{ width: '18rem' }}>
               <Card.Header>
-                <Row>
-                  <Col xs={10}>Roteiristas</Col>
-                  <Col ><FontAwesomeIcon icon={faVideo} /></Col>
-                  </Row>
+                Roteiristas<FontAwesomeIcon icon={faVideo} style={{float:'right', marginTop:'5'}} />
                 </Card.Header>
                 <Card.Img variant="bottom" src={imagem} />                
                   <Card.Body>

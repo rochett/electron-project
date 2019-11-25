@@ -21,7 +21,7 @@ function MenuVideo() {
                         <Card.Text>
                         IT 2 é baseado no livro "IT", do autor norte-americano Stephen King.
                         Sua primeira versão cinematográfica foi produzida nos anos 90.                         
-                        </Card.Text>                                                                     
+                        </Card.Text>                                                                                            
                     </Card.Body>
                 </Card>
                 <br />   
