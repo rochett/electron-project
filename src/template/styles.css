@@ -1,0 +1,14 @@
+.Cabecalho-Jumbotron {
+    background-color: #343a40;
+    color: white;
+}
+.Margem-Jumbotron {
+    margin-left:0;
+}
+.Card-Geral {
+    width: 18rem;
+}
+.Icon-Menu {
+    float:right;
+    margin-top:5px;
+}
