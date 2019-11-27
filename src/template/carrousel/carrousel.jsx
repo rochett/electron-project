@@ -44,7 +44,7 @@ function ControlledCarousel() {
           />
   
           <Carousel.Caption>
-            <h3>{slider_pagina.subtitulo_slider3}</h3>
+            <h3>{slider_pagina.titulo_slider3}</h3>
             <p>
             {slider_pagina.subtitulo_slider3}
             </p>

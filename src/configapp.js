@@ -19,6 +19,6 @@ export const titulo_secao = {
     titulo_slider2: 'Second slide label',
     subtitulo_slider2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     imagem_slider3: require('./image/slider3.png'),
-    titulo_slider3: 'Third slide label',
+    titulo_slider3: 'Conan, o bárbaro',
     subtitulo_slider3: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
   } 

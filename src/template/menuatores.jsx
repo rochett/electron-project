@@ -12,7 +12,7 @@ function MenuAtores() {
     
         return (
             <>
-              <Card bg="dark" text="white" border="info" className="Card-Geral">
+              <Card bg="dark" text="white" border="info">
               <Card.Header>
                 {titulo_secao.ator}<FontAwesomeIcon icon={faUser} className="Icon-Menu" />                  
                 </Card.Header>

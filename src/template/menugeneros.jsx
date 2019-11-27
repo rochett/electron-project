@@ -12,7 +12,7 @@ function MenuGeneros() {
     
         return (
             <>
-              <Card bg="dark" text="white" border="info" className="Card-Geral">
+              <Card bg="dark" text="white" border="info">
               <Card.Header>
               {titulo_secao.genero}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
                 </Card.Header>

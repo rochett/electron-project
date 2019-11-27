@@ -12,7 +12,7 @@ function MenuFilmes() {
     
         return (
             <>
-              <Card bg="dark" text="white" border="info" className="Card-Geral">
+              <Card bg="dark" text="white" border="info">
               <Card.Header>                
                   {titulo_secao.filme}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
                 </Card.Header>

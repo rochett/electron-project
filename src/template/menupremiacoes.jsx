@@ -12,7 +12,7 @@ function MenuPremiacoes() {
     
         return (
             <>
-              <Card bg="dark" text="white" border="info" className="Card-Geral">
+              <Card bg="dark" text="white" border="info">
               <Card.Header>
                 {titulo_secao.premiacao}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
                 </Card.Header>

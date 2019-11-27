@@ -6,7 +6,7 @@ function MenuVideo() {
     
         return (
             <>
-                <Card bg="dark" text="white" style={{ width: '18rem' }}>
+                <Card bg="dark" text="white">
                     <Card.Header>Trailers</Card.Header>
                     <Card.Body>
                         <Card.Title>IT 2 - Trailer do cinema</Card.Title>
