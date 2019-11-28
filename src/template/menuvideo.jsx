@@ -1,13 +1,15 @@
 import React  from 'react';
 import { Card } from 'react-bootstrap';
 import YoutubeVideo from './youtubevideo';
+import { faFilm, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function MenuVideo() {    
     
         return (
             <>
                 <Card bg="dark" text="white">
-                    <Card.Header>Trailers</Card.Header>
+                    <Card.Header>Trailers<FontAwesomeIcon icon={faFilm} className="Icon-Menu" /></Card.Header>
                     <Card.Body>
                         <Card.Title>IT 2 - Trailer do cinema</Card.Title>
                         <Card.Text>
@@ -16,7 +18,7 @@ function MenuVideo() {
                         </Card.Text>          
                         <YoutubeVideo />                                      
                     </Card.Body>
-                    <Card.Header>Curiosidades</Card.Header>
+                    <Card.Header>Curiosidades<FontAwesomeIcon icon={faExclamationCircle} className="Icon-Menu" /></Card.Header>
                     <Card.Body>                        
                         <Card.Text>
                         IT 2 é baseado no livro "IT", do autor norte-americano Stephen King.

@@ -1,6 +1,5 @@
 import React  from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import imagem from '../image/bestmoviesofalltime.jpg';
 import ModalFilme from './modal/modalfilme';
 import ModalListaFilme from './modal/modallistafilme';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
@@ -14,9 +13,9 @@ function MenuFilmes() {
             <>
               <Card bg="dark" text="white" border="info">
               <Card.Header>                
-                  {titulo_secao.filme}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
+                  {titulo_secao.filme.titulo}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
                 </Card.Header>
-                <Card.Img variant="bottom" src={imagem} />                
+                <Card.Img variant="bottom" src={titulo_secao.filme.imagem} />                
                   <Card.Body>
                     <Card.Title>IT 2</Card.Title>
                     <Card.Text>                      
