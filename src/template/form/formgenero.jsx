@@ -48,7 +48,7 @@ function FormGenero() {
                             </Form.Row> 
 
                             <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                <Form.Group as={Col} md="7" controlId="validationCustom01">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <option>1</option>
@@ -60,7 +60,7 @@ function FormGenero() {
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                <Form.Group as={Col} md="5" controlId="validationCustom01">
                                     <Form.Label>Ano de Criação</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <option>1</option>
