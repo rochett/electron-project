@@ -38,7 +38,7 @@ function MenuAtores() {
                       </div>
                     </div>
                   </Card.Body>
-                  <Card.Footer className="text-muted" align="center">Último Adicionado: 2 dias atrás</Card.Footer>
+                  <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 2 dias atrás</Card.Footer>
               </Card>   
             </>
         );

@@ -19,7 +19,7 @@ function FormExample() {
         
     return (
         
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>            
 
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">

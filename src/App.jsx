@@ -7,6 +7,7 @@ import MenuDiretores from './template/menudiretores';
 import MenuGeneros from './template/menugeneros';
 import MenuRoteiristas from './template/menuroteiristas';
 import MenuPremiacoes from './template/menupremiacoes';
+import MenuCartaz from './template/menucartaz';
 import { CardDeck } from 'react-bootstrap';
 import CControlledCarousel from './template/carrousel/carrousel';
 import FooterApp from './template/footerapp';
@@ -21,9 +22,11 @@ function App() {
 
         <CardDeck>          
 
-            <MenuFilmes />                                                     
+            <MenuFilmes />                                                                 
 
             <MenuAtores /> 
+
+            <MenuDiretores />        
 
             <MenuVideo />        
 
@@ -31,15 +34,15 @@ function App() {
 
         <div><hr></hr></div> 
 
-        <CardDeck>          
+        <CardDeck>                      
 
-            <MenuDiretores />        
-
+            <MenuCartaz /> 
+            
             <MenuRoteiristas />            
 
             <MenuGeneros />                                
 
-            <MenuPremiacoes />          
+            <MenuPremiacoes />                      
 
         </CardDeck>  
           
