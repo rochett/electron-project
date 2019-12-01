@@ -3,7 +3,7 @@ import { Button, Modal } from 'react-bootstrap';
 import { faList, faUndoAlt, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import ListaGenero from './listagenero.tsx';
+import ListaGenero from './listagenero';
 
 function ModalListaGenero() {
 

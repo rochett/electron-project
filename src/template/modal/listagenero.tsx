@@ -32,15 +32,15 @@ class ListaGenero extends Component<any, AppState> {
                   <FirebaseDatabaseNode
                     path="generos/"
                     limitToFirst={this.state.limit}                    
-                    orderByValue={"titulo"}
-                  >
-                    {d => {
+                    orderByValue={"titulo"}                                     
+                  >                                     
+                    {d => {                      
                       return (
                         <Fragment>
-                          <pre>Path {d.path}</pre>
-                          <pre style={{ height: 300, overflow: "auto" }}>
-                            Value {s(d.value)}
-                          </pre>
+                          <pre>Path {d.path}</pre>                          
+                          <pre>
+                          Value {s(d.value)}                              
+                          </pre>                                            
                           <button
                             onClick={() => {
                               this.setState(state => ({ limit: state.limit + 2 }));
