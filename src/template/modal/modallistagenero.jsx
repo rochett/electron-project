@@ -3,6 +3,8 @@ import { Button, Modal } from 'react-bootstrap';
 import { faList, faUndoAlt, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import ListaGenero from './listagenero.tsx';
+
 function ModalListaGenero() {
 
     const [show, setShow] = useState(false);
@@ -19,7 +21,7 @@ function ModalListaGenero() {
                     <Modal.Header closeButton>
                     <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Listagem de Gêneros</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                    <Modal.Body><ListaGenero /></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>
                         <FontAwesomeIcon icon={faUndoAlt} />&nbsp;Fechar
