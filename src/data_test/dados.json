@@ -1,0 +1,20 @@
+{
+  "generos": {
+    "one": {
+      "titulo": "Ficção Científica",
+      "titulo_original": "Science Fiction (SCI-FI)"      
+    },
+    "two": { 
+	  "titulo": "Ação",
+      "titulo_original": "Action"      
+	  },
+    "three": { 
+	  "titulo": "Aventura",
+      "titulo_original": "Adventure"      
+	},
+	"four": { 
+	  "titulo": "Horror",
+      "titulo_original": "Horror"      
+	}
+  }
+}  
