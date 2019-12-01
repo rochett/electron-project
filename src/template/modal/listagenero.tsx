@@ -5,10 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import firebase from "firebase/app";
 import "firebase/database";
-import {
-  FirebaseDatabaseProvider,
-  FirebaseDatabaseNode
-} from "@react-firebase/database";
+import { FirebaseDatabaseProvider, FirebaseDatabaseNode } from "@react-firebase/database";
 import { config } from "../../config";
 
 const s = (a: any) => JSON.stringify(a, null, 2);
@@ -17,7 +14,17 @@ export type AppState = {
     limit: number;
   };
 
-class ListaGenero extends Component<any, AppState> {
+firebase.initializeApp(config);
+
+function readUserData() {
+  firebase.database().ref('generos/').on('value', function (snapshot) {
+    console.log(snapshot.val())
+  });
+}
+
+readUserData();
+
+class ListaGenero extends Component<any, AppState> {  
    
         state = {
           limit: 2
