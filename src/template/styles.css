@@ -9,3 +9,7 @@
     float:right;
     margin-top:5px;
 }
+.Modal-Largo {
+    width: 90%;
+    max-width: none!important;
+}

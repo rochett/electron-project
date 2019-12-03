@@ -1,0 +1,22 @@
+{
+  "slider_principal": [
+    {
+      "imagem_slider": "./image/slider1.jpg",
+      "titulo_slider1": "Science Fiction (SCI-FI)",
+	  "subtitulo_slider1": "1808",
+	  "descricao": "Gênero criado por Mary Shelley"	
+    },
+    { 
+	  "imagem_slider2": "./image/slider2.jpg",
+      "titulo_slider1": "Action",
+	  "subtitulo_slider1": "1901",
+	  "descricao": "Gênero criado por Edgar Rice Burroughs"      
+	  },
+    { 
+	  "imagem_slider3": "Aventura",
+      "titulo_slider1": "Adventure",
+	  "subtitulo_slider1": "1808",
+	  "descricao": "Gênero criado por Mary Shelley"      
+	}
+  ]
+}  

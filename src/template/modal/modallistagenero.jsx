@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ListaGenero from './listagenero.jsx';
 
+import '../../template/styles.css';
+
 function ModalListaGenero() {
 
     const [show, setShow] = useState(false);
@@ -17,7 +19,12 @@ function ModalListaGenero() {
                 <FontAwesomeIcon icon={faList} />&nbsp;Lista
                 </Button>                
 
-                <Modal show={show} onHide={handleClose}>
+                <Modal 
+                    show={show}                 
+                    onHide={() => setShow(false)}
+                    dialogClassName="Modal-Largo"
+                    aria-labelledby="example-custom-modal-styling-title"
+                    >
                     <Modal.Header closeButton>
                     <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Listagem de Gêneros</Modal.Title>
                     </Modal.Header>
