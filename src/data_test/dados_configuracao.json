@@ -1,22 +1,75 @@
 {
+  "generos" : [ 
+  {
+    "ano_criacao" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Ficção Científica",
+    "titulo_original" : "Science Fiction (SCI-FI)"
+  }, 
+  {
+    "ano_criacao" : "1901",
+    "descricao" : "Gênero criado por Edgar Rice Burroughs",
+    "titulo" : "Ação",
+    "titulo_original" : "Action"
+  }, 
+  {
+    "ano_criacao" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Aventura",
+    "titulo_original" : "Adventure"
+  }, 
+  {
+    "ano_criacao" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Horror",
+    "titulo_original" : "Horror"
+  }, 
+  {
+    "ano_criacao" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Mistério",
+    "titulo_original" : "Mystery"
+  }, 
+  {
+    "ano_criacao" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Policial",
+    "titulo_original" : "Detective"
+  }, 
+  {
+    "ano_criacao" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Distopia",
+    "titulo_original" : "Distopy"
+  }, 
+  {
+    "ano_criacao" : "1980",
+    "descricao" : "Gênero criado por Wes Craven",
+    "titulo" : "Meladeiro, sangue e tripa",
+    "titulo_original" : "Slasher"
+  }, 
+  {
+    "ano_criacao" : "1980",
+    "descricao" : "Gênero criado por Wes Craven",
+    "titulo" : "Meladeiro, sangue e tripa",
+    "titulo_original" : "Slasher"
+  } 
+  ],
   "slider_principal": [
     {
       "imagem_slider": "./image/slider1.jpg",
-      "titulo_slider1": "Science Fiction (SCI-FI)",
-	  "subtitulo_slider1": "1808",
-	  "descricao": "Gênero criado por Mary Shelley"	
+      "titulo_slider": "Aplicativo para administração de catálogo de filmes",
+	  "subtitulo_slider": "Nulla vitae elit libero, a pharetra augue mollis interdum."	  
     },
     { 
-	  "imagem_slider2": "./image/slider2.jpg",
-      "titulo_slider1": "Action",
-	  "subtitulo_slider1": "1901",
-	  "descricao": "Gênero criado por Edgar Rice Burroughs"      
+	  "imagem_slider": "./image/slider2.jpg",
+      "titulo_slider": "Second slide label",
+	  "subtitulo_slider": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	  },
     { 
-	  "imagem_slider3": "Aventura",
-      "titulo_slider1": "Adventure",
-	  "subtitulo_slider1": "1808",
-	  "descricao": "Gênero criado por Mary Shelley"      
+	  "imagem_slider": "./image/slider3.jpg",
+      "titulo_slider": "Conan, o bárbaro",
+	  "subtitulo_slider": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
 	}
   ]
-}  
+}

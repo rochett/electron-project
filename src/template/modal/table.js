@@ -4,9 +4,9 @@ import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
-function Table(props) {
+export default function Table({ characterData: dados }) {
 
-  function priceFormatter(cell, row) {
+  function actionButtons() {
     return (
       <>
         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Editar</Tooltip>}><Button variant="primary"><FontAwesomeIcon icon={faEdit} /></Button></OverlayTrigger>&nbsp;
@@ -23,9 +23,7 @@ function Table(props) {
     );
   }
 
-
-  const { characterData } = props;
-  const options = () => ({
+  const options = {
     noDataText: 'A consulta não encontrou resultados.',
     sizePerPage: 8,
     hideSizePerPage: true,
@@ -34,30 +32,25 @@ function Table(props) {
     nextPage: 'Próximo',
     prePage: 'Anterior',
     paginationShowsTotal: renderShowsTotal
-  });
+  };
   return (
-    <div>
-      <BootstrapTable
-        data={characterData}
-        options={options()}
-        hover
-        striped
-        pagination >
-        <TableHeaderColumn dataField='titulo' isKey dataSort >Título</TableHeaderColumn>
-        <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pelo número da conta' }} dataField='titulo_original' dataSort>
-          Título Original
-                </TableHeaderColumn>
-        <TableHeaderColumn dataField='ano_criacao' dataSort>
-          Ano de Criação
-                </TableHeaderColumn>
-        <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pelo número do documento' }} dataField='descricao' dataSort>
-          Descrição
-                </TableHeaderColumn>
-        <TableHeaderColumn dataField='price' dataFormat={priceFormatter}>Product Price</TableHeaderColumn>
-      </BootstrapTable>
-    </div>
-  );
+    <BootstrapTable
+      data={dados}
+      options={options}
+      hover
+      striped
+      pagination >
+      <TableHeaderColumn dataField='titulo' isKey dataSort >Título</TableHeaderColumn>
+      <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pelo título original' }} dataField='titulo_original' dataSort>
+        Título Original
+        </TableHeaderColumn>
+      <TableHeaderColumn dataField='ano_criacao' dataSort>
+        Ano de Criação
+        </TableHeaderColumn>
+      <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pela descrição' }} dataField='descricao' dataSort>
+        Descrição
+        </TableHeaderColumn>
+      <TableHeaderColumn dataField='price' dataFormat={actionButtons}>Ações</TableHeaderColumn>
+    </BootstrapTable>
+  )
 }
-
-
-export default Table;
