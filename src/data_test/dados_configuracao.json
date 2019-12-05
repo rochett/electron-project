@@ -57,19 +57,56 @@
   ],
   "slider_principal": [
     {
-      "imagem_slider": "./image/slider1.jpg",
+      "imagem_slider": "slider1.jpg",
       "titulo_slider": "Aplicativo para administração de catálogo de filmes",
 	  "subtitulo_slider": "Nulla vitae elit libero, a pharetra augue mollis interdum."	  
     },
     { 
-	  "imagem_slider": "./image/slider2.jpg",
+	  "imagem_slider": "slider2.jpg",
       "titulo_slider": "Second slide label",
 	  "subtitulo_slider": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 	  },
     { 
-	  "imagem_slider": "./image/slider3.jpg",
+	  "imagem_slider": "slider3.png",
       "titulo_slider": "Conan, o bárbaro",
 	  "subtitulo_slider": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+	}
+  ],
+  "titulo_secao": [
+    {
+      "titulo_filme": "Filmes",	  
+      "imagem_filme": "bestmoviesofalltime.jpg",
+	  "titulo_menu_filme": "Filme"
+    },
+    { 
+	  "titulo_ator": "Atores & Atrizes",	  
+      "imagem_ator": "atoratriz.jpg",
+	  "titulo_menu_ator": "Ator/Atriz"
+	  },
+    { 
+	  "titulo_filme": "Diretores",	  
+      "imagem_filme": "bestmoviesofalltime.jpg",
+	  "titulo_menu_filme": "Diretor"
+	},
+	{ 
+	  "titulo_filme": "Roteiristas",	  
+      "imagem_filme": "bestmoviesofalltime.jpg",
+	  "titulo_menu_filme": "Roteirista"
+	},
+	{ 
+	  "titulo_filme": "Gêneros",	  
+      "imagem_filme": "bestmoviesofalltime.jpg",
+	  "titulo_menu_filme": "Gênero"
+	},
+	{ 
+	  "titulo_filme": "Filmes",	  
+      "imagem_filme": "bestmoviesofalltime.jpg",
+	  "titulo_menu_filme": "Filme"
+	},
+	{ 
+	  "titulo_filme": "Filmes",	  
+      "imagem_filme": "bestmoviesofalltime.jpg",
+	  "titulo_menu_filme": "Filme"
 	}
   ]
 }

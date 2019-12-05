@@ -11,48 +11,53 @@ import MenuCartaz from './template/menucartaz';
 import { CardDeck } from 'react-bootstrap';
 import CControlledCarousel from './template/carrousel/carrousel';
 import FooterApp from './template/footerapp';
+import firebase from "firebase/app";
+import "firebase/database";
+import { config } from "./config";
+
+firebase.initializeApp(config);
 
 function App() {
-    return (
-      <div className="container-fluid">         
+  return (
+    <div className="container-fluid">
 
-        <CControlledCarousel />         
+      <CControlledCarousel />
 
-        <div><hr></hr></div>  
+      <div><hr></hr></div>
 
-        <CardDeck>          
+      <CardDeck>
 
-            <MenuFilmes />                                                                 
+        <MenuFilmes />
 
-            <MenuAtores /> 
+        <MenuAtores />
 
-            <MenuDiretores />        
+        <MenuDiretores />
 
-            <MenuVideo />        
+        <MenuVideo />
 
-        </CardDeck>             
+      </CardDeck>
 
-        <div><hr></hr></div> 
+      <div><hr></hr></div>
 
-        <CardDeck>                      
+      <CardDeck>
 
-            <MenuCartaz /> 
-            
-            <MenuRoteiristas />            
+        <MenuCartaz />
 
-            <MenuGeneros />                                
+        <MenuRoteiristas />
 
-            <MenuPremiacoes />                      
+        <MenuGeneros />
 
-        </CardDeck>  
-          
-        <div><hr></hr></div>
+        <MenuPremiacoes />
 
-        <FooterApp />  
+      </CardDeck>
 
-      </div>      
+      <div><hr></hr></div>
 
-    );
+      <FooterApp />
+
+    </div>
+
+  );
 }
 
 export default App;
