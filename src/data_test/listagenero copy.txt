@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import firebase from "firebase/app";
 import "firebase/database";
-import { config } from "../../config";
+import { config } from "../config";
 
 firebase.initializeApp(config);
 

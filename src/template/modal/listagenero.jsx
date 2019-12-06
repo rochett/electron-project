@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from "firebase/app";
-import Table from '../modal/table';
+import Table from './tableGenero';
 
 export default function ListaGenero() {
   const [snapshot, setSnapshot] = useState([]);

@@ -72,41 +72,80 @@
 	  "subtitulo_slider": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
 	}
   ],
-  "titulo_secao": [
-    {
-      "titulo_filme": "Filmes",	  
-      "imagem_filme": "bestmoviesofalltime.jpg",
-	  "titulo_menu_filme": "Filme"
-    },
-    { 
-	  "titulo_ator": "Atores & Atrizes",	  
-      "imagem_ator": "atoratriz.jpg",
-	  "titulo_menu_ator": "Ator/Atriz"
-	  },
-    { 
-	  "titulo_filme": "Diretores",	  
-      "imagem_filme": "bestmoviesofalltime.jpg",
-	  "titulo_menu_filme": "Diretor"
-	},
-	{ 
-	  "titulo_filme": "Roteiristas",	  
-      "imagem_filme": "bestmoviesofalltime.jpg",
-	  "titulo_menu_filme": "Roteirista"
-	},
-	{ 
-	  "titulo_filme": "Gêneros",	  
-      "imagem_filme": "bestmoviesofalltime.jpg",
-	  "titulo_menu_filme": "Gênero"
-	},
-	{ 
-	  "titulo_filme": "Filmes",	  
-      "imagem_filme": "bestmoviesofalltime.jpg",
-	  "titulo_menu_filme": "Filme"
-	},
-	{ 
-	  "titulo_filme": "Filmes",	  
-      "imagem_filme": "bestmoviesofalltime.jpg",
-	  "titulo_menu_filme": "Filme"
-	}
+  "premiacoes" : [ 
+  {
+    "ano_criacao" : "1808",
+	"ano_encerramento" : "",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Oscar",
+    "titulo_original" : "Academy Oscar"
+  }, 
+  {
+    "ano_criacao" : "1901",
+	"ano_encerramento" : "1808",
+    "descricao" : "Gênero criado por Edgar Rice Burroughs",
+    "titulo" : "Palma de Ouro",
+    "titulo_original" : "Action"
+  }, 
+  {
+    "ano_criacao" : "1808",
+	"ano_encerramento" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Globo de Ouro",
+    "titulo_original" : "Adventure"
+  }, 
+  {
+    "ano_criacao" : "1808",
+	"ano_encerramento" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Framboesa de Ouro",
+    "titulo_original" : "Horror"
+  }
+  ],
+  "roteiristas" : [ 
+  {
+    "nome" : "Orson Welles",
+	"data_nascimento" : "1915",
+    "pais_origem" : "EUA",
+    "filmes" : "The Terminator, Terminator II, Terminator VI",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Alfred Hitchcock",
+	"data_nascimento" : "1899",
+    "pais_origem" : "EUA",
+    "filmes" : "Alien, Aliens, o resgate",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Charlie Chaplin",
+	"data_nascimento" : "1889",
+    "pais_origem" : "GBR",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }
+  ],
+   "diretores" : [ 
+  {
+    "nome" : "James Cameron",
+	"data_nascimento" : "1952",
+    "pais_origem" : "EUA",
+    "filmes" : "The Terminator, Terminator II, Terminator VI",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Ridley Scott",
+	"data_nascimento" : "1959",
+    "pais_origem" : "EUA",
+    "filmes" : "Alien, Aliens, o resgate",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Francis Ford Coppola",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }
   ]
 }
