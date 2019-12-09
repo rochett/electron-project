@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import MenuFilmes from './template/menufilmes';
+import MenuFilmes from './template/menuFilmes';
 import MenuAtores from './template/menuatores';
-import MenuVideo from './template/menuvideo';
-import MenuDiretores from './template/menudiretores';
-import MenuGeneros from './template/menugeneros';
-import MenuRoteiristas from './template/menuroteiristas';
-import MenuPremiacoes from './template/menupremiacoes';
-import MenuCartaz from './template/menucartaz';
+import MenuVideo from './template/menuVideo';
+import MenuDiretores from './template/menuDiretores';
+import MenuGeneros from './template/menuGeneros';
+import MenuRoteiristas from './template/menuRoteiristas';
+import MenuPremiacoes from './template/menuPremiacoes';
+import MenuCartaz from './template/menuCartaz';
 import { CardDeck } from 'react-bootstrap';
 import CControlledCarousel from './template/carrousel/carrousel';
 import FooterApp from './template/footerapp';
@@ -17,7 +17,7 @@ import { config } from "./config";
 
 firebase.initializeApp(config);
 
-function App() {
+export default function App() {
   return (
     <div className="container-fluid">
 
@@ -59,5 +59,3 @@ function App() {
 
   );
 }
-
-export default App;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from "firebase/app";
-import Table from '../modal/tableDiretor';
+import Table from '../form/components/table/tableDiretor';
 
 export default function ListaDiretor() {
     const [snapshot, setSnapshot] = useState([]);

@@ -21,7 +21,7 @@ function MenuPremiacoes() {
           <Card.Text>
             Vinte e sete anos depois dos eventos que chocaram os adolescentes que faziam
             parte do Clube dos Perdedores, os amigos realizam uma reunião...
-                    </Card.Text>
+          </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem variant="dark">Andy Muschietti (Direção)</ListGroupItem>

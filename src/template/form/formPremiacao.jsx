@@ -4,7 +4,7 @@ import SelectPais from './components/select/selectPais';
 import SelectAno from './components/select/selectAno';
 import ButtonsForm from './components/button/buttonsForm';
 
-export default function FormGenero() {
+export default function FormPremiacao() {
 
     const [validated, setValidated] = useState(false);
     const handleSubmit = event => {

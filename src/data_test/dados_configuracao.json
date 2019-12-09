@@ -147,5 +147,154 @@
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "premiacoes" : "Academy Oscar"
   }
-  ]
+  ],
+   "pais_origem" : [ 
+  {
+    "nome" : "Estados Unidos da América",
+	"sigla" : "EUA"
+  }, 
+  {
+    "nome" : "Inglaterra",
+	"sigla" : "GBR"
+  }, 
+  {
+    "nome" : "China",
+	"sigla" : "CHI"
+  },
+  {
+    "nome" : "Japão",
+	"sigla" : "JAP"
+  },
+  {
+    "nome" : "Brasil",
+	"sigla" : "BRA"
+  },
+  {
+    "nome" : "Espanha",
+	"sigla" : "ESP"
+  },
+  {
+    "nome" : "Holanda",
+	"sigla" : "HOL"
+  },
+  {
+    "nome" : "Coréia do Sul",
+	"sigla" : "CRS"
+  },
+  {
+    "nome" : "Alemanha",
+	"sigla" : "ALE"
+  },
+  {
+    "nome" : "Turquia",
+	"sigla" : "TUR"
+  },
+  {
+    "nome" : "Noruega",
+	"sigla" : "NOR"
+  },
+  {
+    "nome" : "Itália",
+	"sigla" : "ITA"
+  },
+  {
+    "nome" : "França",
+	"sigla" : "FRA"
+  }
+ ],
+   "atores" : [ 
+  {
+    "nome" : "Arnold Schwarzenegger",
+	"data_nascimento" : "1952",
+    "pais_origem" : "EUA",
+    "filmes" : "The Terminator, Terminator II, Terminator VI",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Sylvester Stallone",
+	"data_nascimento" : "1959",
+    "pais_origem" : "EUA",
+    "filmes" : "Alien, Aliens, o resgate",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Tom Cruise",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Bruce Willis",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Liam Neeson",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Anthony Hopkins",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Keanu Reeves",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Christopher Lee",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }, 
+  {
+    "nome" : "Christopher Reeve",
+	"data_nascimento" : "1947",
+    "pais_origem" : "EUA",
+    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
+    "premiacoes" : "Academy Oscar"
+  }
+ ],
+  "filmes" : [ 
+  {
+    "ano_criacao" : "1808",
+	"ano_encerramento" : "",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Oscar",
+    "titulo_original" : "Academy Oscar"
+  }, 
+  {
+    "ano_criacao" : "1901",
+	"ano_encerramento" : "1808",
+    "descricao" : "Gênero criado por Edgar Rice Burroughs",
+    "titulo" : "Palma de Ouro",
+    "titulo_original" : "Action"
+  }, 
+  {
+    "ano_criacao" : "1808",
+	"ano_encerramento" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Globo de Ouro",
+    "titulo_original" : "Adventure"
+  }, 
+  {
+    "ano_criacao" : "1808",
+	"ano_encerramento" : "1808",
+    "descricao" : "Gênero criado por Mary Shelley",
+    "titulo" : "Framboesa de Ouro",
+    "titulo_original" : "Horror"
+  } 
+ ]  
 }

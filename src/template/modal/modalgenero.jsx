@@ -4,8 +4,9 @@ import { faPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FormGenero from '../form/formgenero';
 import { titulo_secao } from '../../configapp';
+import '../../template/styles.css';
 
-function ModalFilme() {
+export default function ModalGenero() {
     
     const [show, setShow] = useState(false);    
     
@@ -15,14 +16,14 @@ function ModalFilme() {
                 <FontAwesomeIcon icon={faPlus} />&nbsp;Novo
                 </Button>                
 
-                <Modal 
-                 show={show}
-                 onHide={() => setShow(false)}
-                 dialogClassName="modal-90w"
-                 aria-labelledby="example-custom-modal-styling-title"
-                 size="lg">
+                <Modal
+                    show={show}
+                    onHide={() => setShow(false)}
+                    dialogClassName="Modal-Largo"
+                    aria-labelledby="example-custom-modal-styling-title"
+                >
                     <Modal.Header closeButton>
-        <Modal.Title id="example-custom-modal-styling-title"><FontAwesomeIcon icon={faVideo} />&nbsp;Dados do {titulo_secao.genero.form_titulo}</Modal.Title>
+                        <Modal.Title id="example-custom-modal-styling-title"><FontAwesomeIcon icon={faVideo} />&nbsp;Dados do {titulo_secao.genero.form_titulo}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body><FormGenero /></Modal.Body>                                     
                 </Modal>               
@@ -30,5 +31,3 @@ function ModalFilme() {
         );
            
 }
-
-export default ModalFilme;

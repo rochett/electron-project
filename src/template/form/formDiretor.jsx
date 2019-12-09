@@ -1,19 +1,16 @@
 import React, { useState }  from 'react';
-import { Col, Card, Form, Tabs, Tab, InputGroup } from 'react-bootstrap';
-import { faVideo } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FileUploadDemo from '../uploader/upload-file';
+import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
 import SelectPais from './components/select/selectPais';
 import SelectAno from './components/select/selectAno';
 import SelectDiretor from './components/select/selectDiretor';
 import SelectRoteirista from './components/select/selectRoteirista';
 import SelectGenero from './components/select/selectGenero';
-import SelectAtor from './components/select/selectAtor';
+import SelectFilme from './components/select/selectFilme';
 import SelectPremiacao from './components/select/selectPremiacao';
 import ButtonsForm from './components/button/buttonsForm';
 import ButtonSwap from './components/button/buttonSwap';
 
-export default function FormExample() {
+export default function FormDiretor() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = event => {
@@ -31,10 +28,10 @@ export default function FormExample() {
         <Form noValidate validated={validated} onSubmit={handleSubmit}>            
 
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
-                <Tab eventKey="ficha" title="Ficha Técnica">
+                <Tab eventKey="ficha" title="Diretor">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Ficha Técnica</Card.Header>
+                        <Card.Header as="h5">Diretor</Card.Header>
                         <Card.Body> 
                             <Form.Row>
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
@@ -104,16 +101,16 @@ export default function FormExample() {
                     </Card>
                 </Tab>                
 
-                <Tab eventKey="elenco" title="Elenco">
+                <Tab eventKey="filmes" title="Filmes">
                     <hr></hr>
                     <Card>
                         <Card.Header as="h5">Elenco</Card.Header>
                         <Card.Body> 
                             <Form.Row>
                                 <Form.Group as={Col} md="5" controlId="validationCustom01">
-                                    <Form.Label>Atores/Atrizes</Form.Label>
+                                    <Form.Label>Listagem de Filmes</Form.Label>
                                     <Form.Control as="select" size="sm" style={{height:'136px'}} multiple>
-                                        <SelectAtor />
+                                        <SelectFilme />
                                     </Form.Control>                                        
                                 </Form.Group>
                             
@@ -122,7 +119,7 @@ export default function FormExample() {
                                 </Form.Group>                                    
                             
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Elenco Final</Form.Label>
+                                    <Form.Label>Filmes do Diretor</Form.Label>
                                     <Form.Control as="textarea" rows="6" style={{resize:'none', multiline:'true'}} size="sm" required />                                        
                                 </Form.Group>                                    
                             </Form.Row>
@@ -130,15 +127,15 @@ export default function FormExample() {
                     </Card>                           
                 </Tab>
 
-                <Tab eventKey="sinopse" title="Sinopse">
+                <Tab eventKey="biografia" title="Biografia">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Sinopse</Card.Header>
+                        <Card.Header as="h5">Dados Biográficos</Card.Header>
                         <Card.Body>                            
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">                        
                                     <Form.Label>
-                                        Informe a Sinopse do Filme
+                                        Informe a Biografia do Diretor
                                     </Form.Label>
                                     <Form.Control as="textarea" rows="4" style={{resize:'none'}} size="sm" required />
                                 </Form.Group> 
@@ -174,37 +171,7 @@ export default function FormExample() {
                             </Form.Row>
                         </Card.Body>
                     </Card>                           
-                </Tab>
-
-                <Tab eventKey="cartaz" title="Cartaz/Trailer">
-                    <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Cartaz/Trailer</Card.Header>
-                        <Card.Body>                            
-                            <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="validationCustom01">
-                                    <Form.Label>URL Trailer</Form.Label>
-                                    <InputGroup className="mb-3" size="sm">
-                                        <InputGroup.Prepend>
-                                            <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faVideo} /></InputGroup.Text>
-                                        </InputGroup.Prepend>
-                                        <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="URL Trailer" 
-                                        size="sm"                                          
-                                        /> 
-                                    </InputGroup>                                       
-                                </Form.Group>                                
-                            </Form.Row> 
-                            <Form.Row> 
-                                <Form.Group as={Col} md="12" controlId="validationCustom01">                                
-                                    <FileUploadDemo />  
-                                </Form.Group>     
-                            </Form.Row>                                         
-                        </Card.Body>
-                    </Card>
-                </Tab>
+                </Tab>                
             </Tabs>            
 
             <br></br>
