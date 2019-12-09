@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import MenuFilmes from './template/menuFilmes';
-import MenuAtores from './template/menuatores';
+import MenuAtores from './template/menuAtores';
 import MenuVideo from './template/menuVideo';
 import MenuDiretores from './template/menuDiretores';
 import MenuGeneros from './template/menuGeneros';

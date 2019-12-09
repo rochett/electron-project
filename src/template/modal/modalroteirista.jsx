@@ -1,37 +1,33 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { faPlus, faUndoAlt, faCheck, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FormRoteirista from '../form/formRoteirista';
+import { titulo_secao } from '../../configapp';
+import '../../template/styles.css';
 
-function ModalRoteirista() {
+export default function ModalRoteirista() {
 
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true); 
-    
-        return (
-            <>
-                <Button variant="primary" onClick={handleShow}>
+
+    return (
+        <>
+            <Button variant="primary" onClick={() => setShow(true)}>
                 <FontAwesomeIcon icon={faPlus} />&nbsp;Novo
-                </Button>                
+            </Button>
 
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                    <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Dados do Roteirista</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                    <FontAwesomeIcon icon={faUndoAlt} />&nbsp;Fechar
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                    <FontAwesomeIcon icon={faCheck} />&nbsp;Salvar
-                    </Button>
-                    </Modal.Footer>                    
-                </Modal>               
-            </>
-        );
-           
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="Modal-Largo"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Dados do {titulo_secao.roteirista.form_titulo}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><FormRoteirista /></Modal.Body>
+            </Modal>
+        </>
+    );
+
 }
-
-export default ModalRoteirista;

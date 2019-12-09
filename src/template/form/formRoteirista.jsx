@@ -8,7 +8,7 @@ import SelectPremiacao from './components/select/selectPremiacao';
 import ButtonsForm from './components/button/buttonsForm';
 import ButtonSwap from './components/button/buttonSwap';
 
-export default function FormDiretor() {
+export default function FormRoteirista() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = event => {
@@ -25,11 +25,11 @@ export default function FormDiretor() {
 
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
-            <Tabs defaultActiveKey="diretor" id="uncontrolled-tab-example">
-                <Tab eventKey="diretor" title="Diretor">
+            <Tabs defaultActiveKey="roteirista" id="uncontrolled-tab-example">
+                <Tab eventKey="roteirista" title="Roteirista">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Diretor</Card.Header>
+                        <Card.Header as="h5">Roteirista</Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
@@ -131,7 +131,7 @@ export default function FormDiretor() {
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
                                     <Form.Label>
-                                        Informe a Biografia do Diretor
+                                        Informe a Biografia do Roteirista
                                     </Form.Label>
                                     <Form.Control as="textarea" rows="4" style={{ resize: 'none' }} size="sm" required />
                                 </Form.Group>

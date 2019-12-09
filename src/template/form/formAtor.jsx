@@ -8,7 +8,7 @@ import SelectPremiacao from './components/select/selectPremiacao';
 import ButtonsForm from './components/button/buttonsForm';
 import ButtonSwap from './components/button/buttonSwap';
 
-export default function FormDiretor() {
+export default function FormAtor() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = event => {
@@ -25,11 +25,11 @@ export default function FormDiretor() {
 
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
-            <Tabs defaultActiveKey="diretor" id="uncontrolled-tab-example">
-                <Tab eventKey="diretor" title="Diretor">
+            <Tabs defaultActiveKey="ator" id="uncontrolled-tab-example">
+                <Tab eventKey="ator" title="Ator/Atriz">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Diretor</Card.Header>
+                        <Card.Header as="h5">Ator/Atriz</Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
@@ -53,7 +53,7 @@ export default function FormDiretor() {
                             </Form.Row>
 
                             <Form.Row>
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
+                                <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>Nascimento</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectAno />
@@ -69,7 +69,7 @@ export default function FormDiretor() {
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
+                                <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>Estréia</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectAno />
@@ -77,16 +77,8 @@ export default function FormDiretor() {
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Aposentadoria</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectAno />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-
                                 <Form.Group as={Col} md="3" controlId="validationCustom01">
-                                    <Form.Label>Obra Máxima</Form.Label>
+                                    <Form.Label>Aposentadoria</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectAno />
                                     </Form.Control>
@@ -131,7 +123,7 @@ export default function FormDiretor() {
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
                                     <Form.Label>
-                                        Informe a Biografia do Diretor
+                                        Informe a Biografia do Ator/Atriz
                                     </Form.Label>
                                     <Form.Control as="textarea" rows="4" style={{ resize: 'none' }} size="sm" required />
                                 </Form.Group>

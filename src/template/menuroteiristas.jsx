@@ -7,7 +7,7 @@ import ModalListaRoteirista from './modal/modalListaRoteirista';
 import './styles.css';
 import { titulo_secao } from '../configapp';
 
-function MenuRoteiristas() {
+export default function MenuRoteiristas() {
 
   return (
     <>
@@ -44,5 +44,3 @@ function MenuRoteiristas() {
   );
 
 }
-
-export default MenuRoteiristas;

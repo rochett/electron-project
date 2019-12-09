@@ -269,11 +269,18 @@
  ],
   "filmes" : [ 
   {
-    "ano_criacao" : "1808",
-	"ano_encerramento" : "",
-    "descricao" : "Gênero criado por Mary Shelley",
-    "titulo" : "Oscar",
-    "titulo_original" : "Academy Oscar"
+    "ano_lancamento" : "1984",	    
+    "titulo" : "O Exterminador do Futuro",
+    "titulo_original" : "The Terminator",
+	"pais_origem": "EUA",
+	"genero": "Ficção Científica",
+	"elenco": "Bruce Willis, Sylvester Stallone",
+	"premiacoes" : "Academy Oscar",
+	"diretor": "James Cameron",
+	"roteirista": "Ridley Scott",	
+	"sinopse": "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",	
+	"trailer": "k64P4l2Wmeg",
+	"cartaz": ""
   }, 
   {
     "ano_criacao" : "1901",

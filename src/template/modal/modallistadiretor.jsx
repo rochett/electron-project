@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListaDiretor from './listaDiretor.jsx';
 import '../../template/styles.css';
 
-function ModalListaFilme() {
+export default function ModalListaDiretor() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -37,5 +37,3 @@ function ModalListaFilme() {
     );
 
 }
-
-export default ModalListaFilme;

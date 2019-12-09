@@ -7,7 +7,7 @@ import ModalListaPremiacao from './modal/modalListaPremiacao';
 import './styles.css';
 import { titulo_secao } from '../configapp';
 
-function MenuPremiacoes() {
+export default function MenuPremiacoes() {
 
   return (
     <>
@@ -44,5 +44,3 @@ function MenuPremiacoes() {
   );
 
 }
-
-export default MenuPremiacoes;

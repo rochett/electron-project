@@ -1,36 +1,33 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FormAtor from '../form/formAtor';
+import { titulo_secao } from '../../configapp';
+import '../../template/styles.css';
 
-function ModalAtor() {
+export default function ModalAtor() {
 
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true); 
-        return (
-            <>
-                <Button variant="primary" onClick={handleShow}>
+
+    return (
+        <>
+            <Button variant="primary" onClick={() => setShow(true)}>
                 <FontAwesomeIcon icon={faPlus} />&nbsp;Novo
-                </Button>                
+            </Button>
 
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                    <Modal.Title>Dados do Ator/Atriz</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Fechar
-                    </Button>
-                    <Button variant="primary" onClick={handleClose} >
-                        Salvar
-                    </Button>
-                    </Modal.Footer>                    
-                </Modal>               
-            </>
-        );
-           
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="Modal-Largo"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-custom-modal-styling-title"><FontAwesomeIcon icon={faVideo} />&nbsp;Dados do {titulo_secao.ator.form_titulo}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><FormAtor /></Modal.Body>
+            </Modal>
+        </>
+    );
+
 }
-
-export default ModalAtor;
