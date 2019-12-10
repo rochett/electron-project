@@ -7,7 +7,7 @@ import ModalListaGenero from './modal/modalListaGenero';
 import './styles.css';
 import { titulo_secao } from '../configapp';
 
-function MenuGeneros() {
+export default function MenuGeneros() {
 
   return (
     <>
@@ -44,5 +44,3 @@ function MenuGeneros() {
   );
 
 }
-
-export default MenuGeneros;

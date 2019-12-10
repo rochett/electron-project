@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles.css';
 import { titulo_secao } from '../configapp';
 
-function MenuAtores() {
+export default function MenuAtores() {
 
   return (
     <>
@@ -44,5 +44,3 @@ function MenuAtores() {
   );
 
 }
-
-export default MenuAtores;

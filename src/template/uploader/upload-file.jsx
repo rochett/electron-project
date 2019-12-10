@@ -46,5 +46,3 @@ export default class FileUploadDemo extends Component {
         )
     }
 }
-
-//export default FileUploadDemo

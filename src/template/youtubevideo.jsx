@@ -1,7 +1,7 @@
 import React from 'react';
 import YouTube from 'react-youtube';
- 
-class YoutubeVideo extends React.Component {
+
+export default class YoutubeVideo extends React.Component {
   render() {
     const opts = {
       height: '290',
@@ -10,15 +10,12 @@ class YoutubeVideo extends React.Component {
         autoplay: 0
       }
     };
- 
-    return (      
+
+    return (
       <YouTube
         videoId="Zs0hLEHAoSs"
-        opts={opts}              
-      />      
+        opts={opts}
+      />
     );
   }
-
 }
-
-export default YoutubeVideo;

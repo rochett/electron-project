@@ -283,25 +283,62 @@
 	"cartaz": ""
   }, 
   {
-    "ano_criacao" : "1901",
-	"ano_encerramento" : "1808",
-    "descricao" : "Gênero criado por Edgar Rice Burroughs",
-    "titulo" : "Palma de Ouro",
-    "titulo_original" : "Action"
+    "ano_lancamento" : "1984",	    
+    "titulo" : "Alien, o oitavo passageiro",
+    "titulo_original" : "Alien",
+	"pais_origem": "EUA",
+	"genero": "Ficção Científica",
+	"elenco": "Bruce Willis, Sylvester Stallone",
+	"premiacoes" : "Academy Oscar",
+	"diretor": "James Cameron",
+	"roteirista": "Ridley Scott",	
+	"sinopse": "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",	
+	"trailer": "k64P4l2Wmeg",
+	"cartaz": ""
   }, 
   {
-    "ano_criacao" : "1808",
-	"ano_encerramento" : "1808",
-    "descricao" : "Gênero criado por Mary Shelley",
-    "titulo" : "Globo de Ouro",
-    "titulo_original" : "Adventure"
+    "ano_lancamento" : "1984",	    
+    "titulo" : "O Vingador do Futuro",
+    "titulo_original" : "Total Recall",
+	"pais_origem": "EUA",
+	"genero": "Ficção Científica",
+	"elenco": "Bruce Willis, Sylvester Stallone",
+	"premiacoes" : "Academy Oscar",
+	"diretor": "James Cameron",
+	"roteirista": "Ridley Scott",	
+	"sinopse": "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",	
+	"trailer": "k64P4l2Wmeg",
+	"cartaz": ""
   }, 
   {
-    "ano_criacao" : "1808",
-	"ano_encerramento" : "1808",
-    "descricao" : "Gênero criado por Mary Shelley",
-    "titulo" : "Framboesa de Ouro",
-    "titulo_original" : "Horror"
-  } 
+    "ano_lancamento" : "1984",	    
+    "titulo" : "Conan, o bárbaro",
+    "titulo_original" : "Conan, the barbarian",
+	"pais_origem": "EUA",
+	"genero": "Ficção Científica",
+	"elenco": "Bruce Willis, Sylvester Stallone",
+	"premiacoes" : "Academy Oscar",
+	"diretor": "James Cameron",
+	"roteirista": "Ridley Scott",	
+	"sinopse": "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",	
+	"trailer": "k64P4l2Wmeg",
+	"cartaz": ""
+  },
+  {
+    "ano_lancamento" : "1984",	    
+    "titulo" : "IT 2",
+    "titulo_original" : "IT 2",
+	"pais_origem": "EUA",
+	"genero": "Ficção Científica",
+	"elenco": "Bruce Willis, Sylvester Stallone",
+	"premiacoes" : "Academy Oscar",
+	"diretor": "James Cameron",
+	"roteirista": "Ridley Scott",	
+	"sinopse": "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",	
+	"trailer": "Zs0hLEHAoSs",
+	"texto_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+	"curiosidades": "IT 2 é baseado no livro "IT", do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+	"cartaz": ""
+  }
  ]  
 }

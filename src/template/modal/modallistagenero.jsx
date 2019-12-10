@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListaGenero from './listaGenero';
 import '../../template/styles.css';
 
-function ModalListaGenero() {
+export default function ModalListaGenero() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -37,5 +37,3 @@ function ModalListaGenero() {
     );
 
 }
-
-export default ModalListaGenero;

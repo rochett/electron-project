@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
 import SelectPais from './components/select/selectPais';
 import SelectAno from './components/select/selectAno';
+import SelectFilme from './components/select/selectFilme';
 import ButtonsForm from './components/button/buttonsForm';
 
 export default function FormGenero() {
@@ -65,7 +66,7 @@ export default function FormGenero() {
                                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                                     <Form.Label>Obra Máxima</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectAno />
+                                        <SelectFilme />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>

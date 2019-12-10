@@ -88,7 +88,7 @@ export default function FormDiretor() {
                                 <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>Obra Máxima</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectAno />
+                                        <SelectFilme />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>

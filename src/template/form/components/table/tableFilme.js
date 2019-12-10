@@ -41,21 +41,16 @@ export default function Table({ characterData: dados }) {
             hover
             striped
             pagination >
-            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pelo título original' }} dataField='nome' isKey dataSort>
-                Nome
-            </TableHeaderColumn>
-            <TableHeaderColumn dataField='data_nascimento' dataSort>
-                Data de Nascimento
-            </TableHeaderColumn>
-            <TableHeaderColumn dataField='pais_origem' dataSort>
-                País de Origem
-            </TableHeaderColumn>
-            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pela descrição' }} dataField='filmes' dataSort>
-                Filmes
-            </TableHeaderColumn>
-            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pela descrição' }} dataField='premiacoes' dataSort>
-                Premiações
-            </TableHeaderColumn>
+            <TableHeaderColumn dataField='titulo' isKey dataSort >Título</TableHeaderColumn>
+            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pelo título original' }} dataField='titulo_original' dataSort>
+                Título Original
+        </TableHeaderColumn>
+            <TableHeaderColumn dataField='ano_lancamento' dataSort>
+                Ano de Lançamento
+        </TableHeaderColumn>
+            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pela descrição' }} dataField='pais_origem' dataSort>
+                pais_origem
+        </TableHeaderColumn>
             <TableHeaderColumn dataField='price' dataFormat={actionButtons}>Ações</TableHeaderColumn>
         </BootstrapTable>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faEdit, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
@@ -10,7 +10,8 @@ export default function Table({ characterData: dados }) {
         return (
             <>
                 <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Editar</Tooltip>}><Button variant="primary"><FontAwesomeIcon icon={faEdit} /></Button></OverlayTrigger>&nbsp;
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Excluir</Tooltip>}><Button variant="danger"><FontAwesomeIcon icon={faTrashAlt} /></Button></OverlayTrigger>
+                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Excluir</Tooltip>}><Button variant="danger"><FontAwesomeIcon icon={faTrashAlt} /></Button></OverlayTrigger>&nbsp;
+                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Visualizar</Tooltip>}><Button variant="warning"><FontAwesomeIcon icon={faEye} /></Button></OverlayTrigger>
             </>
         );
     }

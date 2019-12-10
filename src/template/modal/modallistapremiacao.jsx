@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListaPremiacao from './listaPremiacao.jsx';
 import '../../template/styles.css';
 
-function ModalListaPremiacao() {
+export default function ModalListaPremiacao() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -37,5 +37,3 @@ function ModalListaPremiacao() {
     );
 
 }
-
-export default ModalListaPremiacao;

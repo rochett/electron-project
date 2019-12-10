@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListaRoteirista from './listaRoteirista.jsx';
 import '../../template/styles.css';
 
-function ModalListaRoteirista() {
+export default function ModalListaRoteirista() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -37,5 +37,3 @@ function ModalListaRoteirista() {
     );
 
 }
-
-export default ModalListaRoteirista;
