@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
-import SelectPais from './components/select/selectPais';
 import SelectAno from './components/select/selectAno';
+import SelectGeral from "./components/select/selectGeral";
 import ButtonsForm from './components/button/buttonsForm';
 
 export default function FormPremiacao() {
@@ -51,7 +51,7 @@ export default function FormPremiacao() {
                                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectPais />
+                                        <SelectGeral tableData="pais_origem" valueTag="nome" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>

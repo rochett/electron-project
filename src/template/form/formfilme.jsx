@@ -3,17 +3,12 @@ import { Col, Card, Form, Tabs, Tab, InputGroup } from 'react-bootstrap';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FileUploadDemo from '../uploader/upload-file';
-import SelectPais from './components/select/selectPais';
 import SelectAno from './components/select/selectAno';
-import SelectDiretor from './components/select/selectDiretor';
-import SelectRoteirista from './components/select/selectRoteirista';
-import SelectGenero from './components/select/selectGenero';
-import SelectAtor from './components/select/selectAtor';
-import SelectPremiacao from './components/select/selectPremiacao';
 import ButtonsForm from './components/button/buttonsForm';
-import ButtonSwap from './components/button/buttonSwap';
+import SelectGeral from "./components/select/selectGeral";
+import MultiGeral from './components/multilist/multilistGeral';
 
-export default function FormExample() {
+export default function FormFilme() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = event => {
@@ -61,7 +56,7 @@ export default function FormExample() {
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
                                     <Form.Label>Direção</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectDiretor />
+                                        <SelectGeral tableData="diretores" valueTag="nome" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
@@ -69,7 +64,7 @@ export default function FormExample() {
                                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectPais />
+                                        <SelectGeral tableData="pais_origem" valueTag="nome" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
@@ -87,7 +82,7 @@ export default function FormExample() {
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
                                     <Form.Label>Roteiro</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectRoteirista />
+                                        <SelectGeral tableData="roteiristas" valueTag="nome" />
                                     </Form.Control>
                                     <Form.Control.Feedback>De boa!</Form.Control.Feedback>
                                 </Form.Group>
@@ -95,7 +90,7 @@ export default function FormExample() {
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
                                     <Form.Label>Gênero</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectGenero />
+                                        <SelectGeral tableData="generos" valueTag="titulo" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
@@ -106,28 +101,7 @@ export default function FormExample() {
 
                 <Tab eventKey="elenco" title="Elenco">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Elenco</Card.Header>
-                        <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="validationCustom01">
-                                    <Form.Label>Atores/Atrizes</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
-                                        <SelectAtor />
-                                    </Form.Control>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
-                                    <ButtonSwap />
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Listagem do Elenco</Form.Label>
-                                    <Form.Control as="textarea" rows="6" style={{ resize: 'none', multiline: 'true' }} size="sm" required />
-                                </Form.Group>
-                            </Form.Row>
-                        </Card.Body>
-                    </Card>
+                    <MultiGeral titleTag="Atores" valueTag="nome" />
                 </Tab>
 
                 <Tab eventKey="sinopse" title="Sinopse">
@@ -152,28 +126,7 @@ export default function FormExample() {
 
                 <Tab eventKey="premiacao" title="Premiações">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Listagem de Premiações</Card.Header>
-                        <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="validationCustom01">
-                                    <Form.Label>Premiações</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
-                                        <SelectPremiacao />
-                                    </Form.Control>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
-                                    <ButtonSwap />
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Listagem de Premiações</Form.Label>
-                                    <Form.Control as="textarea" rows="6" style={{ resize: 'none', multiline: 'true' }} size="sm" required />
-                                </Form.Group>
-                            </Form.Row>
-                        </Card.Body>
-                    </Card>
+                    <MultiGeral titleTag="Premiações" valueTag="titulo" />
                 </Tab>
 
                 <Tab eventKey="cartaz" title="Cartaz/Trailer">

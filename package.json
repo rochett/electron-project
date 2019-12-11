@@ -47,6 +47,7 @@
         "react-modal": "^3.11.1",
         "react-youtube": "^7.9.0",
         "reactstrap": "^8.1.1",
+        "remover-acentos": "0.0.6",
         "sweetalert": "^2.1.2"
     },
     "homepage": "./",

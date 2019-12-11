@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
 import FileUploadDemo from '../uploader/upload-file';
-import SelectPais from './components/select/selectPais';
 import SelectAno from './components/select/selectAno';
-import SelectFilme from './components/select/selectFilme';
-import SelectPremiacao from './components/select/selectPremiacao';
+import SelectGeral from "./components/select/selectGeral";
 import ButtonsForm from './components/button/buttonsForm';
-import ButtonSwap from './components/button/buttonSwap';
+import MultiGeral from './components/multilist/multilistGeral';
 
 export default function FormRoteirista() {
     const [validated, setValidated] = useState(false);
@@ -64,7 +62,7 @@ export default function FormRoteirista() {
                                 <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectPais />
+                                        <SelectGeral tableData="pais_origem" valueTag="nome" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
@@ -88,7 +86,7 @@ export default function FormRoteirista() {
                                 <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>Obra Máxima</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectFilme />
+                                        <SelectGeral tableData="filmes" valueTag="titulo" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
@@ -99,28 +97,7 @@ export default function FormRoteirista() {
 
                 <Tab eventKey="filmes" title="Filmes">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Listagem de Filmes</Card.Header>
-                        <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="validationCustom01">
-                                    <Form.Label>Filmes</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
-                                        <SelectFilme />
-                                    </Form.Control>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
-                                    <ButtonSwap />
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Listagem de Filmes</Form.Label>
-                                    <Form.Control as="textarea" rows="6" style={{ resize: 'none', multiline: 'true' }} size="sm" required />
-                                </Form.Group>
-                            </Form.Row>
-                        </Card.Body>
-                    </Card>
+                    <MultiGeral titleTag="Filmes" valueTag="titulo" />
                 </Tab>
 
                 <Tab eventKey="biografia" title="Biografia">
@@ -145,28 +122,7 @@ export default function FormRoteirista() {
 
                 <Tab eventKey="premiacao" title="Premiações">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Listagem de Premiações</Card.Header>
-                        <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="validationCustom01">
-                                    <Form.Label>Premiações</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
-                                        <SelectPremiacao />
-                                    </Form.Control>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
-                                    <ButtonSwap />
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Listagem de Premiações</Form.Label>
-                                    <Form.Control as="textarea" rows="6" style={{ resize: 'none', multiline: 'true' }} size="sm" required />
-                                </Form.Group>
-                            </Form.Row>
-                        </Card.Body>
-                    </Card>
+                    <MultiGeral titleTag="Premiações" valueTag="titulo" />
                 </Tab>
 
                 <Tab eventKey="foto" title="Foto">

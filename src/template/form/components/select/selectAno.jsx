@@ -10,7 +10,7 @@ export default function SelectAno() {
     function ComboAno() {
         while (coReg <= 120) {
             valReg = anoAtual - coReg;
-            anosCombo.push(<option value={{ valReg }}>{valReg}</option>)
+            anosCombo.push(<option key={coReg} value={{ valReg }}>{valReg}</option>)
             coReg++;
         }
         return anosCombo;
