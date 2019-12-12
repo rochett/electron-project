@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from "firebase/app";
-import Table from '../form/components/table/tableDiretor';
+import TableGeral from '../form/components/table/tableGeral';
 
 export default function ListaDiretor() {
     const [snapshot, setSnapshot] = useState([]);
@@ -12,5 +12,11 @@ export default function ListaDiretor() {
         });
     }, []);
 
-    return <Table characterData={snapshot} />
+    const titles = [{ title: "Nome", field: "nome", search: false, iskey: true },
+    { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
+    { title: "Filmes", field: "filmes", search: false, iskey: false },
+    { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
+    { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
+
+    return <TableGeral characterData={snapshot} titulos={titles} />
 }

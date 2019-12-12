@@ -4,7 +4,7 @@ import { faTrashAlt, faEdit, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
-export default function Table({ characterData: dados }) {
+export default function Table({ characterData: dados, titulos }) {
 
     function actionButtons() {
         return (
@@ -41,16 +41,12 @@ export default function Table({ characterData: dados }) {
             hover
             striped
             pagination >
-            <TableHeaderColumn dataField='titulo' isKey dataSort >Título</TableHeaderColumn>
-            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pelo título original' }} dataField='titulo_original' dataSort>
-                Título Original
-        </TableHeaderColumn>
-            <TableHeaderColumn dataField='ano_lancamento' dataSort>
-                Ano de Lançamento
-        </TableHeaderColumn>
-            <TableHeaderColumn filter={{ type: 'TextFilter', placeholder: 'Pesquisar pela descrição' }} dataField='pais_origem' dataSort>
-                pais_origem
-        </TableHeaderColumn>
+
+            {titulos.map(t => (
+                <TableHeaderColumn key={t.title} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo ${t.title}` }} dataField={t.field} dataSort>
+                    {t.title}
+                </TableHeaderColumn>
+            ))}
             <TableHeaderColumn dataField='price' dataFormat={actionButtons}>Ações</TableHeaderColumn>
         </BootstrapTable>
     )
