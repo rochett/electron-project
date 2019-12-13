@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import YoutubeVideo from './youtubevideo';
+import YoutubeVideo from '../components/youtube/youtubevideo';
 import { faFilm, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

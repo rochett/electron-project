@@ -25,8 +25,8 @@ export default function ControlledCarousel() {
         carrossel && carrossel.map((text, i) => <Carousel.Item key={i} > <img
 
           className="d-block w-100"
-          src={require(`../../image/${text.imagem_slider}`)}
-          alt="First slide"
+          src={require(`../../../image/${text.imagem_slider}`)}
+          alt={text.titulo_slider}
         />
           <Carousel.Caption>
             <h3>{text.titulo_slider}</h3>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
-import SelectAno from './components/select/selectAno';
-import SelectGeral from "./components/select/selectGeral";
-import ButtonsForm from './components/button/buttonsForm';
+import SelectAno from '../../components/select/selectAno';
+import SelectGeral from "../../components/select/selectGeral";
+import ButtonsForm from '../../components/button/buttonsForm';
 
-export default function FormPremiacao() {
+export default function FormGenero() {
 
     const [validated, setValidated] = useState(false);
     const handleSubmit = event => {
@@ -55,7 +55,6 @@ export default function FormPremiacao() {
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
-
                                 <Form.Group as={Col} md="4" controlId="validationCustom01">
                                     <Form.Label>Ano de Criação</Form.Label>
                                     <Form.Control as="select" required size="sm">
@@ -63,15 +62,13 @@ export default function FormPremiacao() {
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
-
                                 <Form.Group as={Col} md="4" controlId="validationCustom01">
-                                    <Form.Label>Ano de Encerramento</Form.Label>
+                                    <Form.Label>Obra Máxima</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectAno />
+                                        <SelectGeral tableData="filmes" valueTag="titulo" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
-
                             </Form.Row>
 
                             <Form.Row>

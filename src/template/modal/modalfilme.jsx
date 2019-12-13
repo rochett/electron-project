@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { faPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FormExample from '../form/formFilme';
+import FormExample from '../form/filme/formFilme';
 import { titulo_secao } from '../../configapp';
 import '../../template/styles.css';
 

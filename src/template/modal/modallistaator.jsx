@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { faList, faUndoAlt, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ListaAtor from './listaAtor.jsx';
+import ListaGeral from '../components/table/listaGeral';
 import '../../template/styles.css';
 
 export default function ModalListaAtor() {
+
+    const titles = [{ title: "Nome", field: "nome", search: false, iskey: true },
+    { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
+    { title: "Filmes", field: "filmes", search: true, iskey: false },
+    { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
+    { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -26,7 +32,7 @@ export default function ModalListaAtor() {
                 <Modal.Header closeButton>
                     <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Listagem de Atores</Modal.Title>
                 </Modal.Header>
-                <Modal.Body><ListaAtor /></Modal.Body>
+                <Modal.Body><ListaGeral tableData="atores" titulos={titles} /></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         <FontAwesomeIcon icon={faUndoAlt} />&nbsp;Fechar

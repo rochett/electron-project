@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
-import FileUploadDemo from '../uploader/upload-file';
-import SelectAno from './components/select/selectAno';
-import SelectGeral from "./components/select/selectGeral";
-import ButtonsForm from './components/button/buttonsForm';
-import MultiGeral from './components/multilist/multilistGeral';
+import { Col, Card, Form, Tabs, Tab, InputGroup } from 'react-bootstrap';
+import { faVideo } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FileUploadDemo from '../../components/uploader/upload-file';
+import SelectAno from '../../components/select/selectAno';
+import ButtonsForm from '../../components/button/buttonsForm';
+import SelectGeral from "../../components/select/selectGeral";
+import MultiGeral from '../../components/multilist/multilistGeral';
 
-export default function FormRoteirista() {
+export default function FormFilme() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = event => {
@@ -23,15 +25,15 @@ export default function FormRoteirista() {
 
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
-            <Tabs defaultActiveKey="roteirista" id="uncontrolled-tab-example">
-                <Tab eventKey="roteirista" title="Roteirista">
+            <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
+                <Tab eventKey="ficha" title="Ficha Técnica">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Roteirista</Card.Header>
+                        <Card.Header as="h5">Ficha Técnica</Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Nome</Form.Label>
+                                    <Form.Label>Título</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
@@ -40,7 +42,7 @@ export default function FormRoteirista() {
                                     />
                                 </Form.Group>
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Nome Original</Form.Label>
+                                    <Form.Label>Título Original</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
@@ -51,15 +53,15 @@ export default function FormRoteirista() {
                             </Form.Row>
 
                             <Form.Row>
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Nascimento</Form.Label>
+                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                    <Form.Label>Direção</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectAno />
+                                        <SelectGeral tableData="diretores" valueTag="nome" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="3" controlId="validationCustom01">
+                                <Form.Group as={Col} md="4" controlId="validationCustom01">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectGeral tableData="pais_origem" valueTag="nome" />
@@ -68,25 +70,27 @@ export default function FormRoteirista() {
                                 </Form.Group>
 
                                 <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Estréia</Form.Label>
+                                    <Form.Label>Lançamento</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectAno />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
+                            </Form.Row>
 
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Aposentadoria</Form.Label>
+                            <Form.Row>
+                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                    <Form.Label>Roteiro</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectAno />
+                                        <SelectGeral tableData="roteiristas" valueTag="nome" />
                                     </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                    <Form.Control.Feedback>De boa!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="3" controlId="validationCustom01">
-                                    <Form.Label>Obra Máxima</Form.Label>
+                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                    <Form.Label>Gênero</Form.Label>
                                     <Form.Control as="select" required size="sm">
-                                        <SelectGeral tableData="filmes" valueTag="titulo" />
+                                        <SelectGeral tableData="generos" valueTag="titulo" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
@@ -95,20 +99,20 @@ export default function FormRoteirista() {
                     </Card>
                 </Tab>
 
-                <Tab eventKey="filmes" title="Filmes">
+                <Tab eventKey="elenco" title="Elenco">
                     <hr></hr>
-                    <MultiGeral titleTag="Filmes" valueTag="titulo" />
+                    <MultiGeral titleTag="Atores" valueTag="nome" />
                 </Tab>
 
-                <Tab eventKey="biografia" title="Biografia">
+                <Tab eventKey="sinopse" title="Sinopse">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Biografia</Card.Header>
+                        <Card.Header as="h5">Sinopse</Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
                                     <Form.Label>
-                                        Informe a Biografia do Roteirista
+                                        Informe a Sinopse do Filme
                                     </Form.Label>
                                     <Form.Control as="textarea" rows="4" style={{ resize: 'none' }} size="sm" required />
                                 </Form.Group>
@@ -125,11 +129,27 @@ export default function FormRoteirista() {
                     <MultiGeral titleTag="Premiações" valueTag="titulo" />
                 </Tab>
 
-                <Tab eventKey="foto" title="Foto">
+                <Tab eventKey="cartaz" title="Cartaz/Trailer">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Foto</Card.Header>
+                        <Card.Header as="h5">Cartaz/Trailer</Card.Header>
                         <Card.Body>
+                            <Form.Row>
+                                <Form.Group as={Col} md="12" controlId="validationCustom01">
+                                    <Form.Label>URL Trailer</Form.Label>
+                                    <InputGroup className="mb-3" size="sm">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faVideo} /></InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            required
+                                            type="text"
+                                            placeholder="URL Trailer"
+                                            size="sm"
+                                        />
+                                    </InputGroup>
+                                </Form.Group>
+                            </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
                                     <FileUploadDemo />

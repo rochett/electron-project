@@ -1,21 +1,21 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import ModalDiretor from '../modal/modalDiretor';
+import ModalListaDiretor from '../modal/modalListaDiretor';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalGenero from './modal/modalGenero';
-import ModalListaGenero from './modal/modalListaGenero';
-import './styles.css';
-import { titulo_secao } from '../configapp';
+import '../styles.css';
+import { titulo_secao } from '../../configapp';
 
-export default function MenuGeneros() {
+export default function MenuDiretores() {
 
   return (
     <>
       <Card bg="dark" text="white" border="info">
         <Card.Header>
-          {titulo_secao.genero.titulo}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
+          {titulo_secao.diretor.titulo}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
         </Card.Header>
-        <Card.Img variant="bottom" src={titulo_secao.genero.imagem} />
+        <Card.Img variant="bottom" src={titulo_secao.diretor.imagem} />
         <Card.Body>
           <Card.Title>IT 2</Card.Title>
           <Card.Text>
@@ -31,10 +31,10 @@ export default function MenuGeneros() {
         <Card.Body>
           <div className="row" width="100%">
             <div className="col-6">
-              <ModalGenero />
+              <ModalDiretor />
             </div>
             <div className="col-6" align="right">
-              <ModalListaGenero />
+              <ModalListaDiretor />
             </div>
           </div>
         </Card.Body>

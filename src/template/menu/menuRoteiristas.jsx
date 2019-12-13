@@ -1,21 +1,21 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import ModalDiretor from './modal/modalDiretor';
-import ModalListaDiretor from './modal/modalListaDiretor';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './styles.css';
-import { titulo_secao } from '../configapp';
+import ModalRoteirista from '../modal/modalRoteirista';
+import ModalListaRoteirista from '../modal/modalListaRoteirista';
+import '../styles.css';
+import { titulo_secao } from '../../configapp';
 
-export default function MenuDiretores() {
+export default function MenuRoteiristas() {
 
   return (
     <>
       <Card bg="dark" text="white" border="info">
         <Card.Header>
-          {titulo_secao.diretor.titulo}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
+          {titulo_secao.roteirista.titulo}<FontAwesomeIcon icon={faVideo} className="Icon-Menu" />
         </Card.Header>
-        <Card.Img variant="bottom" src={titulo_secao.diretor.imagem} />
+        <Card.Img variant="bottom" src={titulo_secao.roteirista.imagem} />
         <Card.Body>
           <Card.Title>IT 2</Card.Title>
           <Card.Text>
@@ -31,10 +31,10 @@ export default function MenuDiretores() {
         <Card.Body>
           <div className="row" width="100%">
             <div className="col-6">
-              <ModalDiretor />
+              <ModalRoteirista />
             </div>
             <div className="col-6" align="right">
-              <ModalListaDiretor />
+              <ModalListaRoteirista />
             </div>
           </div>
         </Card.Body>

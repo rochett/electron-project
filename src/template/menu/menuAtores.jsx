@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import ModalAtor from './modal/modalAtor';
-import ModalListaAtor from './modal/modalListaAtor';
+import ModalAtor from '../modal/modalAtor';
+import ModalListaAtor from '../modal/modalListaAtor';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './styles.css';
-import { titulo_secao } from '../configapp';
+import '../styles.css';
+import { titulo_secao } from '../../configapp';
 
 export default function MenuAtores() {
 
