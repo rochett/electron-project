@@ -16,6 +16,8 @@ export default function MenuAtores({lastMovieTag}) {
     { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
     { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
 
+    var result = lastMovieTag && lastMovieTag.filmes.split(", ", 3);  
+
   return (
     <>
       <Card bg="dark" text="white" border="info">
@@ -24,16 +26,17 @@ export default function MenuAtores({lastMovieTag}) {
         </Card.Header>
         <Card.Img variant="bottom" src={titulo_secao.ator.imagem} />
         <Card.Body>
-          <Card.Title>Vincent Price</Card.Title>
+          <Card.Title>{lastMovieTag && lastMovieTag.nome}</Card.Title>
           <Card.Text>
             Vincent Leonard Price Jr. foi um ator norte-americano. Nascido no Missouri,
             Price veio de uma família rica, cercada por m ambiente cultural...
                     </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem variant="dark">The Fly (1958)</ListGroupItem>
-          <ListGroupItem variant="dark">Tales of Terror (1962)</ListGroupItem>
-          <ListGroupItem variant="dark">Edward Scissorhands (1990)</ListGroupItem>
+          {
+            result && result.map((text, i) => <ListGroupItem key={i} variant="dark">
+            {text}</ListGroupItem>)          
+          }
         </ListGroup>
         <Card.Body>
           <div className="row">

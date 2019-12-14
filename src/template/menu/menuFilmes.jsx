@@ -6,7 +6,8 @@ import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles.css';
 import { titulo_secao } from '../../configapp';
-import DateDiff from '../components/calendar/dates'
+import DateDiff from '../components/calendar/dates';
+import CharLimit from '../components/characters/charLimit';
 
 export default function MenuFilmes({lastMovieTag}) {
 
@@ -14,9 +15,8 @@ export default function MenuFilmes({lastMovieTag}) {
     { title: "Título Original", field: "titulo_original", search: true, iskey: false },
     { title: "Ano de Lançamento", field: "ano_lancamento", search: false, iskey: false },
     { title: "País de Origem", field: "pais_origem", search: true, iskey: false }];  
-    
-    var elenco = lastMovieTag && lastMovieTag.elenco;
-    var resultado = elenco && elenco.split(", ", 2);
+        
+    var result = lastMovieTag && lastMovieTag.elenco.split(", ", 2);     
 
   return (
     <>
@@ -28,13 +28,13 @@ export default function MenuFilmes({lastMovieTag}) {
         <Card.Body>
           <Card.Title>{lastMovieTag && lastMovieTag.titulo}</Card.Title>
           <Card.Text>
-            {lastMovieTag && lastMovieTag.sinopse}
+            <CharLimit lastMovieTag={lastMovieTag} limitTag="140" />
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem variant="dark">{lastMovieTag && lastMovieTag.diretor}&nbsp;(Direção)</ListGroupItem>
           {
-            resultado && resultado.map((text, i) => <ListGroupItem key={i} variant="dark">
+            result && result.map((text, i) => <ListGroupItem key={i} variant="dark">
             {text}</ListGroupItem>)          
           }
         </ListGroup>
