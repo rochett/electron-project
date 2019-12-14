@@ -1,13 +1,20 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import ModalAtor from '../modal/modalAtor';
-import ModalListaAtor from '../modal/modalListaAtor';
+import ModalFormGeral from '../modal/modalFormGeral';
+import ModalListaGeral from '../modal/modalListaGeral';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles.css';
 import { titulo_secao } from '../../configapp';
+import DateDiff from '../components/calendar/dates'
 
-export default function MenuAtores() {
+export default function MenuAtores({lastMovieTag}) {
+
+  const titles = [{ title: "Nome", field: "nome", search: false, iskey: true },
+    { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
+    { title: "Filmes", field: "filmes", search: true, iskey: false },
+    { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
+    { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
 
   return (
     <>
@@ -31,14 +38,15 @@ export default function MenuAtores() {
         <Card.Body>
           <div className="row">
             <div className="col-6">
-              <ModalAtor />
+              <ModalFormGeral titleTag="Ator/Atriz" formTag="FormAtor" />
             </div>
             <div className="col-6" align="right">
-              <ModalListaAtor />
+              <ModalListaGeral tableData="Atores" titles={titles} />
             </div>
           </div>
         </Card.Body>
-        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 2 dias atrás</Card.Footer>
+        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 
+          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
       </Card>
     </>
   );

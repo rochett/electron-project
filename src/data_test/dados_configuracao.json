@@ -4,74 +4,86 @@
     "filmes" : "The Terminator, Terminator II, Terminator VI",
     "nome" : "Arnold Schwarzenegger",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-11-12"
   }, {
     "data_nascimento" : "1959",
     "filmes" : "Alien, Aliens, o resgate",
     "nome" : "Sylvester Stallone",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-09-15"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Tom Cruise",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-10-12"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Bruce Willis",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-10-12"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Liam Neeson",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-10-12"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Anthony Hopkins",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-10-12"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Keanu Reeves",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-09-15"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Christopher Lee",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-10-12"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Christopher Reeve",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-09-15"
   } ],
   "diretores" : [ {
     "data_nascimento" : "1952",
     "filmes" : "The Terminator, Terminator II, Terminator VI",
     "nome" : "James Cameron",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-05-21"
   }, {
     "data_nascimento" : "1959",
     "filmes" : "Alien, Aliens, o resgate",
     "nome" : "Ridley Scott",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-05-21"
   }, {
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Francis Ford Coppola",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-10-27"
   } ],
   "filmes" : [ {
     "ano_lancamento" : "1984",
@@ -85,7 +97,10 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "O Exterminador do Futuro",
     "titulo_original" : "The Terminator",
-    "trailer" : "k64P4l2Wmeg"
+    "trailer" : "k64P4l2Wmeg",
+	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+	"data_adicionado" : "2019-10-12"
   }, {
     "ano_lancamento" : "1984",
     "cartaz" : "",
@@ -98,7 +113,10 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "Alien, o oitavo passageiro",
     "titulo_original" : "Alien",
-    "trailer" : "k64P4l2Wmeg"
+    "trailer" : "k64P4l2Wmeg",
+	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+	"data_adicionado" : "2019-10-12"
   }, {
     "ano_lancamento" : "1984",
     "cartaz" : "",
@@ -111,7 +129,10 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "O Vingador do Futuro",
     "titulo_original" : "Total Recall",
-    "trailer" : "k64P4l2Wmeg"
+    "trailer" : "k64P4l2Wmeg",
+	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+	"data_adicionado" : "2019-10-12"
   }, {
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
@@ -124,53 +145,81 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "Conan, o bárbaro",
     "titulo_original" : "Conan, the barbarian",
-    "trailer" : "k64P4l2Wmeg"
+    "trailer" : "k64P4l2Wmeg",
+	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+	"data_adicionado" : "2019-10-12"
+  }, {
+    "ano_lancamento" : "1984",
+    "cartaz" : "it2_poster.jpg",
+    "diretor" : "James Cameron",
+    "elenco" : "Bruce Willis, Sylvester Stallone",
+    "genero" : "Ficção Científica",
+    "pais_origem" : "EUA",
+    "premiacoes" : "Academy Oscar",
+    "roteirista" : "Ridley Scott",
+    "sinopse" : "Vinte e sete anos depois dos eventos que chocaram os adolescentes que faziam parte do Clube dos Perdedores, os amigos realizam uma reunião...",
+    "titulo" : "IT 2",
+    "titulo_original" : "IT 2",
+    "trailer" : "Zs0hLEHAoSs",
+	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+	"data_adicionado" : "2019-10-12"
   } ],
   "generos" : [ {
     "ano_criacao" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Ficção Científica",
-    "titulo_original" : "Science Fiction (SCI-FI)"
+    "titulo_original" : "Science Fiction (SCI-FI)",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1901",
     "descricao" : "Gênero criado por Edgar Rice Burroughs",
     "titulo" : "Ação",
-    "titulo_original" : "Action"
+    "titulo_original" : "Action",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Aventura",
-    "titulo_original" : "Adventure"
+    "titulo_original" : "Adventure",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Horror",
-    "titulo_original" : "Horror"
+    "titulo_original" : "Horror",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Mistério",
-    "titulo_original" : "Mystery"
+    "titulo_original" : "Mystery",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Policial",
-    "titulo_original" : "Detective"
+    "titulo_original" : "Detective",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Distopia",
-    "titulo_original" : "Distopy"
+    "titulo_original" : "Distopy",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1980",
     "descricao" : "Gênero criado por Wes Craven",
     "titulo" : "Meladeiro, sangue e tripa",
-    "titulo_original" : "Slasher"
+    "titulo_original" : "Slasher",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1980",
     "descricao" : "Gênero criado por Wes Craven",
     "titulo" : "Meladeiro, sangue e tripa",
-    "titulo_original" : "Slasher"
+    "titulo_original" : "Slasher",
+	"data_adicionado" : "2019-05-21"
   } ],
   "pais_origem" : [ {
     "nome" : "Estados Unidos da América",
@@ -217,44 +266,51 @@
     "ano_encerramento" : "",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Oscar",
-    "titulo_original" : "Academy Oscar"
+    "titulo_original" : "Academy Oscar",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1901",
     "ano_encerramento" : "1808",
     "descricao" : "Gênero criado por Edgar Rice Burroughs",
     "titulo" : "Palma de Ouro",
-    "titulo_original" : "Action"
+    "titulo_original" : "Action",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "ano_encerramento" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Globo de Ouro",
-    "titulo_original" : "Adventure"
+    "titulo_original" : "Adventure",
+	"data_adicionado" : "2019-05-21"
   }, {
     "ano_criacao" : "1808",
     "ano_encerramento" : "1808",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Framboesa de Ouro",
-    "titulo_original" : "Horror"
+    "titulo_original" : "Horror",
+	"data_adicionado" : "2019-08-21"
   } ],
   "roteiristas" : [ {
     "data_nascimento" : "1915",
     "filmes" : "The Terminator, Terminator II, Terminator VI",
     "nome" : "Orson Welles",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-05-21"
   }, {
     "data_nascimento" : "1899",
     "filmes" : "Alien, Aliens, o resgate",
     "nome" : "Alfred Hitchcock",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-05-21"
   }, {
     "data_nascimento" : "1889",
     "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Charlie Chaplin",
     "pais_origem" : "GBR",
-    "premiacoes" : "Academy Oscar"
+    "premiacoes" : "Academy Oscar",
+	"data_adicionado" : "2019-02-23"
   } ],
   "slider_principal" : [ {
     "imagem_slider" : "slider1.jpg",

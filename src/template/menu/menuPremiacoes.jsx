@@ -2,12 +2,19 @@ import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalPremiacao from '../modal/modalPremiacao';
-import ModalListaPremiacao from '../modal/modalListaPremiacao';
+import ModalFormGeral from '../modal/modalFormGeral';
+import ModalListaGeral from '../modal/modalListaGeral';
 import '../styles.css';
 import { titulo_secao } from '../../configapp';
+import DateDiff from '../components/calendar/dates'
 
-export default function MenuPremiacoes() {
+export default function MenuPremiacoes({lastMovieTag}) {
+
+  const titles = [{ title: "Título", field: "titulo", search: false, iskey: true },
+    { title: "Título Original", field: "titulo_original", search: false, iskey: false },
+    { title: "Ano de Criação", field: "ano_criacao", search: false, iskey: false },
+    { title: "Ano de Encerramento", field: "ano_encerramento", search: false, iskey: false },
+    { title: "Descrição", field: "descricao", search: true, iskey: false }];
 
   return (
     <>
@@ -31,14 +38,15 @@ export default function MenuPremiacoes() {
         <Card.Body>
           <div className="row" width="100%">
             <div className="col-6">
-              <ModalPremiacao />
+              <ModalFormGeral titleTag="Premiação" formTag="FormPremiacao" />
             </div>
             <div className="col-6" align="right">
-              <ModalListaPremiacao />
+              <ModalListaGeral tableData="Premiações" titles={titles} />
             </div>
           </div>
         </Card.Body>
-        <Card.Footer className="text-muted" align="center">Último Adicionado: 2 dias atrás</Card.Footer>
+        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 
+          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
       </Card>
     </>
   );

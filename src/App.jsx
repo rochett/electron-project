@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import './App.css';
 import MenuFilmes from './template/menu/menuFilmes';
 import MenuAtores from './template/menu/menuAtores';
@@ -18,7 +18,30 @@ import { config } from "./config";
 firebase.initializeApp(config);
 
 export default function App() {
+  
+  var getTableData = function (tableData) {
+    
+    const [infoGeral, setInfoGeral] = useState([]);
+
+    useEffect(() => {
+        firebase.database().ref(`${tableData}/`).on('value', function (_infoGeral) {
+            setInfoGeral(_infoGeral.val());
+        });
+    }, []);
+
+    return infoGeral && infoGeral[infoGeral.length - 1];
+  }
+
+  const lastMovieElement = getTableData('filmes');
+  const lastActorElement = getTableData('atores');
+  const lastGenreElement = getTableData('generos');
+  const lastWriterElement = getTableData('roteiristas');
+  const lastPrizeElement = getTableData('premiacoes');
+  const lastDirectorElement = getTableData('diretores');
+
+
   return (
+    
     <div className="container-fluid">
 
       <CControlledCarousel />
@@ -27,13 +50,13 @@ export default function App() {
 
       <CardDeck>
 
-        <MenuFilmes />
+        <MenuFilmes lastMovieTag={lastMovieElement} />
 
-        <MenuAtores />
+        <MenuAtores lastMovieTag={lastActorElement} />
 
-        <MenuDiretores />
+        <MenuDiretores lastMovieTag={lastDirectorElement} />
 
-        <MenuVideo />
+        <MenuVideo lastMovieTag={lastMovieElement} />
 
       </CardDeck>
 
@@ -41,13 +64,13 @@ export default function App() {
 
       <CardDeck>
 
-        <MenuCartaz />
+        <MenuCartaz lastMovieTag={lastMovieElement} />
 
-        <MenuRoteiristas />
+        <MenuRoteiristas lastMovieTag={lastWriterElement} />
 
-        <MenuGeneros />
+        <MenuGeneros lastMovieTag={lastGenreElement} />
 
-        <MenuPremiacoes />
+        <MenuPremiacoes lastMovieTag={lastPrizeElement} />
 
       </CardDeck>
 

@@ -4,14 +4,9 @@ import { faList, faUndoAlt, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListaGeral from '../components/table/listaGeral';
 import '../../template/styles.css';
+import removeAccents from 'remover-acentos';
 
-export default function ModalListaPremiacao() {
-
-    const titles = [{ title: "Título", field: "titulo", search: false, iskey: true },
-    { title: "Título Original", field: "titulo_original", search: false, iskey: false },
-    { title: "Ano de Criação", field: "ano_criacao", search: false, iskey: false },
-    { title: "Ano de Encerramento", field: "ano_encerramento", search: false, iskey: false },
-    { title: "Descrição", field: "descricao", search: true, iskey: false }];
+export default function ModalListaGeral({tableData, titles}) {    
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -30,9 +25,9 @@ export default function ModalListaPremiacao() {
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Listagem de Premiações</Modal.Title>
+                    <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Listagem de {tableData}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body><ListaGeral tableData="premiacoes" titulos={titles} /></Modal.Body>
+                <Modal.Body><ListaGeral tableData={removeAccents(tableData).toLowerCase()} titulos={titles} /></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         <FontAwesomeIcon icon={faUndoAlt} />&nbsp;Fechar

@@ -2,12 +2,18 @@ import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalGenero from '../modal/modalGenero';
-import ModalListaGenero from '../modal/modalListaGenero';
+import ModalFormGeral from '../modal/modalFormGeral';
+import ModalListaGeral from '../modal/modalListaGeral';
 import '../styles.css';
 import { titulo_secao } from '../../configapp';
+import DateDiff from '../components/calendar/dates'
 
-export default function MenuGeneros() {
+export default function MenuGeneros({lastMovieTag}) {
+
+  const titles = [{ title: "Título", field: "titulo", search: false, iskey: true },
+  { title: "Título Original", field: "titulo_original", search: false, iskey: false },
+  { title: "Ano de Criação", field: "ano_criacao", search: false, iskey: false },
+  { title: "Descrição", field: "descricao", search: true, iskey: false }];
 
   return (
     <>
@@ -31,14 +37,15 @@ export default function MenuGeneros() {
         <Card.Body>
           <div className="row" width="100%">
             <div className="col-6">
-              <ModalGenero />
+              <ModalFormGeral titleTag="Gênero" formTag="FormGenero" />
             </div>
             <div className="col-6" align="right">
-              <ModalListaGenero />
+              <ModalListaGeral tableData="Gêneros" titles={titles} />
             </div>
           </div>
         </Card.Body>
-        <Card.Footer className="text-muted" align="center">Último Adicionado: 2 dias atrás</Card.Footer>
+        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 
+          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
       </Card>
     </>
   );

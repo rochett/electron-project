@@ -43,7 +43,7 @@ export default function Table({ characterData: dados, titulos }) {
             pagination >
 
             {titulos.map(t => (
-                <TableHeaderColumn key={t.title} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo ${t.title}` }} dataField={t.field} dataSort>
+                <TableHeaderColumn key={t.title} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo(a) ${t.title}` }} dataField={t.field} dataSort>
                     {t.title}
                 </TableHeaderColumn>
             ))}
