@@ -1,12 +1,14 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import ModalFormGeral from '../modal/modalFormGeral';
 import ModalListaGeral from '../modal/modalListaGeral';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles.css';
 import { titulo_secao } from '../../configapp';
-import DateDiff from '../components/calendar/dates'
+import DateDiff from '../components/calendar/dates';
+import CharLimit from '../components/characters/charLimit';
+import ListMenuGeral from '../components/list/listMenu';
 
 export default function MenuAtores({lastMovieTag}) {
 
@@ -15,9 +17,7 @@ export default function MenuAtores({lastMovieTag}) {
     { title: "Filmes", field: "filmes", search: true, iskey: false },
     { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
     { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
-
-    var result = lastMovieTag && lastMovieTag.filmes.split(", ", 3);  
-
+   
   return (
     <>
       <Card bg="dark" text="white" border="info">
@@ -28,16 +28,10 @@ export default function MenuAtores({lastMovieTag}) {
         <Card.Body>
           <Card.Title>{lastMovieTag && lastMovieTag.nome}</Card.Title>
           <Card.Text>
-            Vincent Leonard Price Jr. foi um ator norte-americano. Nascido no Missouri,
-            Price veio de uma família rica, cercada por m ambiente cultural...
-                    </Card.Text>
+            <CharLimit lastMovieTag={lastMovieTag} limitTag="140" valueTag="biografia" />
+          </Card.Text>
         </Card.Body>
-        <ListGroup className="list-group-flush">
-          {
-            result && result.map((text, i) => <ListGroupItem key={i} variant="dark">
-            {text}</ListGroupItem>)          
-          }
-        </ListGroup>
+        <ListMenuGeral lastMovieTag={lastMovieTag} valueTag="filmes" regLimitTag="3" />
         <Card.Body>
           <div className="row">
             <div className="col-6">

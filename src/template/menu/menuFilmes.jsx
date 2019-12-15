@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import ModalFormGeral from '../modal/modalFormGeral';
 import ModalListaGeral from '../modal/modalListaGeral';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,7 @@ import '../styles.css';
 import { titulo_secao } from '../../configapp';
 import DateDiff from '../components/calendar/dates';
 import CharLimit from '../components/characters/charLimit';
+import ListMenuGeral from '../components/list/listMenu';
 
 export default function MenuFilmes({lastMovieTag}) {
 
@@ -15,8 +16,6 @@ export default function MenuFilmes({lastMovieTag}) {
     { title: "Título Original", field: "titulo_original", search: true, iskey: false },
     { title: "Ano de Lançamento", field: "ano_lancamento", search: false, iskey: false },
     { title: "País de Origem", field: "pais_origem", search: true, iskey: false }];  
-        
-    var result = lastMovieTag && lastMovieTag.elenco.split(", ", 2);     
 
   return (
     <>
@@ -28,16 +27,10 @@ export default function MenuFilmes({lastMovieTag}) {
         <Card.Body>
           <Card.Title>{lastMovieTag && lastMovieTag.titulo}</Card.Title>
           <Card.Text>
-            <CharLimit lastMovieTag={lastMovieTag} limitTag="140" />
+            <CharLimit lastMovieTag={lastMovieTag} limitTag="140" valueTag="sinopse" />
           </Card.Text>
         </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem variant="dark">{lastMovieTag && lastMovieTag.diretor}&nbsp;(Direção)</ListGroupItem>
-          {
-            result && result.map((text, i) => <ListGroupItem key={i} variant="dark">
-            {text}</ListGroupItem>)          
-          }
-        </ListGroup>
+        <ListMenuGeral lastMovieTag={lastMovieTag} valueTag="elenco" regTag="diretor" regLimitTag="2" />        
         <Card.Body>
           <div className="row" width="100%">
             <div className="col-6">

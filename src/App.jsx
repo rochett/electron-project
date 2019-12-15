@@ -68,7 +68,7 @@ export default function App() {
 
         <MenuRoteiristas lastMovieTag={lastWriterElement} />
 
-        <MenuGeneros lastMovieTag={lastGenreElement} />
+        <MenuGeneros lastMovieTag={lastGenreElement}  />
 
         <MenuPremiacoes lastMovieTag={lastPrizeElement} />
 
