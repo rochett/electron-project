@@ -16,14 +16,7 @@ export default function ListMenuGeral({ lastMovieTag, tableData, valueTag, regTa
           });
       }, []);               
       
-      //result = resultMovie && resultMovie.filter( obj => obj[`${fieldTag}`] === `${filterTag}` ).slice(0, regLimitTag);      
-
-      function filterByValue(array, string) {
-        return array.filter(o =>
-            Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
-      }
-     
-      result = filterByValue(resultMovie, `${filterTag}`).slice(0, regLimitTag);      
+      result = resultMovie && resultMovie.filter(obj => obj[`${fieldTag}`].toLowerCase().includes(`${filterTag}`.toLowerCase())).slice(0, regLimitTag);                
       
     } 
 
