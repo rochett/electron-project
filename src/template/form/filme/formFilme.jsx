@@ -129,10 +129,10 @@ export default function FormFilme() {
                     <MultiGeral titleTag="Premiações" valueTag="titulo" />
                 </Tab>
 
-                <Tab eventKey="cartaz" title="Cartaz/Trailer">
+                <Tab eventKey="trailer" title="Trailer">
                     <hr></hr>
                     <Card>
-                        <Card.Header as="h5">Cartaz/Trailer</Card.Header>
+                        <Card.Header as="h5">Trailer</Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
@@ -152,12 +152,45 @@ export default function FormFilme() {
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
-                                    <FileUploadDemo />
+                                        <Form.Label>
+                                            Comentário sobre o Trailer 
+                                        </Form.Label>
+                                        <Form.Control as="textarea" rows="4" style={{ resize: 'none' }} size="sm" required />
                                 </Form.Group>
+                                <Form.Control.Feedback type="invalid">
+                                    Please choose a username.
+                                </Form.Control.Feedback>
                             </Form.Row>
                         </Card.Body>
                     </Card>
                 </Tab>
+
+                <Tab eventKey="cartaz" title="Cartaz/Curiosidades">
+                    <hr></hr>
+                    <Card>
+                        <Card.Header as="h5">Cartaz/Curiosidades</Card.Header>
+                        <Card.Body>
+                            <Form.Row>
+                                <Form.Group as={Col} md="12" controlId="validationCustom01">
+                                    <FileUploadDemo />
+                                </Form.Group>
+                            </Form.Row>
+                            <Form.Row>
+                                <Form.Group as={Col} md="12" controlId="validationCustom01">
+                                    <Form.Label>
+                                        Curiosidades sobre o Filme 
+                                    </Form.Label>
+                                    <Form.Control as="textarea" rows="4" style={{ resize: 'none' }} size="sm" required />
+                                </Form.Group>
+                                <Form.Control.Feedback type="invalid">
+                                    Please choose a username.
+                                </Form.Control.Feedback>
+                            </Form.Row>
+                           
+                        </Card.Body>
+                    </Card>
+                </Tab>
+
             </Tabs>
 
             <br></br>
