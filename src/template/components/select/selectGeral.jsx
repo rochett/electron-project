@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from "firebase/app";
 
-export default function SelectGeral({ tableData, valueTag }) {
+export default function SelectGeral({ tableData, valueTag, fieldTag }) {
 
     const [selectGeral, setSelectGeral] = useState([]);
 
@@ -12,7 +12,12 @@ export default function SelectGeral({ tableData, valueTag }) {
     }, []);
 
     return (
-        selectGeral && selectGeral.map((text, i) => <option key={i} value={text[valueTag]} >
-            {text[valueTag]}</option >)
+        <>
+            {
+                fieldTag ? selectGeral && selectGeral.map((text, i) => <option key={i} value={text[valueTag]} >
+                {text[valueTag]}&nbsp;({text[fieldTag]})</option >) : selectGeral && selectGeral.map((text, i) => <option key={i} value={text[valueTag]} >
+                {text[valueTag]}</option >)
+            } 
+        </>
     )
 }

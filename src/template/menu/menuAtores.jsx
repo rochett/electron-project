@@ -31,7 +31,7 @@ export default function MenuAtores({lastMovieTag}) {
             <CharLimit lastMovieTag={lastMovieTag} limitTag="140" valueTag="biografia" />
           </Card.Text>
         </Card.Body>
-        <ListMenuGeral lastMovieTag={lastMovieTag} valueTag="filmes" regLimitTag="3" />
+        <ListMenuGeral tableData="filmes" valueTag="titulo" fieldTag="elenco" filterTag={lastMovieTag && lastMovieTag.nome} regLimitTag="3" />
         <Card.Body>
           <div className="row">
             <div className="col-6">

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
 import FileUploadDemo from '../../components/uploader/upload-file';
-import SelectAno from '../../components/select/selectAno';
-import SelectGeral from "../../components/select/selectGeral";
 import ButtonsForm from '../../components/button/buttonsForm';
 import MultiGeral from '../../components/multilist/multilistGeral';
+import FormGeneralFields from '../../components/formgeral/formGeneralFields';
 
 export default function FormDiretor() {
     const [validated, setValidated] = useState(false);
@@ -29,76 +28,10 @@ export default function FormDiretor() {
                     <Card>
                         <Card.Header as="h5">Diretor</Card.Header>
                         <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Nome</Form.Label>
-                                    <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="Título"
-                                        size="sm"
-                                    />
-                                </Form.Group>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Nome Original</Form.Label>
-                                    <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="Título Original"
-                                        size="sm"
-                                    />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Nascimento</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectAno />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="3" controlId="validationCustom01">
-                                    <Form.Label>País de Origem</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectGeral tableData="pais_origem" valueTag="nome" />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Estréia</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectAno />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Aposentadoria</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectAno />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="3" controlId="validationCustom01">
-                                    <Form.Label>Obra Máxima</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectGeral tableData="filmes" valueTag="titulo" />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-                            </Form.Row>
+                            <FormGeneralFields />
                         </Card.Body>
                     </Card>
-                </Tab>
-
-                <Tab eventKey="filmes" title="Filmes">
-                    <hr></hr>
-                    <MultiGeral titleTag="Filmes" valueTag="titulo" />
-                </Tab>
+                </Tab>                
 
                 <Tab eventKey="biografia" title="Biografia">
                     <hr></hr>

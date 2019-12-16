@@ -1,7 +1,6 @@
 {
   "atores" : [ {
     "data_nascimento" : "1952",
-    "filmes" : "The Terminator, Terminator II, Terminator VI",
     "nome" : "Arnold Schwarzenegger",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -9,7 +8,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1959",
-    "filmes" : "Alien, Aliens, o resgate",
     "nome" : "Sylvester Stallone",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -17,7 +15,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Tom Cruise",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -25,7 +22,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Bruce Willis",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -33,7 +29,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Liam Neeson",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -41,7 +36,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Anthony Hopkins",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -49,7 +43,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Keanu Reeves",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -57,7 +50,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "O Poderoso Chefão, Drácula, de Bram Stocker",
     "nome" : "Christopher Lee",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -65,7 +57,6 @@
 	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
   }, {
     "data_nascimento" : "1947",
-    "filmes" : "Em Algum Lugar do Passado (1972), A Cidade dos Amaldiçoados (1992), Superman (1978)",
     "nome" : "Christopher Reeve",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -101,11 +92,11 @@
     "ano_lancamento" : "1984",
     "cartaz" : "",
     "diretor" : "James Cameron",
-    "elenco" : "Bruce Willis, Sylvester Stallone",
+    "elenco" : "Bruce Willis, Sylvester Stallone, Christopher Reeve",
     "genero" : "Horror",
     "pais_origem" : "EUA",
     "premiacoes" : "Globo de Ouro",
-    "roteirista" : "Ridley Scott",
+    "roteirista" : "Charles Chaplin, RidleyScott",
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "O Exterminador do Futuro",
     "titulo_original" : "The Terminator",
@@ -116,7 +107,7 @@
   }, {
     "ano_lancamento" : "1984",
     "cartaz" : "",
-    "diretor" : "James Cameron",
+    "diretor" : "Francis Ford Coppola",
     "elenco" : "Bruce Willis, Sylvester Stallone",
     "genero" : "Horror",
     "pais_origem" : "EUA",
@@ -137,7 +128,7 @@
     "genero" : "Ficção Científica",
     "pais_origem" : "EUA",
     "premiacoes" : "Oscar",
-    "roteirista" : "Ridley Scott",
+    "roteirista" : "Charles Chaplin",
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "O Vingador do Futuro",
     "titulo_original" : "Total Recall",
@@ -148,8 +139,8 @@
   }, {
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
-    "diretor" : "James Cameron",
-    "elenco" : "Bruce Willis, Sylvester Stallone",
+    "diretor" : "Francis Ford Coppola",
+    "elenco" : "Bruce Willis, Sylvester Stallone, Christopher Reeve",
     "genero" : "Ficção Científica",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -164,12 +155,12 @@
   }, {
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
-    "diretor" : "James Cameron",
-    "elenco" : "Bruce Willis, Sylvester Stallone, Arnold Schwarzenegger",
+    "diretor" : "Francis Ford Coppola",
+    "elenco" : "Bruce Willis, Sylvester Stallone, Arnold Schwarzenegger, Christopher Reeve",
     "genero" : "Horror",
     "pais_origem" : "EUA",
     "premiacoes" : "Oscar, Palma de Ouro",
-    "roteirista" : "Ridley Scott",
+    "roteirista" : "Charles Chaplin",
     "sinopse" : "Vinte e sete anos depois dos eventos que chocaram os adolescentes que faziam parte do Clube dos Perdedores, os amigos realizam uma reunião. No entanto, o reencontro se torna uma verdadeira e sangrenta batalha quando Pennywise, o palhaço, retorna.",
     "titulo" : "IT 2",
     "titulo_original" : "IT 2",
@@ -304,7 +295,6 @@
   } ],
   "roteiristas" : [ {
     "data_nascimento" : "1915",
-    "filmes" : "The Terminator, Terminator II, Terminator VI",
     "nome" : "Orson Welles",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -312,7 +302,6 @@
 	"biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong."
   }, {
     "data_nascimento" : "1899",
-    "filmes" : "Alien, Aliens, o resgate",
     "nome" : "Alfred Hitchcock",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
@@ -320,7 +309,6 @@
 	"biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong."
   }, {
     "data_nascimento" : "1889",
-    "filmes" : "O Grande Ditador (1943), Tempos Modernos (1911), O Garoto (1921)",
     "nome" : "Charles Chaplin",
     "pais_origem" : "GBR",
     "premiacoes" : "Academy Oscar",

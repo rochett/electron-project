@@ -4,7 +4,7 @@ import SelectGeral from '../select/selectGeral';
 import ButtonSwap from '../button/buttonSwap';
 import removeAccents from 'remover-acentos';
 
-export default function MultiGeral({ titleTag, valueTag }) {
+export default function MultiGeral({ titleTag, valueTag, fieldTag }) {
 
     return (
 
@@ -15,7 +15,7 @@ export default function MultiGeral({ titleTag, valueTag }) {
                     <Form.Group as={Col} md="5" controlId="validationCustom01">
                         <Form.Label>{titleTag}</Form.Label>
                         <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
-                            <SelectGeral tableData={removeAccents(titleTag).toLowerCase()} valueTag={valueTag} />
+                            <SelectGeral tableData={removeAccents(titleTag).toLowerCase()} valueTag={valueTag} fieldTag={fieldTag} />
                         </Form.Control>
                     </Form.Group>
 

@@ -53,7 +53,7 @@ export default function FormFilme() {
                             </Form.Row>
 
                             <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                <Form.Group as={Col} md="5" controlId="validationCustom01">
                                     <Form.Label>Direção</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectGeral tableData="diretores" valueTag="nome" />
@@ -61,7 +61,7 @@ export default function FormFilme() {
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="4" controlId="validationCustom01">
+                                <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectGeral tableData="pais_origem" valueTag="nome" />
@@ -69,32 +69,22 @@ export default function FormFilme() {
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="2" controlId="validationCustom01">
-                                    <Form.Label>Lançamento</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectAno />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Roteiro</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectGeral tableData="roteiristas" valueTag="nome" />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>De boa!</Form.Control.Feedback>
-                                </Form.Group>
-
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
+                                <Form.Group as={Col} md="3" controlId="validationCustom01">
                                     <Form.Label>Gênero</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectGeral tableData="generos" valueTag="titulo" />
                                     </Form.Control>
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
-                            </Form.Row>
+
+                                <Form.Group as={Col} md="1" controlId="validationCustom01">
+                                    <Form.Label>Lançamento</Form.Label>
+                                    <Form.Control as="select" required size="sm">
+                                        <SelectAno />
+                                    </Form.Control>
+                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                </Form.Group>
+                            </Form.Row>                            
                         </Card.Body>
                     </Card>
                 </Tab>
@@ -102,6 +92,11 @@ export default function FormFilme() {
                 <Tab eventKey="elenco" title="Elenco">
                     <hr></hr>
                     <MultiGeral titleTag="Atores" valueTag="nome" />
+                </Tab>
+
+                <Tab eventKey="roteiro" title="Roteiro">
+                    <hr></hr>
+                    <MultiGeral titleTag="Roteiristas" valueTag="nome" />
                 </Tab>
 
                 <Tab eventKey="sinopse" title="Sinopse">
