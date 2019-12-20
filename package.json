@@ -34,8 +34,8 @@
         "classnames": "^2.2.6",
         "electron-is-dev": "^1.0.1",
         "electron-modal-window": "^1.0.0",
-        "firebase": "^7.5.0",
-        "firebase-tools": "^7.8.1",
+        "firebase": "^7.6.0",
+        "firebase-tools": "^7.10.0",
         "jquery": "^1.9.1",
         "mdbreact": "^4.22.1",
         "moment": "^2.24.0",
@@ -79,7 +79,7 @@
     "devDependencies": {
         "concurrently": "^4.1.0",
         "electron": "^7.1.1",
-        "electron-builder": "^21.2.0",
+        "electron-builder": "^22.2.0",
         "react-scripts": "^2.1.5",
         "typescript": "^3.3.3333",
         "wait-on": "^3.2.0"
