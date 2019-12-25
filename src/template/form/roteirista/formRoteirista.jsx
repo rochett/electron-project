@@ -49,7 +49,12 @@ export default function FormRoteirista({tableData}) {
                
                 <Tab eventKey="biografia" title="Biografia">
                     <hr></hr>
-                    <TextGeral titleTag="Roteirista" />
+                    <Card>
+                        <Card.Header as="h5">Biografia</Card.Header>
+                        <Card.Body>
+                            <TextGeral titleTag="Biografia do Roteirista" fieldTag="biografia" />
+                        </Card.Body>
+                    </Card>
                 </Tab>
 
                 <Tab eventKey="premiacao" title="Premiações">

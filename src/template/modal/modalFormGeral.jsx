@@ -19,7 +19,7 @@ export default function ModalFormGeral({titleTag, formTag}) {
             case 'FormPremiacao':
                 return <FormPremiacao tableData="premiacoes" />;
             case 'FormFilme':
-                return <FormFilme />;  
+                return <FormFilme tableData="filmes" />;  
             case 'FormGenero':
                 return <FormGenero tableData="generos" />; 
             case 'FormAtor':

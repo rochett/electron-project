@@ -4,7 +4,7 @@ import firebase from "firebase/app";
 
 export default function ListMenuGeral({ lastMovieTag, tableData, valueTag, regTag, regLimitTag, fieldTag, filterTag }) {        
     
-  var result = lastMovieTag && lastMovieTag[valueTag].split(", ", regLimitTag);  
+  var result = lastMovieTag && lastMovieTag[valueTag].split(",", regLimitTag);  
   
   if (fieldTag) {    
       

@@ -12,7 +12,7 @@ export default function MultiGeral({ titleTag, valueTag, fieldTag }) {
             <Card.Header as="h5">Listagem de {titleTag}</Card.Header>
             <Card.Body>
                 <Form.Row>
-                    <Form.Group as={Col} md="5" controlId="validationCustom01">
+                    <Form.Group as={Col} md="5" controlId={removeAccents(`${titleTag}-a`).toLowerCase()} controlName={removeAccents(`${titleTag}-a`).toLowerCase()}>
                         <Form.Label>{titleTag}</Form.Label>
                         <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
                             <SelectGeral tableData={removeAccents(titleTag).toLowerCase()} valueTag={valueTag} fieldTag={fieldTag} />
@@ -20,7 +20,7 @@ export default function MultiGeral({ titleTag, valueTag, fieldTag }) {
                     </Form.Group>
 
                     <Form.Group as={Col} md="1" controlId="validationCustom01">
-                        <ButtonSwap />
+                        <ButtonSwap titleTag={removeAccents(titleTag).toLowerCase()} />
                     </Form.Group>
 
                     <Form.Group as={Col} md="6" controlId={removeAccents(titleTag).toLowerCase()} controlName={removeAccents(titleTag).toLowerCase()}>

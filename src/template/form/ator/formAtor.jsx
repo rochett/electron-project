@@ -49,7 +49,12 @@ export default function FormAtor({tableData}) {
                
                 <Tab eventKey="biografia" title="Biografia">
                     <hr></hr>
-                    <TextGeral titleTag="Ator/Atriz" />
+                    <Card>
+                        <Card.Header as="h5">Biografia</Card.Header>
+                        <Card.Body>
+                            <TextGeral titleTag="Biografia do Ator/Atriz" fieldTag="biografia" />
+                        </Card.Body>
+                    </Card>
                 </Tab>
 
                 <Tab eventKey="premiacao" title="Premiações">
