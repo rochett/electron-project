@@ -3,7 +3,7 @@ import { faCheck, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from 'react-bootstrap';
 
-export default function ButtonsForm() {
+export default function ButtonsForm() {    
 
     return (
 

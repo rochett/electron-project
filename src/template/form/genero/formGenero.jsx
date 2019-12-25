@@ -1,84 +1,36 @@
-import React, { useState } from 'react';
-import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
-import SelectAno from '../../components/select/selectAno';
-import SelectGeral from "../../components/select/selectGeral";
+import React, { useState, useEffect } from 'react';
+import { Form, Tabs, Tab } from 'react-bootstrap';
 import ButtonsForm from '../../components/button/buttonsForm';
+import FormGeneral from '../../components/formgeral/formGeneral';
+import firebase from "firebase/app";
+import SaveDataGeneral from '../../function/saveDataGeneral';
 
-export default function FormGenero() {
+export default function FormGenero({tableData}) {
 
-    const [validated, setValidated] = useState(false);
-    const handleSubmit = event => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-        setValidated(true);
-    }
+    const [selectGeral, setSelectGeral] = useState([]);
+
+    useEffect(() => {
+        firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
+            setSelectGeral(_selectGeral.val());
+        });
+    }, []);     
+
+    const handleSubmit = event => {        
+        const dados = event.currentTarget;                     
+        var dadosId=selectGeral && selectGeral[selectGeral.length - 1].id + 1;                              
+        SaveDataGeneral(tableData, dados, dadosId);                       
+        event.preventDefault();            
+        event.currentTarget.reset();                             
+    } 
 
     return (
 
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
 
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Ficha Técnica</Card.Header>
-                        <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Título</Form.Label>
-                                    <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="Título"
-                                        size="sm"
-                                    />
-                                </Form.Group>
-                                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                                    <Form.Label>Título Original</Form.Label>
-                                    <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="Título Original"
-                                        size="sm"
-                                    />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} md="4" controlId="validationCustom01">
-                                    <Form.Label>País de Origem</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectGeral tableData="pais_origem" valueTag="nome" />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-                                <Form.Group as={Col} md="4" controlId="validationCustom01">
-                                    <Form.Label>Ano de Criação</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectAno />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-                                <Form.Group as={Col} md="4" controlId="validationCustom01">
-                                    <Form.Label>Obra Máxima</Form.Label>
-                                    <Form.Control as="select" required size="sm">
-                                        <SelectGeral tableData="filmes" valueTag="titulo" />
-                                    </Form.Control>
-                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="validationCustom01">
-                                    <Form.Label>Descrição</Form.Label>
-                                    <Form.Control as="textarea" rows="4" style={{ resize: 'none', multiline: 'true' }} size="sm" required />
-                                </Form.Group>
-                            </Form.Row>
-                        </Card.Body>
-                    </Card>
+                    <FormGeneral />
                 </Tab>
             </Tabs>
 

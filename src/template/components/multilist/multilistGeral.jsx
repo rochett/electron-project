@@ -23,7 +23,7 @@ export default function MultiGeral({ titleTag, valueTag, fieldTag }) {
                         <ButtonSwap />
                     </Form.Group>
 
-                    <Form.Group as={Col} md="6" controlId="validationCustom01">
+                    <Form.Group as={Col} md="6" controlId={removeAccents(titleTag).toLowerCase()} controlName={removeAccents(titleTag).toLowerCase()}>
                         <Form.Label>Listagem de {titleTag}</Form.Label>
                         <Form.Control as="textarea" rows="6" style={{ resize: 'none', multiline: 'true' }} size="sm" required />
                     </Form.Group>

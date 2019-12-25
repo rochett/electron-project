@@ -7,7 +7,7 @@ export default function DatePicker({widthTag}){
     
     return (
         <>
-            <Form.Group as={Col} md={widthTag} controlId="validationCustom01">
+            <Form.Group as={Col} md={widthTag} controlId="data_nascimento" controlName="data_nascimento">
                 <Form.Label>Nascimento</Form.Label>
                 <InputGroup className="mb-2" size="sm">
                     <InputGroup.Prepend>

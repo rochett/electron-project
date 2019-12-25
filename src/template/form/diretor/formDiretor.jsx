@@ -1,56 +1,55 @@
-import React, { useState } from 'react';
-import { Col, Card, Form, Tabs, Tab } from 'react-bootstrap';
-import FileUploadDemo from '../../components/uploader/upload-file';
-import ButtonsForm from '../../components/button/buttonsForm';
+import React, { useState, useEffect } from 'react';
+import { Card, Form, Tabs, Tab } from 'react-bootstrap';
 import MultiGeral from '../../components/multilist/multilistGeral';
+import ButtonsForm from '../../components/button/buttonsForm';
 import FormGeneralFields from '../../components/formgeral/formGeneralFields';
+import firebase from "firebase/app";
+import '../../components/uploader/css/bootstrap.min.css' ;
+import '../../components/uploader/css/styleUpload.css' ;
+import SaveData from '../../function/saveData';
+import UploadFile from '../../components/uploader/uploadFile';
+import TextGeral from '../../components/text/textGeral';
 
-export default function FormDiretor() {
-    const [validated, setValidated] = useState(false);
+export default function FormDiretor({tableData}) {
+   
+    const [selectGeral, setSelectGeral] = useState([]);
 
-    const handleSubmit = event => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
+    useEffect(() => {
+        firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
+            setSelectGeral(_selectGeral.val());
+        });
+    }, []);
 
-        setValidated(true);
+     //Preenchendo o nome do arquivo no select
+     const handleChange = event => {
+        var fileName = event.currentTarget.value.split("\\").pop();        
+        var retorno = document.getElementById("labelFile");
+        retorno.innerHTML = fileName;
     }
+
+    const handleSubmit = event => {        
+        const dados = event.currentTarget;                     
+        var dadosId=selectGeral && selectGeral[selectGeral.length - 1].id + 1;                              
+        SaveData(tableData, dados, dadosId);                       
+        event.preventDefault();            
+        event.currentTarget.reset();            
+        var limpeza = document.getElementById("labelFile");
+        limpeza.innerHTML = '';                  
+    } 
 
     return (
 
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} encType="multipart/form-data">
 
             <Tabs defaultActiveKey="diretor" id="uncontrolled-tab-example">
                 <Tab eventKey="diretor" title="Diretor">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Diretor</Card.Header>
-                        <Card.Body>
-                            <FormGeneralFields />
-                        </Card.Body>
-                    </Card>
+                    <FormGeneralFields titleTag="Diretor" />
                 </Tab>                
 
                 <Tab eventKey="biografia" title="Biografia">
                     <hr></hr>
-                    <Card>
-                        <Card.Header as="h5">Biografia</Card.Header>
-                        <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="validationCustom01">
-                                    <Form.Label>
-                                        Informe a Biografia do Diretor
-                                    </Form.Label>
-                                    <Form.Control as="textarea" rows="4" style={{ resize: 'none' }} size="sm" required />
-                                </Form.Group>
-                                <Form.Control.Feedback type="invalid">
-                                    Please choose a username.
-                                </Form.Control.Feedback>
-                            </Form.Row>
-                        </Card.Body>
-                    </Card>
+                    <TextGeral titleTag="Diretor" />
                 </Tab>
 
                 <Tab eventKey="premiacao" title="Premiações">
@@ -63,11 +62,7 @@ export default function FormDiretor() {
                     <Card>
                         <Card.Header as="h5">Foto</Card.Header>
                         <Card.Body>
-                            <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="validationCustom01">
-                                    <FileUploadDemo />
-                                </Form.Group>
-                            </Form.Row>
+                            <UploadFile handleChange={handleChange} />
                         </Card.Body>
                     </Card>
                 </Tab>

@@ -1,0 +1,26 @@
+.custom-file-inputA {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin: 0;
+    opacity: 0;  
+  }
+  
+  .custom-file-inputA:focus ~ .custom-file-label {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);    
+  }
+  
+  .custom-file-inputA[disabled] ~ .custom-file-label,
+  .custom-file-input:disabledA ~ .custom-file-label {
+    background-color: #e9ecef;
+  }
+  
+  .custom-file-inputA:lang(en) ~ .custom-file-label::after {
+    content: "Escolha um Arquivo";
+  }
+  
+  .custom-file-inputA ~ .custom-file-label[data-browse]::after {
+    content: attr(data-browse);
+  }  

@@ -8,11 +8,10 @@ import 'primeicons/primeicons.css';
 export default class FileUploadDemo extends Component {
 
     constructor() {
-        super();
-
+        super();        
         this.onUpload = this.onUpload.bind(this);
         this.onBasicUpload = this.onBasicUpload.bind(this);
-        this.onBasicUploadAuto = this.onBasicUploadAuto.bind(this);
+        this.onBasicUploadAuto = this.onBasicUploadAuto.bind(this);  
     }
 
     onUpload(event) {
@@ -25,19 +24,20 @@ export default class FileUploadDemo extends Component {
 
     onBasicUploadAuto(event) {
         this.growl.show({ severity: 'info', summary: 'Success', detail: 'File Uploaded with Auto Mode' });
-    }
+    }      
 
-    render() {
+    render() {       
         return (
             <div>
                 <div className="content-section implementation">
                     <label>Imagem</label>
-                    <FileUpload name="demo[]" url="./upload.php" onUpload={this.onUpload}
+                    <FileUpload name="imageUpload" url="./upload.php" onUpload={this.onUpload}
                         multiple={false} accept="image/*" maxFileSize={2000000}
                         chooseLabel="Escolha o arquivo"
                         cancelLabel="Cancelar"
                         invalidFileSizeMessageSummary="ARQUIVO INVÁLIDO!"
                         invalidFileSizeMessageDetail="O tamanho máximo permitido é {0}"
+                        id="imageUpload"                        
                     />
 
                     <Growl ref={(el) => { this.growl = el; }}></Growl>

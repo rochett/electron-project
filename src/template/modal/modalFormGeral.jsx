@@ -17,19 +17,19 @@ export default function ModalFormGeral({titleTag, formTag}) {
     function renderSwitch({formTag}) {
         switch(formTag) {
             case 'FormPremiacao':
-                return <FormPremiacao />;
+                return <FormPremiacao tableData="premiacoes" />;
             case 'FormFilme':
                 return <FormFilme />;  
             case 'FormGenero':
-                return <FormGenero />; 
+                return <FormGenero tableData="generos" />; 
             case 'FormAtor':
-                return <FormAtor />;
+                return <FormAtor tableData="atores" />;
             case 'FormDiretor':
-                return <FormDiretor />;  
+                return <FormDiretor tableData="diretores" />;  
             case 'FormRoteirista':
-                return <FormRoteirista />;        
+                return <FormRoteirista tableData="roteiristas" />;        
             default:
-                return <FormPremiacao />;
+                return <FormPremiacao tableData="premiacoes" />;
         }
     }
 

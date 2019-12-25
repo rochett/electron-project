@@ -30,15 +30,19 @@
         "@fortawesome/free-solid-svg-icons": "^5.11.2",
         "@fortawesome/react-fontawesome": "^0.1.7",
         "@react-firebase/database": "^0.3.11",
+        "axios": "^0.19.0",
         "bootstrap": "^4.3.1",
         "classnames": "^2.2.6",
+        "cors": "^2.8.5",
         "electron-is-dev": "^1.0.1",
         "electron-modal-window": "^1.0.0",
+        "express": "^4.17.1",
         "firebase": "^7.6.0",
         "firebase-tools": "^7.10.0",
         "jquery": "^1.9.1",
         "mdbreact": "^4.22.1",
         "moment": "^2.24.0",
+        "multer": "^1.4.2",
         "primeicons": "^2.0.0",
         "primereact": "^3.3.2",
         "react": "^16.8.3",
@@ -65,7 +69,8 @@
         "pack": "electron-builder --dir",
         "dist": "electron-builder",
         "prebuild-win": "npm run build-web",
-        "build-win": "electron-builder --win"
+        "build-win": "electron-builder --win",
+        "server": "node server.js"
     },
     "eslintConfig": {
         "extends": "react-app"

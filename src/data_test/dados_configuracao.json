@@ -1,96 +1,141 @@
 {
   "atores" : [ {
+	"id" : 0,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-11-12",
     "data_nascimento" : "1952",
     "nome" : "Arnold Schwarzenegger",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-11-12",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 1,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-09-15",
     "data_nascimento" : "1959",
     "nome" : "Sylvester Stallone",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-09-15",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 2,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
     "nome" : "Tom Cruise",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-10-12",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 3,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
     "nome" : "Bruce Willis",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-10-12",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 4,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
     "nome" : "Liam Neeson",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-10-12",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 5,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
     "nome" : "Anthony Hopkins",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-10-12",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 6,
+    "ano_aposentadoria" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-09-15",
     "data_nascimento" : "1947",
     "nome" : "Keanu Reeves",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-09-15",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 7,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
     "nome" : "Christopher Lee",
+    "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-10-12",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 8,
+    "ano_aposentadoria" : "1992",
+    "ano_estreia" : "1992",
+    "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
+    "data_adicionado" : "2019-09-15",
     "data_nascimento" : "1947",
     "nome" : "Christopher Reeve",
+    "obra_maxima" : "O Exterminador do Futuro",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-09-15",
-	"biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA."
+    "premiacoes" : "Academy Oscar"
   } ],
   "diretores" : [ {
+	"id" : 0,
+    "ano_estreia" : "1992",
+    "biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes.",
+    "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1952",
     "filmes" : "The Terminator, Terminator II, Terminator VI",
     "nome" : "James Cameron",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-05-21",
-	"biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 1,
+    "ano_estreia" : "1992",
+    "biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes.",
+    "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1959",
     "filmes" : "Alien, Aliens, o resgate",
     "nome" : "Ridley Scott",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-05-21",
-	"biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 2,
+    "ano_estreia" : "1992",
+    "biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes.",
+    "data_adicionado" : "2019-10-27",
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão (1972), O Poderoso Chefão II (1974), Drácula de Bram Stocker (1992)",
     "nome" : "Francis Ford Coppola",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-10-27",
-	"biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes."
+    "premiacoes" : "Academy Oscar"
   } ],
   "filmes" : [ {
+	"id" : 0,
     "ano_lancamento" : "1984",
     "cartaz" : "",
+    "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+    "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+    "data_adicionado" : "2019-10-12",
     "diretor" : "James Cameron",
     "elenco" : "Bruce Willis, Sylvester Stallone, Christopher Reeve",
     "genero" : "Horror",
@@ -100,13 +145,14 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "O Exterminador do Futuro",
     "titulo_original" : "The Terminator",
-    "trailer" : "k64P4l2Wmeg",
-	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
-	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
-	"data_adicionado" : "2019-10-12"
+    "trailer" : "k64P4l2Wmeg"
   }, {
+	"id" : 1,
     "ano_lancamento" : "1984",
     "cartaz" : "",
+    "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+    "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+    "data_adicionado" : "2019-10-12",
     "diretor" : "Francis Ford Coppola",
     "elenco" : "Bruce Willis, Sylvester Stallone",
     "genero" : "Horror",
@@ -116,13 +162,14 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "Alien, o oitavo passageiro",
     "titulo_original" : "Alien",
-    "trailer" : "k64P4l2Wmeg",
-	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
-	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
-	"data_adicionado" : "2019-10-12"
+    "trailer" : "k64P4l2Wmeg"
   }, {
+	"id" : 2,
     "ano_lancamento" : "1984",
     "cartaz" : "",
+    "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+    "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+    "data_adicionado" : "2019-10-12",
     "diretor" : "James Cameron",
     "elenco" : "Bruce Willis, Sylvester Stallone",
     "genero" : "Ficção Científica",
@@ -132,13 +179,14 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "O Vingador do Futuro",
     "titulo_original" : "Total Recall",
-    "trailer" : "k64P4l2Wmeg",
-	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
-	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
-	"data_adicionado" : "2019-10-12"
+    "trailer" : "k64P4l2Wmeg"
   }, {
+	"id" : 3,
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
+    "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+    "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+    "data_adicionado" : "2019-10-12",
     "diretor" : "Francis Ford Coppola",
     "elenco" : "Bruce Willis, Sylvester Stallone, Christopher Reeve",
     "genero" : "Ficção Científica",
@@ -148,13 +196,14 @@
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
     "titulo" : "Conan, o bárbaro",
     "titulo_original" : "Conan, the barbarian",
-    "trailer" : "k64P4l2Wmeg",
-	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
-	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
-	"data_adicionado" : "2019-10-12"
+    "trailer" : "k64P4l2Wmeg"
   }, {
+	"id" : 4,
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
+    "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
+    "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
+    "data_adicionado" : "2019-10-12",
     "diretor" : "Francis Ford Coppola",
     "elenco" : "Bruce Willis, Sylvester Stallone, Arnold Schwarzenegger, Christopher Reeve",
     "genero" : "Horror",
@@ -164,166 +213,195 @@
     "sinopse" : "Vinte e sete anos depois dos eventos que chocaram os adolescentes que faziam parte do Clube dos Perdedores, os amigos realizam uma reunião. No entanto, o reencontro se torna uma verdadeira e sangrenta batalha quando Pennywise, o palhaço, retorna.",
     "titulo" : "IT 2",
     "titulo_original" : "IT 2",
-    "trailer" : "Zs0hLEHAoSs",
-	"comentario_trailer": "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
-	"curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
-	"data_adicionado" : "2019-10-12"
+    "trailer" : "Zs0hLEHAoSs"
   } ],
   "generos" : [ {
+	"id" : 0,
     "ano_criacao" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Ficção Científica",
-    "titulo_original" : "Science Fiction (SCI-FI)",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Science Fiction (SCI-FI)"
   }, {
+	"id" : 1,
     "ano_criacao" : "1901",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Edgar Rice Burroughs",
     "titulo" : "Ação",
-    "titulo_original" : "Action",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Action"
   }, {
+	"id" : 2,
     "ano_criacao" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Aventura",
-    "titulo_original" : "Adventure",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Adventure"
   }, {
+	"id" : 3,
     "ano_criacao" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Horror",
-    "titulo_original" : "Horror",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Horror"
   }, {
+	"id" : 4,
     "ano_criacao" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Mistério",
-    "titulo_original" : "Mystery",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Mystery"
   }, {
+	"id" : 5,
     "ano_criacao" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Policial",
-    "titulo_original" : "Detective",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Detective"
   }, {
+	"id" : 6,
     "ano_criacao" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Distopia",
-    "titulo_original" : "Distopy",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Distopy"
   }, {
+	"id" : 7,
     "ano_criacao" : "1980",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Wes Craven",
     "titulo" : "Meladeiro, sangue e tripa",
-    "titulo_original" : "Slasher",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Slasher"
   }, {
+	"id" : 8,
     "ano_criacao" : "1764",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "É um gênero literário, cinematográfico ou musical, que está sempre muito ligado à fantasia e à ficção especulativa,[1] e é criado com intuito de causar medo, aterrorizar. Também pode ser verificado na pintura, no desenho, nos filmes e fotografia. A abstrata ideia de terror ou o ato de transmitir o sentimento de terror ou horror pode ser verificado em todas as formas de arte. Ao decorrer da década de 1990, até os dias de hoje, o gênero também compreende um estilo de desenvolvimento de jogos eletrônicos.",
     "titulo" : "Horror",
-    "titulo_original" : "Horror",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Horror"
   } ],
   "pais_origem" : [ {
+	"id" : 0,
     "nome" : "Estados Unidos da América",
     "sigla" : "EUA"
   }, {
+	"id" : 1,
     "nome" : "Inglaterra",
     "sigla" : "GBR"
   }, {
+	"id" : 2,
     "nome" : "China",
     "sigla" : "CHI"
   }, {
+	"id" : 3,
     "nome" : "Japão",
     "sigla" : "JAP"
   }, {
+	"id" : 4,
     "nome" : "Brasil",
     "sigla" : "BRA"
   }, {
+	"id" : 5,
     "nome" : "Espanha",
     "sigla" : "ESP"
   }, {
+	"id" : 6,
     "nome" : "Holanda",
     "sigla" : "HOL"
   }, {
+	"id" : 7,
     "nome" : "Coréia do Sul",
     "sigla" : "CRS"
   }, {
+	"id" : 8,
     "nome" : "Alemanha",
     "sigla" : "ALE"
   }, {
+	"id" : 9,
     "nome" : "Turquia",
     "sigla" : "TUR"
   }, {
+	"id" : 10,
     "nome" : "Noruega",
     "sigla" : "NOR"
   }, {
+	"id" : 11,
     "nome" : "Itália",
     "sigla" : "ITA"
   }, {
+	"id" : 12,
     "nome" : "França",
     "sigla" : "FRA"
   } ],
   "premiacoes" : [ {
+	"id" : 0,
     "ano_criacao" : "1808",
     "ano_encerramento" : "",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Framboesa de Ouro",
-    "titulo_original" : "Gold Strawberry",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Gold Strawberry"
   }, {
+	"id" : 1,
     "ano_criacao" : "1901",
     "ano_encerramento" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Edgar Rice Burroughs",
     "titulo" : "Palma de Ouro",
-    "titulo_original" : "Action",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Action"
   }, {
+	"id" : 2,
     "ano_criacao" : "1808",
     "ano_encerramento" : "1808",
+    "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
     "titulo" : "Globo de Ouro",
-    "titulo_original" : "Adventure",
-	"data_adicionado" : "2019-05-21"
+    "titulo_original" : "Adventure"
   }, {
+	"id" : 3,
     "ano_criacao" : "1808",
     "ano_encerramento" : "1808",
+    "data_adicionado" : "2019-08-21",
     "descricao" : "Oficialmente chamado de Prêmio da Academia (em inglês, The Academy Awards ou The Oscar) é uma cerimônia de premiação da Academia de Artes e Ciências Cinematográficas,[2] fundada em Los Angeles (Califórnia) em 1927, que presenteia anualmente os profissionais da indústria cinematográfica com o prêmio Óscar, em reconhecimento à excelência do trabalho e conquistas na arte da produção cinematográfica.",
     "titulo" : "Oscar",
-    "titulo_original" : "The Academy Awards",
-	"data_adicionado" : "2019-08-21"
+    "titulo_original" : "The Academy Awards"
   } ],
   "roteiristas" : [ {
+	"id" : 0,
+    "biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong.",
+    "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1915",
     "nome" : "Orson Welles",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-05-21",
-	"biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 1,
+    "biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong.",
+    "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1899",
     "nome" : "Alfred Hitchcock",
     "pais_origem" : "EUA",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-05-21",
-	"biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong."
+    "premiacoes" : "Academy Oscar"
   }, {
+	"id" : 2,
+    "biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong.",
+    "data_adicionado" : "2019-02-23",
     "data_nascimento" : "1889",
     "nome" : "Charles Chaplin",
     "pais_origem" : "GBR",
-    "premiacoes" : "Academy Oscar",
-	"data_adicionado" : "2019-02-23",
-	"biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong."
+    "premiacoes" : "Academy Oscar"
   } ],
   "slider_principal" : [ {
+	"id" : 0,
     "imagem_slider" : "slider1.jpg",
     "subtitulo_slider" : "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "titulo_slider" : "Aplicativo para administração de catálogo de filmes"
   }, {
+	"id" : 1,
     "imagem_slider" : "slider2.jpg",
     "subtitulo_slider" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "titulo_slider" : "Second slide label"
   }, {
+	"id" : 2,
     "imagem_slider" : "slider3.png",
     "subtitulo_slider" : "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "titulo_slider" : "Conan, o bárbaro"

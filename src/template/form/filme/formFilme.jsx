@@ -23,7 +23,7 @@ export default function FormFilme() {
 
     return (
 
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} encType="multipart/form-data">
 
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">
