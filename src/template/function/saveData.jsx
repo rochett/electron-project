@@ -1,21 +1,14 @@
 import firebase from "firebase/app";
-import "firebase/storage";
 import moment from 'moment';
 import swal from 'sweetalert';
 
-export default function SaveData(tableData, dados, dadosId) {
-
-  var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
-  var arquivo = dados.imageUpload && dados.imageUpload.files[0].name;
-  writeUserData(dadosId, dados, hoje, arquivo);
+export default function SaveData(tableData, _dados, dadosId) {
 
   // File or Blob named mountains.jpg
 
   var storageRef = firebase.storage().ref();
 
-  var file = dados.imageUpload.files[0];
-
-  alert(file);
+  var file = _dados.image_upload;
 
   // Create the file metadata
   var metadata = {
@@ -24,7 +17,6 @@ export default function SaveData(tableData, dados, dadosId) {
 
   // Upload file and metadata to the object 'images/mountains.jpg'
   var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
-  alert(file.name);
 
   // Listen for state changes, errors, and completion of the upload.
   uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
@@ -66,6 +58,8 @@ export default function SaveData(tableData, dados, dadosId) {
       // Upload completed successfully, now we can get the download URL
       uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
         console.log('File available at', downloadURL);
+        var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
+        writeUserData(dadosId, _dados, hoje, downloadURL);
       });
     });
 
@@ -75,19 +69,19 @@ export default function SaveData(tableData, dados, dadosId) {
     icon: "success"
   });
 
-  function writeUserData(dadosId, dados, hoje, arquivo) {
+  function writeUserData(dadosId, _dados, hoje, downloadURL) {
     firebase.database().ref(`${tableData}/` + dadosId).set({
       id: dadosId,
-      nome: dados.nome.value,
-      nome_original: dados.nome_original.value,
-      biografia: dados.biografia.value,
-      ano_estreia: dados.ano_estreia.value,
-      ano_aposentadoria: dados.ano_aposentadoria.value,
-      data_nascimento: dados.data_nascimento.value,
-      pais_origem: dados.pais_origem.value,
-      premiacoes: dados.premiacoes.value,
-      foto: `${arquivo}`,
-      obra_maxima: dados.obra_maxima.value,
+      nome: _dados.nome,
+      nome_original: _dados.nome_original,
+      biografia: _dados.biografia,
+      ano_estreia: _dados.ano_estreia,
+      ano_aposentadoria: _dados.ano_aposentadoria,
+      data_nascimento: _dados.data_nascimento,
+      pais_origem: _dados.pais_origem,
+      premiacoes: _dados.premiacoes,
+      foto: `${downloadURL}`,
+      obra_maxima: _dados.obra_maxima,
       data_adicionado: `${hoje}`
     });
   }

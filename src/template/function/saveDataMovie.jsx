@@ -2,50 +2,92 @@ import firebase from "firebase/app";
 import moment from 'moment';
 import swal from 'sweetalert';
 
-export default function SaveDataMovie(tableData, dados, dadosId) {           
-    
-    var hoje=(moment(new Date()).format('YYYY-MM-DD')).toString();   
-    var arquivo = dados.imageUpload && dados.imageUpload.files[0].name;                                    
-    writeUserData(dadosId, dados, hoje, arquivo);    
-            
-    // var formData = new FormData();
-    // formData.append('file', dados.imageUpload && dados.imageUpload.files[0]);
-    // fetch('https://localhost:3000/public/images', {            
-    // method: 'POST',
-    // body: formData
-    // })
-    // .then(response => response.json())
-    // .then(_success => {
-    //     alert('OK');
-    // })
-    // .catch(error => alert(error)
-    // );     
+export default function SaveDataMovie(tableData, _dados, dadosId) {
+
+    // File or Blob named mountains.jpg
+
+    var storageRef = firebase.storage().ref();
+
+    var file = _dados.image_upload;
+
+    // Create the file metadata
+    var metadata = {
+        contentType: 'image/jpeg'
+    };
+
+    // Upload file and metadata to the object 'images/mountains.jpg'
+    var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
+
+    // Listen for state changes, errors, and completion of the upload.
+    uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+        function (snapshot) {
+            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
+            switch (snapshot.state) {
+                case firebase.storage.TaskState.PAUSED: // or 'paused'
+                    console.log('Upload is paused');
+                    break;
+                case firebase.storage.TaskState.RUNNING: // or 'running'
+                    console.log('Upload is running');
+                    break;
+                default:
+                    break;
+
+            }
+        }, function (error) {
+
+            // A full list of error codes is available at
+            // https://firebase.google.com/docs/storage/web/handle-errors
+            switch (error.code) {
+                case 'storage/unauthorized':
+                    // User doesn't have permission to access the object
+                    break;
+
+                case 'storage/canceled':
+                    // User canceled the upload
+                    break;
+                default:
+                    break;
+
+                case 'storage/unknown':
+                    // Unknown error occurred, inspect error.serverResponse
+                    break;
+            }
+        }, function () {
+            // Upload completed successfully, now we can get the download URL
+            uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                console.log('File available at', downloadURL);
+                var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
+                writeUserData(dadosId, _dados, hoje, downloadURL);
+            });
+        });
 
     swal({
         title: "Operação Concluída!",
         text: "Registro salvo com sucesso!",
         icon: "success"
-      });     
+    });
 
-    function writeUserData(dadosId, dados, hoje, arquivo) {
+    function writeUserData(dadosId, _dados, hoje, downloadURL) {
         firebase.database().ref(`${tableData}/` + dadosId).set({
             id: dadosId,
-            titulo: dados.titulo.value,
-            titulo_original: dados.titulo_original.value,
-            sinopse: dados.sinopse.value,
-            ano_lancamento: dados.ano_lancamento.value,
-            trailer: dados.trailer.value,
-            diretor: dados.diretor.value,
-            genero: dados.genero.value,
-            pais_origem: dados.pais_origem.value,
-            premiacoes: dados.premiacoes.value,
-            elenco: dados.atores.value,
-            roteirista: dados.roteiristas.value,
-            cartaz: `${arquivo}`,
-            curiosidades: dados.curiosidades.value,
-            comentario_trailer: dados.comentario_trailer.value,
+            titulo: _dados.titulo,
+            titulo_original: _dados.titulo_original,
+            sinopse: _dados.sinopse,
+            ano_lancamento: _dados.ano_lancamento,
+            trailer: _dados.trailer,
+            diretor: _dados.diretor,
+            genero: _dados.genero,
+            pais_origem: _dados.pais_origem,
+            premiacoes: _dados.premiacoes,
+            elenco: _dados.elenco,
+            roteirista: _dados.roteirista,
+            cartaz: `${downloadURL}`,
+            curiosidades: _dados.curiosidades,
+            comentario_trailer: _dados.comentario_trailer,
             data_adicionado: `${hoje}`
         });
-    }       
-    
+    }
+
 }

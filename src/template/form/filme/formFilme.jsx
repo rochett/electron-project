@@ -7,13 +7,13 @@ import ButtonsForm from '../../components/button/buttonsForm';
 import SelectGeral from "../../components/select/selectGeral";
 import MultiGeral from '../../components/multilist/multilistGeral';
 import firebase from "firebase/app";
-import '../../components/uploader/css/bootstrap.min.css' ;
-import '../../components/uploader/css/styleUpload.css' ;
+import '../../components/uploader/css/bootstrap.min.css';
+import '../../components/uploader/css/styleUpload.css';
 import SaveDataMovie from '../../function/saveDataMovie';
 import UploadFile from '../../components/uploader/uploadFile';
 import TextGeral from '../../components/text/textGeral';
 
-export default function FormFilme({tableData}) {
+export default function FormFilme({ tableData }) {
 
     const [selectGeral, setSelectGeral] = useState([]);
 
@@ -23,22 +23,38 @@ export default function FormFilme({tableData}) {
         });
     }, []);
 
-     //Preenchendo o nome do arquivo no select
-     const handleChange = event => {
-        var fileName = event.currentTarget.value.split("\\").pop();        
+    //Preenchendo o nome do arquivo no select
+    const handleChange = event => {
+        var fileName = event.currentTarget.value.split("\\").pop();
         var retorno = document.getElementById("labelFile");
         retorno.innerHTML = fileName;
     }
 
-    const handleSubmit = event => {        
-        const dados = event.currentTarget;                     
-        var dadosId=selectGeral && selectGeral[selectGeral.length - 1].id + 1;                              
-        SaveDataMovie(tableData, dados, dadosId);                       
-        event.preventDefault();            
-        event.currentTarget.reset();            
+    const handleSubmit = event => {
+        const dados = event.currentTarget;
+        const _dados = {
+            titulo: dados.titulo.value,
+            titulo_original: dados.titulo_original.value,
+            sinopse: dados.sinopse.value,
+            ano_lancamento: dados.ano_lancamento.value,
+            trailer: dados.trailer.value,
+            diretor: dados.diretor.value,
+            genero: dados.genero.value,
+            pais_origem: dados.pais_origem.value,
+            premiacoes: dados.premiacoes.value,
+            elenco: dados.atores.value,
+            roteirista: dados.roteiristas.value,
+            curiosidades: dados.curiosidades.value,
+            comentario_trailer: dados.comentario_trailer.value,
+            image_upload: dados.imageUpload.files[0]
+        };
+        var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+        SaveDataMovie(tableData, _dados, dadosId);
+        event.preventDefault();
+        event.currentTarget.reset();
         var limpeza = document.getElementById("labelFile");
-        limpeza.innerHTML = '';                  
-    } 
+        limpeza.innerHTML = '';
+    }
 
     return (
 
@@ -76,14 +92,14 @@ export default function FormFilme({tableData}) {
                                     <Form.Label>Direção</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectGeral tableData="diretores" valueTag="nome" />
-                                    </Form.Control>                                    
+                                    </Form.Control>
                                 </Form.Group>
 
                                 <Form.Group as={Col} md="3" controlId="pais_origem" controlName="pais_origem">
                                     <Form.Label>País de Origem</Form.Label>
                                     <Form.Control as="select" required size="sm">
                                         <SelectGeral tableData="pais_origem" valueTag="nome" />
-                                    </Form.Control>                                    
+                                    </Form.Control>
                                 </Form.Group>
 
                                 <Form.Group as={Col} md="3" controlId="genero" controlName="genero">
@@ -99,7 +115,7 @@ export default function FormFilme({tableData}) {
                                         <SelectAno />
                                     </Form.Control>
                                 </Form.Group>
-                            </Form.Row>                            
+                            </Form.Row>
                         </Card.Body>
                     </Card>
                 </Tab>
@@ -152,7 +168,7 @@ export default function FormFilme({tableData}) {
                                     </InputGroup>
                                 </Form.Group>
                             </Form.Row>
-                                <TextGeral titleTag="Comentário sobre o Trailer" fieldTag="comentario_trailer" />
+                            <TextGeral titleTag="Comentário sobre o Trailer" fieldTag="comentario_trailer" />
                         </Card.Body>
                     </Card>
                 </Tab>
@@ -161,9 +177,9 @@ export default function FormFilme({tableData}) {
                     <hr></hr>
                     <Card>
                         <Card.Header as="h5">Cartaz/Curiosidades</Card.Header>
-                        <Card.Body>                            
-                            <UploadFile handleChange={handleChange} />                            
-                            <TextGeral titleTag="Curiosidades sobre o Filme" fieldTag="curiosidades" />                           
+                        <Card.Body>
+                            <UploadFile handleChange={handleChange} />
+                            <TextGeral titleTag="Curiosidades sobre o Filme" fieldTag="curiosidades" />
                         </Card.Body>
                     </Card>
                 </Tab>

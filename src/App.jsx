@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import MenuFilmes from './template/menu/menuFilmes';
 import MenuAtores from './template/menu/menuAtores';
@@ -13,20 +13,21 @@ import CControlledCarousel from './template/components/carrousel/carrousel';
 import FooterApp from './template/components/footer/footerapp';
 import firebase from "firebase/app";
 import "firebase/database";
+import "firebase/storage";
 import { config } from "./config";
 
 firebase.initializeApp(config);
 
 export default function App() {
-  
+
   var getTableData = function (tableData) {
-    
+
     const [infoGeral, setInfoGeral] = useState([]);
 
     useEffect(() => {
-        firebase.database().ref(`${tableData}/`).on('value', function (_infoGeral) {
-            setInfoGeral(_infoGeral.val());
-        });
+      firebase.database().ref(`${tableData}/`).on('value', function (_infoGeral) {
+        setInfoGeral(_infoGeral.val());
+      });
     }, []);
 
     return infoGeral && infoGeral[infoGeral.length - 1];
@@ -41,7 +42,7 @@ export default function App() {
 
 
   return (
-    
+
     <div className="container-fluid">
 
       <CControlledCarousel />
@@ -68,7 +69,7 @@ export default function App() {
 
         <MenuRoteiristas lastMovieTag={lastWriterElement} />
 
-        <MenuGeneros lastMovieTag={lastGenreElement}  />
+        <MenuGeneros lastMovieTag={lastGenreElement} />
 
         <MenuPremiacoes lastMovieTag={lastPrizeElement} />
 

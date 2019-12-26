@@ -17,8 +17,7 @@ export default function ImagemCartaz({ tableData, valueTag }) {
 
     return (
 
-        <Image src={lastElement && require(`../../../image/${lastElement[valueTag]}`)} fluid className="img-responsive" alt="Cartaz" />
-
+        <Image src={lastElement && lastElement[valueTag]} fluid className="img-responsive" alt="Cartaz" />
     );
 
 }
