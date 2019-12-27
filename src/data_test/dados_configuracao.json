@@ -1,136 +1,174 @@
 {
   "atores" : [ {
-	"id" : 0,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-11-12",
     "data_nascimento" : "1952",
+    "id" : 0,
     "nome" : "Arnold Schwarzenegger",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 1,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-09-15",
     "data_nascimento" : "1959",
+    "id" : 1,
     "nome" : "Sylvester Stallone",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 2,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
+    "id" : 2,
     "nome" : "Tom Cruise",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 3,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
+    "id" : 3,
     "nome" : "Bruce Willis",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 4,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
+    "id" : 4,
     "nome" : "Liam Neeson",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 5,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
+    "id" : 5,
     "nome" : "Anthony Hopkins",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 6,
     "ano_aposentadoria" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-09-15",
     "data_nascimento" : "1947",
+    "id" : 6,
     "nome" : "Keanu Reeves",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 7,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-10-12",
     "data_nascimento" : "1947",
+    "id" : 7,
     "nome" : "Christopher Lee",
     "obra_maxima" : "o Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 8,
     "ano_aposentadoria" : "1992",
     "ano_estreia" : "1992",
     "biografia" : "Christopher D'Olier Reeve foi um ator, diretor, produtor e ativista norte-americano. Seu papel mais famoso foi como o Super-Homem, que ele interpretou numa série de quatro filmes famosos, começando por Superman, para qual foi indicado a um prêmio BAFTA.",
     "data_adicionado" : "2019-09-15",
     "data_nascimento" : "1947",
+    "id" : 8,
     "nome" : "Christopher Reeve",
     "obra_maxima" : "O Exterminador do Futuro",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
+  }, {
+    "ano_aposentadoria" : "Em Atividade",
+    "ano_estreia" : "1994",
+    "biografia" : "Aaron Eckhart é um ator norte-americano de cinema e teatro. Nascido na Califórnia, mudou-se para a Inglaterra aos treze anos, acompanhando sua família. Anos mais tarde, deu início à sua carreira em peças escolares, antes de se mudar para Sydney, Austrália, para cursar o último ano do ensino médio; não chegou, no entanto, a se formar, e obteve seu diploma através de um curso de educação para adultos, formando-se em seguida na Universidade Brigham Young (BYUH) em 1994, com um diploma de Bachelor of Fine Arts em Cinema. Por boa parte da década de 1990 viveu em Nova York como um ator em busca de emprego.",
+    "data_adicionado" : "2019-12-25",
+    "data_nascimento" : "1968-03-12",
+    "foto" : "scooby-doo-on-zombie-island-526214245fd63.jpg",
+    "id" : 9,
+    "nome" : "Aaron Eckhart",
+    "nome_original" : "Aaron Edward Eckhart",
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "premiacoes" : "Indicado ao Globo de Ouro "
+  }, {
+    "ano_aposentadoria" : "Em Atividade",
+    "ano_estreia" : "1999",
+    "biografia" : "Abigail Breslin é uma atriz e cantora americana. Ela é uma das atrizes mais jovens a ser nomeada para um Oscar. Breslin apareceu em seu primeiro comercial quando tinha três anos de idade (1999), e em seu primeiro filme, Signs (2002), com a idade de cinco anos. Em 2014, envolveu-se em um escândalo ao ter feito uma música para seu ex-namorado Michael Clifford, da banda 5 Seconds Of Summer, onde ela em vários momentos cita características ruins do cantor. Abigail negou que a música, intitulada You Suck (em português: Você é Uma Droga), fosse para ele.",
+    "data_adicionado" : "2019-12-25",
+    "data_nascimento" : "1996-04-14",
+    "foto" : "Abigail_Breslin_by_Gage_Skidmore.jpg",
+    "id" : 10,
+    "nome" : "Abigail Breslin",
+    "nome_original" : "Abigail Kathleen Breslin",
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "premiacoes" : "Prêmio do Sind. dos Atores"
+  }, {
+    "ano_aposentadoria" : "Em Atividade",
+    "ano_estreia" : "1998",
+    "biografia" : "Aaron Paul  é um ator norte-americano conhecido por estrelar a série Breaking Bad como Jesse Pinkman, pelo qual ganhou inúmeros prêmios, tendo vencido três Primetime Emmy Awards de Melhor Ator Coadjuvante em Série Dramática.",
+    "data_adicionado" : "2019-12-25",
+    "data_nascimento" : "1979-08-27",
+    "foto" : "Aaron_Paul_by_Gage_Skidmore_2.jpg",
+    "id" : 11,
+    "nome" : "Aaron Paul",
+    "nome_original" : "Aaron Paul Sturtevant",
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "premiacoes" : "Prêmio do Sind. dos Atores"
   } ],
   "diretores" : [ {
-	"id" : 0,
     "ano_estreia" : "1992",
     "biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes.",
     "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1952",
     "filmes" : "The Terminator, Terminator II, Terminator VI",
+    "id" : 0,
     "nome" : "James Cameron",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 1,
     "ano_estreia" : "1992",
     "biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes.",
     "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1959",
     "filmes" : "Alien, Aliens, o resgate",
+    "id" : 1,
     "nome" : "Ridley Scott",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 2,
     "ano_estreia" : "1992",
     "biografia" : "É um produtor, roteirista e cineasta ítalo-norte-americano. Coppola é mais reconhecido internacionalmente por dirigir uma das mais aclamadas trilogias da história do cinema, The Godfather e clássicos como Apocalypse Now, The Conversation, Bram Stoker's Dracula, entre outros, e por escrever o roteiro do premiado Patton. É filho do compositor Carmine Coppola, e pai da cineasta Sofia Coppola, avô da também cineasta Gia Coppola, tio do ator Nicolas Cage e irmão da atriz Talia Shire. Já foi indicado 14 vezes ao Oscar e venceu por 5 vezes.",
     "data_adicionado" : "2019-10-27",
     "data_nascimento" : "1947",
     "filmes" : "O Poderoso Chefão (1972), O Poderoso Chefão II (1974), Drácula de Bram Stocker (1992)",
+    "id" : 2,
     "nome" : "Francis Ford Coppola",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   } ],
   "filmes" : [ {
-	"id" : 0,
     "ano_lancamento" : "1984",
     "cartaz" : "",
     "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
@@ -138,7 +176,8 @@
     "data_adicionado" : "2019-10-12",
     "diretor" : "James Cameron",
     "elenco" : "Bruce Willis, Sylvester Stallone, Christopher Reeve",
-    "genero" : "Horror",
+    "genero" : "Horror,Fantasia",
+    "id" : 0,
     "pais_origem" : "EUA",
     "premiacoes" : "Globo de Ouro",
     "roteirista" : "Charles Chaplin, RidleyScott",
@@ -147,15 +186,15 @@
     "titulo_original" : "The Terminator",
     "trailer" : "k64P4l2Wmeg"
   }, {
-	"id" : 1,
     "ano_lancamento" : "1984",
     "cartaz" : "",
     "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
     "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
     "data_adicionado" : "2019-10-12",
     "diretor" : "Francis Ford Coppola",
-    "elenco" : "Bruce Willis, Sylvester Stallone",
+    "elenco" : "Bruce Willis, Sylvester Stallone,Aaron Eckhart",
     "genero" : "Horror",
+    "id" : 1,
     "pais_origem" : "EUA",
     "premiacoes" : "Oscar",
     "roteirista" : "Ridley Scott",
@@ -164,7 +203,6 @@
     "titulo_original" : "Alien",
     "trailer" : "k64P4l2Wmeg"
   }, {
-	"id" : 2,
     "ano_lancamento" : "1984",
     "cartaz" : "",
     "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
@@ -173,6 +211,7 @@
     "diretor" : "James Cameron",
     "elenco" : "Bruce Willis, Sylvester Stallone",
     "genero" : "Ficção Científica",
+    "id" : 2,
     "pais_origem" : "EUA",
     "premiacoes" : "Oscar",
     "roteirista" : "Charles Chaplin",
@@ -181,15 +220,15 @@
     "titulo_original" : "Total Recall",
     "trailer" : "k64P4l2Wmeg"
   }, {
-	"id" : 3,
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
     "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
     "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
     "data_adicionado" : "2019-10-12",
     "diretor" : "Francis Ford Coppola",
-    "elenco" : "Bruce Willis, Sylvester Stallone, Christopher Reeve",
-    "genero" : "Ficção Científica",
+    "elenco" : "Bruce Willis,Sylvester Stallone,Christopher Reeve,Aaron Eckhart",
+    "genero" : "Ficção Científica,Fantasia",
+    "id" : 3,
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar",
     "roteirista" : "Ridley Scott",
@@ -198,15 +237,15 @@
     "titulo_original" : "Conan, the barbarian",
     "trailer" : "k64P4l2Wmeg"
   }, {
-	"id" : 4,
     "ano_lancamento" : "1984",
     "cartaz" : "it2_poster.jpg",
     "comentario_trailer" : "Trailer veiculado antes (e/ou) após sessões cinematográficas antes de sua estréia oficial.",
     "curiosidades" : "IT 2 é baseado no livro IT, do autor norte-americano Stephen King. Sua primeira versão cinematográfica foi produzida nos anos 90.",
     "data_adicionado" : "2019-10-12",
     "diretor" : "Francis Ford Coppola",
-    "elenco" : "Bruce Willis, Sylvester Stallone, Arnold Schwarzenegger, Christopher Reeve",
+    "elenco" : "Bruce Willis,Sylvester Stallone,Arnold Schwarzenegger,Christopher Reeve",
     "genero" : "Horror",
+    "id" : 4,
     "pais_origem" : "EUA",
     "premiacoes" : "Oscar, Palma de Ouro",
     "roteirista" : "Charles Chaplin",
@@ -214,194 +253,658 @@
     "titulo" : "IT 2",
     "titulo_original" : "IT 2",
     "trailer" : "Zs0hLEHAoSs"
+  }, {
+    "ano_lancamento" : "1996",
+    "cartaz" : "https://firebasestorage.googleapis.com/v0/b/supercinema-a476c.appspot.com/o/images%2Fit__chapter_2__2019__fan_poster_by_amazing_zuckonit_dd3aihv-pre.jpg?alt=media&token=28fac816-74d8-4c9c-af2b-fd5e8a4209a0",
+    "comentario_trailer" : "Trailer exibido na TV (aberta/cabo) e cinemas.",
+    "curiosidades" : "Minority Report é baseado no conto homônimo do escritor norte-americano Philip K. Dick.",
+    "data_adicionado" : "2019-12-25",
+    "diretor" : "Ridley Scott",
+    "elenco" : "Tom Cruise,Anthony Hopkins,Keanu Reeves,Aaron Eckhart",
+    "genero" : "Ficção Científica,Fantasia",
+    "id" : 5,
+    "pais_origem" : "Estados Unidos da América",
+    "premiacoes" : "Oscar",
+    "roteirista" : "Charles Chaplin",
+    "sinopse" : "No ano de 2054, há um sistema que permite que crimes sejam previstos com precisão, o que faz com que a taxa de assassinatos caia para zero. O problema começa a acontecer quando o detetive John Anderton, um dos principais agentes no combate ao crime, descobre que foi previsto um assassinato que ele mesmo irá cometer, colocando em dúvida sua reputação ou a confiabilidade do sistema.",
+    "titulo" : "Minority Report, A Nova Lei",
+    "titulo_original" : "Minority Report",
+    "trailer" : "lG7DGMgfOb8"
+  }, {
+    "ano_lancamento" : "1998",
+    "cartaz" : "https://firebasestorage.googleapis.com/v0/b/supercinema-a476c.appspot.com/o/images%2Ft3.jpg?alt=media&token=092aa37d-8ac7-48ef-940c-734df9c41427",
+    "comentario_trailer" : "vvxcxv xcv xcvxcvxvxv",
+    "curiosidades" : "xcvcxv xc xcvxcv",
+    "data_adicionado" : "2019-12-26",
+    "diretor" : "James Cameron",
+    "elenco" : "Arnold Schwarzenegger,Abigail Breslin",
+    "genero" : "Ficção Científica",
+    "id" : 6,
+    "pais_origem" : "Estados Unidos da América",
+    "premiacoes" : "Oscar,Prêmio Romy Schneider,BAFTA",
+    "roteirista" : "Charles Chaplin",
+    "sinopse" : "sdfsd sdfsdsdfsdfd",
+    "titulo" : "T3",
+    "titulo_original" : "Terminator 3 - Rise of the machines",
+    "trailer" : "ZT0F7pXZIJE"
+  }, {
+    "ano_lancamento" : "1988",
+    "cartaz" : "https://firebasestorage.googleapis.com/v0/b/supercinema-a476c.appspot.com/o/images%2Ffilmes%2Fdie_hard_ver2.jpg?alt=media&token=de06740b-df1e-4a24-8700-81b481480e7a",
+    "comentario_trailer" : "Trailer oficial dos cinemas e TV, exibido em 1988.",
+    "curiosidades" : "O cartaz do filme só ganhou a foto de Bruce Willis, quando se tornou sucesso de bilheteria, após sua estréia.",
+    "data_adicionado" : "2019-12-27",
+    "diretor" : "Ridley Scott",
+    "elenco" : "Bruce Willis",
+    "genero" : "Ação",
+    "id" : 7,
+    "pais_origem" : "Estados Unidos da América",
+    "premiacoes" : "Indicado ao Oscarem 1989",
+    "roteirista" : "Charles Chaplin",
+    "sinopse" : "John McClane (Bruce Willis) é um detetive de Nova York que está indo a Los Angeles para se encontrar com sua esposa (Bonnie Bedelia), que trabalha em uma empresa japonesa. Porém, ao chegar no prédio onde ela trabalha, percebe que o edifício está sendo assaltado por um bando de terroristas e decide atrapalhar seus planos para resgatar sua mulher.",
+    "titulo" : "Duro de Matar",
+    "titulo_original" : "Die Hard",
+    "trailer" : "jaJuwKCmJbY"
   } ],
   "generos" : [ {
-	"id" : 0,
     "ano_criacao" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 0,
     "titulo" : "Ficção Científica",
     "titulo_original" : "Science Fiction (SCI-FI)"
   }, {
-	"id" : 1,
     "ano_criacao" : "1901",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Edgar Rice Burroughs",
+    "id" : 1,
     "titulo" : "Ação",
     "titulo_original" : "Action"
   }, {
-	"id" : 2,
     "ano_criacao" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 2,
     "titulo" : "Aventura",
     "titulo_original" : "Adventure"
   }, {
-	"id" : 3,
     "ano_criacao" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 3,
     "titulo" : "Horror",
     "titulo_original" : "Horror"
   }, {
-	"id" : 4,
     "ano_criacao" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 4,
     "titulo" : "Mistério",
     "titulo_original" : "Mystery"
   }, {
-	"id" : 5,
     "ano_criacao" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 5,
     "titulo" : "Policial",
     "titulo_original" : "Detective"
   }, {
-	"id" : 6,
     "ano_criacao" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 6,
     "titulo" : "Distopia",
     "titulo_original" : "Distopy"
   }, {
-	"id" : 7,
     "ano_criacao" : "1980",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Wes Craven",
+    "id" : 7,
     "titulo" : "Meladeiro, sangue e tripa",
     "titulo_original" : "Slasher"
   }, {
-	"id" : 8,
     "ano_criacao" : "1764",
     "data_adicionado" : "2019-05-21",
     "descricao" : "É um gênero literário, cinematográfico ou musical, que está sempre muito ligado à fantasia e à ficção especulativa,[1] e é criado com intuito de causar medo, aterrorizar. Também pode ser verificado na pintura, no desenho, nos filmes e fotografia. A abstrata ideia de terror ou o ato de transmitir o sentimento de terror ou horror pode ser verificado em todas as formas de arte. Ao decorrer da década de 1990, até os dias de hoje, o gênero também compreende um estilo de desenvolvimento de jogos eletrônicos.",
+    "id" : 8,
     "titulo" : "Horror",
     "titulo_original" : "Horror"
+  }, {
+    "ano_criacao" : "1899",
+    "data_adicionado" : "2019-12-25",
+    "descricao" : "Fantasia é um gênero da ficção em que se usa geralmente fenômenos sobrenaturais, mágicos e outros como um elemento primário do enredo, tema ou configuração. Muitas obras dentro do gênero ocorrem em mundos imaginários onde há criaturas mágicas e itens mágicos.",
+    "id" : 9,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Inglaterra",
+    "titulo" : "Fantasia",
+    "titulo_original" : "Fantasy"
+  }, {
+    "ano_criacao" : "1914",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "A comédia é o uso de humor nas artes cênicas. Também pode estar presente em um espetáculo, história, ou até mesmo em um filme, que recorre intensivamente ao humor. De forma geral, \"comédia\" é o que é engraçado, que faz rir. Independentemente se está relacionado com pessoas e pode ter um sentido \"agressivo\" não deixa de ser comédia. Uma das principais características da comédia é o engano. Frequentemente, o cómico está baseado no fato de um ou mais personagens serem enganados ao longo de toda a peça. À medida que o personagem vai sendo enganado e que o equívoco vai aumentando, o público vai rindo cada vez mais.",
+    "id" : 10,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Inglaterra",
+    "titulo" : "Comédia ",
+    "titulo_original" : "Comedy"
+  }, {
+    "ano_criacao" : "1930",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Comédia romântica é um subgênero cinematográfico dos gêneros comédia e romance. O formato básico de uma comédia romântica é muito anterior ao cinema. Muitas das peças de teatro de William Shakespeare, como Muito barulho por nada e Sonho de uma noite de verão se situam dentro do gênero da comédia romântica. ",
+    "id" : 11,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Comédia Romântica",
+    "titulo_original" : "Romantic Comedy"
+  }, {
+    "ano_criacao" : "1936",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Comédia dramática (também conhecido como dramédia) é a junção dos gêneros comédia e drama. Estas obras geralmente apresentam uma história séria, porém abordada de forma engraçada. Os enredos normalmente giram em torno de um personagem que deseja conseguir alguma coisa que será sua realização pessoal ou que é obrigado a conseguir para que isso não lhe cause nenhum sofrimento. As tentativas, geralmente frustradas, acabam provocando risos da plateia. Um dos pré-requisitos desse gênero é que, após muitos risos e lágrimas, o personagem consiga o que deseja e tenha um final feliz.",
+    "id" : 12,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Inglaterra",
+    "titulo" : "Comédia Dramática",
+    "titulo_original" : "Dramatic Comedy"
+  }, {
+    "ano_criacao" : "1920",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Documentário é uma produção artística, via de regra um filme, não-ficcional, que se caracteriza principalmente pelo compromisso da exploração da realidade. Isto não significa que represente a realidade «tal como ela é»: o documentário, assim como o cinema de ficção, é uma representação parcial e subjetiva da realidade.",
+    "id" : 13,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Documentário",
+    "titulo_original" : "Documentary"
   } ],
   "pais_origem" : [ {
-	"id" : 0,
+    "id" : 0,
     "nome" : "Estados Unidos da América",
     "sigla" : "EUA"
   }, {
-	"id" : 1,
+    "id" : 1,
     "nome" : "Inglaterra",
     "sigla" : "GBR"
   }, {
-	"id" : 2,
+    "id" : 2,
     "nome" : "China",
     "sigla" : "CHI"
   }, {
-	"id" : 3,
+    "id" : 3,
     "nome" : "Japão",
     "sigla" : "JAP"
   }, {
-	"id" : 4,
+    "id" : 4,
     "nome" : "Brasil",
     "sigla" : "BRA"
   }, {
-	"id" : 5,
+    "id" : 5,
     "nome" : "Espanha",
     "sigla" : "ESP"
   }, {
-	"id" : 6,
+    "id" : 6,
     "nome" : "Holanda",
     "sigla" : "HOL"
   }, {
-	"id" : 7,
+    "id" : 7,
     "nome" : "Coréia do Sul",
     "sigla" : "CRS"
   }, {
-	"id" : 8,
+    "id" : 8,
     "nome" : "Alemanha",
     "sigla" : "ALE"
   }, {
-	"id" : 9,
+    "id" : 9,
     "nome" : "Turquia",
     "sigla" : "TUR"
   }, {
-	"id" : 10,
+    "id" : 10,
     "nome" : "Noruega",
     "sigla" : "NOR"
   }, {
-	"id" : 11,
+    "id" : 11,
     "nome" : "Itália",
     "sigla" : "ITA"
   }, {
-	"id" : 12,
+    "id" : 12,
     "nome" : "França",
     "sigla" : "FRA"
+  }, {
+    "id" : 13,
+    "nome" : "Portugal",
+    "sigla" : "POR"
+  }, {
+    "id" : 14,
+    "nome" : "Dinamarca",
+    "sigla" : "DIN"
+  }, {
+    "id" : 15,
+    "nome" : "Argentina",
+    "sigla" : "ITA"
+  }, {
+    "id" : 16,
+    "nome" : "México",
+    "sigla" : "MEX"
+  }, {
+    "id" : 17,
+    "nome" : "Colômbia",
+    "sigla" : "ITA"
+  }, {
+    "id" : 18,
+    "nome" : "Chile",
+    "sigla" : "CHI"
+  }, {
+    "id" : 19,
+    "nome" : "Canadá",
+    "sigla" : "CAN"
+  }, {
+    "id" : 20,
+    "nome" : "Venezuela",
+    "sigla" : "VEN"
+  }, {
+    "id" : 21,
+    "nome" : "Bolívia",
+    "sigla" : "BOL"
+  }, {
+    "id" : 22,
+    "nome" : "Guatemala",
+    "sigla" : "GUA"
+  }, {
+    "id" : 23,
+    "nome" : "África do Sul",
+    "sigla" : "AFS"
+  }, {
+    "id" : 24,
+    "nome" : "Arábia Saudita",
+    "sigla" : "ARS"
+  }, {
+    "id" : 25,
+    "nome" : "Áustria",
+    "sigla" : "AUS"
+  }, {
+    "id" : 26,
+    "nome" : "Austrália",
+    "sigla" : "AUT"
+  }, {
+    "id" : 27,
+    "nome" : "Bélgica",
+    "sigla" : "BEL"
+  }, {
+    "id" : 28,
+    "nome" : "Hungria",
+    "sigla" : "HUN"
+  }, {
+    "id" : 29,
+    "nome" : "Bulgária",
+    "sigla" : "BUL"
+  }, {
+    "id" : 30,
+    "nome" : "Camarões",
+    "sigla" : "CAM"
+  }, {
+    "id" : 31,
+    "nome" : "República Tcheca",
+    "sigla" : "RET"
+  }, {
+    "id" : 32,
+    "nome" : "Costa Rica",
+    "sigla" : "COR"
+  }, {
+    "id" : 33,
+    "nome" : "Cuba",
+    "sigla" : "CUB"
+  }, {
+    "id" : 34,
+    "nome" : "Egito",
+    "sigla" : "EGT"
+  }, {
+    "id" : 35,
+    "nome" : "Finlândia",
+    "sigla" : "FIN"
+  }, {
+    "id" : 36,
+    "nome" : "Equador",
+    "sigla" : "EQU"
+  }, {
+    "id" : 37,
+    "nome" : "República Dominicana",
+    "sigla" : "RED"
+  }, {
+    "id" : 38,
+    "nome" : "Eslováquia",
+    "sigla" : "ESL"
+  }, {
+    "id" : 39,
+    "nome" : "Eslovênia",
+    "sigla" : "ESV"
+  }, {
+    "id" : 40,
+    "nome" : "Ucrânia",
+    "sigla" : "UCR"
+  }, {
+    "id" : 41,
+    "nome" : "Filipinas",
+    "sigla" : "FIL"
+  }, {
+    "id" : 42,
+    "nome" : "Gana",
+    "sigla" : "GAN"
+  }, {
+    "id" : 43,
+    "nome" : "Geórgia",
+    "sigla" : "GEO"
+  }, {
+    "id" : 44,
+    "nome" : "Grécia",
+    "sigla" : "GRE"
+  }, {
+    "id" : 45,
+    "nome" : "Índia",
+    "sigla" : "IND"
+  }, {
+    "id" : 46,
+    "nome" : "Haiti",
+    "sigla" : "HAI"
+  }, {
+    "id" : 47,
+    "nome" : "Honduras",
+    "sigla" : "HON"
+  }, {
+    "id" : 48,
+    "nome" : "Indonésia",
+    "sigla" : "INS"
+  }, {
+    "id" : 49,
+    "nome" : "Irlanda",
+    "sigla" : "IRL"
+  }, {
+    "id" : 50,
+    "nome" : "Israel",
+    "sigla" : "ISR"
   } ],
   "premiacoes" : [ {
-	"id" : 0,
     "ano_criacao" : "1808",
     "ano_encerramento" : "",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 0,
     "titulo" : "Framboesa de Ouro",
     "titulo_original" : "Gold Strawberry"
   }, {
-	"id" : 1,
     "ano_criacao" : "1901",
     "ano_encerramento" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Edgar Rice Burroughs",
+    "id" : 1,
     "titulo" : "Palma de Ouro",
     "titulo_original" : "Action"
   }, {
-	"id" : 2,
     "ano_criacao" : "1808",
     "ano_encerramento" : "1808",
     "data_adicionado" : "2019-05-21",
     "descricao" : "Gênero criado por Mary Shelley",
+    "id" : 2,
     "titulo" : "Globo de Ouro",
     "titulo_original" : "Adventure"
   }, {
-	"id" : 3,
     "ano_criacao" : "1808",
     "ano_encerramento" : "1808",
     "data_adicionado" : "2019-08-21",
     "descricao" : "Oficialmente chamado de Prêmio da Academia (em inglês, The Academy Awards ou The Oscar) é uma cerimônia de premiação da Academia de Artes e Ciências Cinematográficas,[2] fundada em Los Angeles (Califórnia) em 1927, que presenteia anualmente os profissionais da indústria cinematográfica com o prêmio Óscar, em reconhecimento à excelência do trabalho e conquistas na arte da produção cinematográfica.",
+    "id" : 3,
     "titulo" : "Oscar",
     "titulo_original" : "The Academy Awards"
+  }, {
+    "ano_criacao" : "1995",
+    "data_adicionado" : "2019-12-25",
+    "descricao" : "Os Prémios ou Prêmios Screen Actors Guild (no original, em inglês: Screen Actors Guild Awards, também conhecidos como SAG Awards) são prêmios anuais promovidos pela Screen Actors Guild‐American Federation of Television and Radio Artists (SAG-AFTRA) com intuito de reconhecer desempenhos excepcionais no cinema e na televisão. A estatueta atribuída, uma figura masculina nua segurando uma máscara de comédia e uma de tragédia, é denominada de \"The Actor\" (O Ator). Além de ter dezesseis polegadas (41 cm) de altura e pesar mais de doze libras (5,4 kg), é fundida em bronze sólido e produzida pela American Fine Arts Foundry, em Burbank, Califórnia.[1]\n\nDesde 1995, os SAG Awards têm sido um dos principais eventos de premiação em Hollywood. As indicações para os prêmios vêm de dois comitês, um para cinema e outro para televisão, cada um com 2100 membros do sindicato, escolhidos ao acaso por ele, de um total de 165 mil integrantes (em 2012) disponíveis para votarem. Tidos como um dos mais prestigiados da indústria, são uma \"prévia\" segura para o Oscar nas categorias de atuação.[2][3][4]\n\nDe 1998 a 2006, eram transmitidos pelo canal TNT, e, desde 2007, são transmitidos por ele e pelo TBS. Este último também os exibe para a América Latina, com tradução simultânea em espanhol e, no caso do Brasil, em português. Em Portugal, são transmitidos todos os anos pelo canal AXN.\n\nOs SAG Awards inaugurais foram transmitidos em direto/ao vivo a 25 de fevereiro de 1995. A segunda edição foi transmitida ao vivo do Auditório Cívico de Santa Monica, enquanto prêmios subsequentes foram e são realizados no Shrine Auditorium, em Los Angeles.[5] Em 4 de dezembro de 2017, foi anunciado que a cerimonia teria seu primeiro anfitrião em seus 24 anos de história: a atriz Kristen Bell.[6]",
+    "id" : 4,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmio do Sind. dos Atores",
+    "titulo_original" : "Screen Actors Guild Award"
+  }, {
+    "ano_criacao" : "1949",
+    "data_adicionado" : "2019-12-25",
+    "descricao" : "O Emmy Award, ou simplesmente Emmy, é o maior e mais prestigioso prêmio atribuído a programas e profissionais de televisão. É equivalente ao Oscar (para o cinema), o Tony (para o teatro), e ao Grammy (para a música). Os prêmios são apresentados em diferentes cerimônias realizadas durante cada ano. Os dois eventos que recebem maior cobertura dos meios de comunicação são os Emmy do Primetime e os Prêmios Emmy do Daytime que reconhecem o trabalho de destaque na programação americana do horário nobre e entretenimento diurno, respectivamente. Além das categorias tradicionais, profissionais de trás das câmeras também são premiados - estes em uma cerimônia à parte, geralmente realizada dias antes, o Creative Arts Emmys. Também existem premiações específicas, com cerimônias próprias, para programação esportiva (Sports Emmys), jornalismo (News and Documentary Emmys), tecnologia (Technology and Engineering Emmys), programação regional (Regional Emmys) e produção audiovisual escolar e universitária. Além desses, a IATAS realiza os Prêmios Emmy Internacional que são concedidos à programação de televisão produzida e, inicialmente, exibida fora dos Estados Unidos, cuja premiação geralmente ocorre no final do ano. Existem três organizações relacionadas, mas autônomas, presentes nos Prémios Emmy: \n Academia de Artes & Ciências Televisivas que premia o entretenimento de horário nobre/primetime (excluindo o desporto);\n Academia Nacional de Artes & Ciências Televisivas que reconhece o horário diurno, desporto, notícias, e programação de documentários; e\n Academia Internacional das Artes & Ciências Televisivas que honra programas de origem estrangeira (fora dos Estados Unidos).",
+    "id" : 5,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmio Emmy",
+    "titulo_original" : "Emmy Award"
+  }, {
+    "ano_criacao" : "1951",
+    "data_adicionado" : "2019-12-25",
+    "descricao" : "O Festival Internacional de Cinema de Berlim (em alemão: Internationale Filmfestspiele Berlin, IFB), também conhecido como Berlinale, é um dos mais importantes festivais de cinema da Europa e do mundo. Ele acontece todos os anos em Fevereiro (em 2005 de 10 de Fevereiro a 20 de Fevereiro) em Berlim, e foi inaugurado em 1951 por uma iniciativa dos Estados Unidos, que ocupavam parte da cidade depois da Segunda Guerra Mundial. O júri sempre deu ênfase a filmes representativos de todos os lugares do mundo, do antigo bloco de leste bem como dos países ocidentais. Os prêmios são chamados de Urso de Ouro e Urso de Prata sendo que o urso é o símbolo de Berlim.",
+    "id" : 6,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Alemanha",
+    "titulo" : "Festival de Berlim",
+    "titulo_original" : "Internationale Filmfestspiele Berlin, IFB"
+  }, {
+    "ano_criacao" : "1984",
+    "data_adicionado" : "2019-12-25",
+    "descricao" : "Os Prêmios Independent Spirit, às vezes traduzido como Prêmio Espírito Independente, (no original, em inglês: Film Independent Spirit Awards (abreviado também como \"Spirit Awards\" e originalmente conhecido como FINDIE ou Friends of Independents Awards)) são concedidos anualmente desde 1984 a cineastas independentes. Os vencedores eram tipicamente premiados com pirâmides de vidro acrílico contendo cordas suspensas representando os pequenos orçamentos de filmes independentes. Desde 2006, os vencedores recebem um troféu de metal que representa um pássaro com asas abertas pousado sobre um pilar, que contém os cadarços do projeto anterior trançados envolto de si. Em 1986, o evento foi renomeado para Independent Spirit Awards. Atualmente chamada de Film Independent Spirit Awards, a premiação é organizada pela Film Independent, organização de artes sem fins lucrativos que também produz o Festival de Cinema de Los Angeles e cuja missão é defender a independência criativa na narrativa visual e apoiar uma comunidade de artistas que incorporam diversidade, inovação e singularidade de visão. No mês de novembro, seus membros votam para determinar os vencedores dos prêmios, os quais são entregues no ano posterior. Conhecidos por sua credibilidade, tornou-se um termômetro para o Oscar quando se refere a filmes independentes na corrida.​ A cerimônia de premiação é realizada dentro de uma tenda na praia de Santa Mônica, Califórnia, geralmente no dia antes do Oscar (desde 1999, originalmente no sábado anterior), e transmitida ao vivo pela rede de televisão IFC, assim como pela Hollywood Suite para o Canadá e pela A&E à América Latina.",
+    "id" : 7,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmios Independent Spirit",
+    "titulo_original" : "Film Independent Spirit Awards"
+  }, {
+    "ano_criacao" : "1992",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Os Prêmios MTV Movie & TV (no original, em inglês: MTV Movie & TV Awards; antigamente MTV Movie Awards) é uma cerimônia de entrega de prêmios do cinema e da televisão estadunidense transmitida anualmente pela MTV. Os indicados e eventuais vencedores são escolhidos pelo público através das plataformas digitais da emissora. A primeira cerimônia ocorreu em 1992 e a mais recente será em 18 de junho de 2018, em Nova Iorque, Califórnia. O icônico troféu recebido pelos vencedores representa um recipiente contendo pipoca, sendo popularmente alcunhado de \"Golden Popcorn\" (ou \"Pipoca Dourada\"). Em 2017, a premiação mudou de nome para MTV Movie & TV Awards, que unirá prêmios para filmes e programas de televisão. Também foi anunciado que a premiação não incluirá mais categorias distintas de gêneros.",
+    "id" : 8,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmios MTV Movie & TV",
+    "titulo_original" : "MTV Movie & TV Awards;"
+  }, {
+    "ano_criacao" : "1962",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Producers Guild of America (PGA) é uma associação comercial que representa produtores de cinema, televisão e mídias diversas dos Estados Unidos. A comunidade do PGA inclui mais de 7000 membros de inúmeros estúdios de produção midiática de todo o mundo. Com sede em Los Angeles, os atuais presidentes são Gary Lucchesi e Lori McCreary. Em 1991, o Producers Guild of America criou o Laurel Awards, renomeado Producers Guild Awards em 2002, que condecora os melhores filmes e séries do ano anterior.",
+    "id" : 9,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Sind. dos Produtores da América",
+    "titulo_original" : "Producers Guild of America (PGA)"
+  }, {
+    "ano_criacao" : "1997",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Os Prêmios Satellite (no original, em inglês: Satellite Awards) são prêmios entregues anualmente pela International Press Academy para honrar as melhores realizações da indústria cinematográfica e televisiva. A premiação era originalmente conhecida por Golden Satellite Awards desde 1997. Os indicados ao prêmio são anunciados no mês de novembro, ao passo que o evento de premiação ocorre a cada ano no Hotel InterContinental, em Century City, Los Angeles. Antigamente, a cerimônia dividia as categorias em Comédia ou Musical e Drama, porém, a partir de 2012, elas foram unificadas. Tidos como um dos prêmios mais prestigiados da indústria, são considerados uma previsão das premiações para o Oscar. ",
+    "id" : 10,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmios Satellite",
+    "titulo_original" : "Satellite Awards"
+  }, {
+    "ano_criacao" : "1972",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Prêmio Saturno (no original em inglês Saturn Award) é uma premiação organizada pela Academia de Filmes de Ficção Científica, Fantasia e Horror dos Estados Unidos e concedida aos mais destacados filmes, produções televisivas e profissionais nos gêneros de ficção científica, horror e fantasia. O prêmio foi criado por Donald A. Reed, que acreditava que os filmes do gênero não recebiam o prestígio e apreciação quanto os gêneros já consagrados do cinema estadunidense. Tendo um estrutura interna baseada nos Prêmios da Academia (Oscar), os membros da Academia de Filmes de Ficção Científica, Fantasia e Horror elegem, em votação, os melhores em cada categoria. A primeira cerimônia ocorreu em 1973, premiando as produções do ano anterior.",
+    "id" : 11,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmio Saturno",
+    "titulo_original" : "Saturn Award"
+  }, {
+    "ano_criacao" : "2019",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Screen Actors Guild (SAG) é um sindicato que representa mais de 120 mil actores dos Estados Unidos da América. O sindicato garante aos seus membros condições de trabalho seguras, um salário mínimo nas produções da União (aproximadamente 1620 dólares por semana), e trata dos pagamentos residuais. Desde 1995, o sindicato nomeia membros para os Prémios Screen Actors Guild.",
+    "id" : 12,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Screen Actors Guild ",
+    "titulo_original" : "Screen Actors Guild (SAG)"
+  }, {
+    "ano_criacao" : "1978",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Festival Sundance de Cinema tem início em agosto de 1978, como Utah/U.S. Film Festival. Em 1985, o Sundance Institute, fundado anos antes por Robert Redford com o intuito de ajudar novos cineastas, incorpora o festival a seus programas, dirigindo o evento para as produções independentes. O festival acontece todos os anos, no mês de janeiro, em Park City, Utah. É o maior festival de cinema independente do país.",
+    "id" : 13,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Sundance",
+    "titulo_original" : "Sundance"
+  }, {
+    "ano_criacao" : "1998",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Os Prémios Teen Choice (no original em inglês Teen Choice Awards) é uma premiação que tem como foco principal os adolescentes, as cerimônias são apresentadas anualmente pela FOX. A primeira cerimônia ocorreu em 1999. As categorias são baseadas nas realizações do ano, seja em música, filme, esporte, televisão, moda e muito mais, os vencedores são decididos por meio de votos, os jovens e adolescentes representam a maioria dos eleitores. Os vencedores são premiados com pranchas de surf autênticas, estilizadas com grafix, que muda a cada ano. A cerimônia criou o spin-off de premiações adolescentes no YouTube.",
+    "id" : 14,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmios Teen Choice",
+    "titulo_original" : "Teen Choice Awards"
+  }, {
+    "ano_criacao" : "1951",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Writers Guild of America (em português: Sindicato de Roteiristas dos Estados Unidos) é um esforço conjunto de dois diferentes sindicatos dos Estados Unidos que representam os roteiristas da televisão e cinema: O Writers Guild of America, East (WGAE) com sede em Nova Iorque e o Writers Guild of America, West (WGAW) com sede em Los Angeles.[1] Ambos organizam em conjunto o Writers Guild of America Award.",
+    "id" : 15,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Sind. de Roteiristas dos EUA",
+    "titulo_original" : "Writers Guild of America"
+  }, {
+    "ano_criacao" : "1979",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Young Artist Awards (originalmente conhecido como o Youth In Film Award) é um prêmio outorgado pela Young Artist Association, uma organização sem fins lucrativos, fundada em 1978, para honrar a excelência de artistas jovens e para fornecer bolsas de estudo para jovens artistas que podem ser fisicamente e/ou financeiramente desafiadas. Apresentado pela primeira vez em 1979, o Young Artist Awards foi a primeira organização criada especificamente para reconhecer e atribuir as contribuições de artistas sob a idade de 21 anos nas áreas de cinema, televisão, teatro e música. A cerimônia do 1st Youth In Film Awards foi realizada em outubro de 1979, no Hotel Sheraton Universal em Hollywood para homenagear proeminentes jovens artistas da época de 1978/1979.[7][8][9] A mais recente cerimônia foi a 34th Annual Young Artist Awards, honrando os jovens artistas do ano 2012, foi realizada no Sportsmen's Lodge em Studio City, Califórnia, em 5 de maio de 2013. ",
+    "id" : 16,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Young Artist Awards",
+    "titulo_original" : "Youth In Film Award"
+  }, {
+    "ano_criacao" : "1988",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Kids' Choice Awards (acrônimo KCA) é uma premiação do cinema, televisão, e música americana criado em 1988 pelo canal de TV a cabo Nickelodeon. Atualmente é a maior prêmiação infantil do planeta. É exibido anualmente no mês de março ou abril, os indicados são escolhidos pelos telespectadores do canal de gênero infantil, pelo site do próprio. O prêmio do KCA e de suas versões internacionais, é um dirigível laranja escrito Nickelodeon em branco, que é chamado de blimp. ",
+    "id" : 17,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Kids' Choice Awards",
+    "titulo_original" : "Nickelodeon Kids' Choice Awards"
+  }, {
+    "ano_criacao" : "2003",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "A Spike Video Game Awards (também conhecida como VGA e, depois, VGX) foi uma premiação anual apresentada pelo canal Spike de 2003 a 2013 que reconhecia os melhores jogos de videogame e computador de cada ano. A atração ganhou muita atenção desde sua criação, já que as premiações de jogos não eram comuns na época, consolidando-se como o evento mais importante de premiações no ramo até seu fim. Geoff Keighley, um de seus apresentadores, criou seu próprio programa de premiações de jogos eletrônicos após o abandono da Spike, o nomeando The Game Awards.",
+    "id" : 18,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Spike Video Game Awards",
+    "titulo_original" : "Spike Video Game Awards"
+  }, {
+    "ano_criacao" : "1999",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Irish Film and Television Awards (IFTA) são prêmios cujo objectivo é o de comemorar e premiar a comunidade cinematográfica e televisiva da Irlanda. A cerimónia é considerada a mais prestigiada da Irlanda, e os prêmios foram concedidos pela primeira vez em 1999.",
+    "id" : 19,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "IFTA",
+    "titulo_original" : "Irish Film and Television Awards (IFTA)"
+  }, {
+    "ano_criacao" : "1976",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O César (em francês: César du cinéma) é um prêmio anual do cinema francês atribuído aos profissionais da \"sétima arte\", em várias categorias, a fim de premiar as melhores produções francesas. A cerimônia de entrega, também conhecida por A Noite dos Césares, ocorre no Teatro do Châtelet, em Paris, França. Atualmente existem vinte e uma categorias[2], mais oito do que na primeira edição.",
+    "id" : 20,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "França",
+    "titulo" : "César",
+    "titulo_original" : "César du cinéma"
+  }, {
+    "ano_criacao" : "1955",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Palma de Ouro (francês: Palme d'or) é o prêmio de maior prestígio do Festival de Cinema de Cannes, entregue desde o ano de 1955 ao filme vencedor do Festival. A escolha anual é feita por um júri composto de profissionais internacionais ligados ao cinema, entre filmes inscritos de diversas partes do mundo, e se realiza durante o mês de maio na cidade de Cannes, na Riviera francesa. Alguns dos mais notáveis diretores da história do cinema já tiveram seus filmes premiados em oportunidades diferentes, entre eles Federico Fellini, Luchino Visconti, Francis Ford Coppola, Mike Leigh, Claude Lelouch, Akira Kurosawa, Roman Polanski, Michael Haneke, Martin Scorsese e Quentin Tarantino. Sendo um dos mais importantes e prestigiados prêmios de cinema do mundo - cujo desenho atual foi feito pela desenhista Caroline Scheufele-Gruosi e é usado desde 1997 - a Palma de Ouro foi atribuída pela primeira vez ao filme norte-americano Marty, de Delbert Mann, e desde então, só não foi entregue entre os anos de 1964 e 1974, quando foi substituída pelo Grand Prix, prêmio que, até 1954, era dado em Cannes como prêmio principal, e que ainda hoje é outorgado aos filmes que são premiados com um simbólico segundo lugar, com o nome de Grand Prix du Juri. Assim, apenas os filmes premiados entre 1955 e 1963 e de 1975 aos dias de hoje são considerados oficialmente como vencedores da Palma de Ouro. Em maio de 1968, quando uma onda de protestos estudantis eclodiu em Paris e espalhou-se por toda a França, o Festival foi cancelado e não houve premiação.",
+    "id" : 21,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "França",
+    "titulo" : "Palma de Ouro",
+    "titulo_original" : "Palme d'or"
+  }, {
+    "ano_criacao" : "1981",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Prêmio Patrick-Dewaere (em francês: Prix Patrick-Dewaere) é um prêmio de cinema francês para atores de revelação na indústria cinematográfica francesa. O prêmio, concedido anualmente em Paris junto com o prêmio Romy Schneider (para atrizes de revelação), é nomeado em honra do ator francês Patrick Dewaere (1947-1982) desde 2008. A denominação anterior, o Prêmio Jean Gabin (Prix Jean Gabin), concedido desde 1981, foi abandonada pelos organizadores por causa de uma disputa jurídica com os descendentes do ator francês Jean Gabin (1904-1976).",
+    "id" : 22,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "França",
+    "titulo" : "Prêmio Patrick-Dewaere",
+    "titulo_original" : "Prix Patrick-Dewaere"
+  }, {
+    "ano_criacao" : "1984",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Prêmio Romy Schneider (em francês: Prix Romy-Schneider) é um prêmio de cinema francês para atrizes de revelação na indústria cinematográfica francesa. O prêmio, concedido anualmente desde 1984 em Paris, junto com o prêmio Patrick-Dewaere (para atores de revelação, antigo Prêmio Jean Gabin), é nomeado em honra da atriz alemã Romy Schneider (1938-1982).",
+    "id" : 23,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Estados Unidos da América",
+    "titulo" : "Prêmio Romy Schneider",
+    "titulo_original" : "Prix Romy-Schneider"
+  }, {
+    "ano_criacao" : "2007",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Asian Film Awards é uma premiação de cinema apresentada anualmente em Hong Kong pela Hong Kong International Film Festival Society (em Cantonês: 香港國際電影節) em reconhecimento aos melhores cineastas e artistas do cinema da Ásia.",
+    "id" : 24,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "China",
+    "titulo" : "Asian Film Awards",
+    "titulo_original" : "Asian Film Awards (AFA)"
+  }, {
+    "ano_criacao" : "1956",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "O Prêmio David di Donatello, comumente chamado de Prêmio David, é o mais importante prêmio cinematográfico da Itália, concedido pela Academia Italiana de Cinema e considerado o Oscar italiano. O prêmio é entregue desde 1956 e seu nome é uma homenagem à estátua em bronze de mesmo nome, David (Donatello), de autoria do escultor Donato di Niccoló di Betto Bardi.",
+    "id" : 25,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Itália",
+    "titulo" : "David di Donatello",
+    "titulo_original" : "Prêmio David"
+  }, {
+    "ano_criacao" : "1949",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "Leão de Ouro (em italiano: Leone d'Oro) é o galardão máximo concedido pelo júri do Festival Internacional de Cinema de Veneza (Mostra Internazionale d'Arte Cinematografica), um festival internacional de cinema que é realizado anualmente em Veneza, Itália, desde 1932. O prêmio foi introduzido em 1949 pelo comitê organizador e agora é considerado como um dos prêmios mais ilustres da indústria cinematográfica. Em 1970, um segundo Leão de Ouro foi introduzido, este é um prêmio honorário para as pessoas que fizeram uma contribuição importante para o cinema. O prêmio é uma representação do Leão de São Marcos — o leão alado que aparecia na bandeira da República de Veneza. Anteriormente, o prêmio equivalente foi o Grande Prêmio Internacional de Veneza, concedido entre 1946 e 1948. Antes disso, de 1934 a 1942, os prêmios mais importantes foram a Coppa Mussolini para Melhor Filme Italiano e Melhor Filme Estrangeiro. Nenhum Leão de Ouro foi concedido entre 1969 e 1979. De acordo com o site oficial da Bienal, este hiato foi um resultado do Leão de 1968 sendo concedido ao radicalmente experimental Die Artisten in der Zirkuskuppel: Ratlos. O site diz que os prêmios \"ainda tinha um estatuto que remonta à era fascista e não poderia escamotear o clima político geral. Sessenta e oito produziu uma fratura dramática com o passado.\"",
+    "id" : 26,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Itália",
+    "titulo" : "Leão de Ouro",
+    "titulo_original" : "Leone d'Oro"
+  }, {
+    "ano_criacao" : "1947",
+    "data_adicionado" : "2019-12-26",
+    "descricao" : "A British Academy of Film and Television Arts (BAFTA, \"Academia Britânica de Artes do Cinema e Televisão\", em inglês), é uma academia britânica responsável pela premiação anual à excelência de trabalhos realizados em cinema, televisão, filmes e em outros meios audiovisuais. É a segunda maior premiação da história do cinema, e um indicativo da importância do BAFTA como meio de reconhecer atores, diretores, produtores e demais profissionais de cinema, televisão e artes audiovisuais, pode ser medida por sua jocosa denominação de Oscar Britânico. É reconhecida também pela sua exigência e rigidez em suas análises de méritos.",
+    "id" : 27,
+    "obra_maxima" : "O Exterminador do Futuro",
+    "pais_origem" : "Inglaterra",
+    "titulo" : "BAFTA",
+    "titulo_original" : "British Academy of Film and Television Arts"
   } ],
   "roteiristas" : [ {
-	"id" : 0,
     "biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong.",
     "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1915",
+    "id" : 0,
     "nome" : "Orson Welles",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 1,
     "biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong.",
     "data_adicionado" : "2019-05-21",
     "data_nascimento" : "1899",
+    "id" : 1,
     "nome" : "Alfred Hitchcock",
     "pais_origem" : "EUA",
     "premiacoes" : "Academy Oscar"
   }, {
-	"id" : 2,
     "biografia" : "Sir Chales Spencer Chaplin foi um ator, diretor, compositor, roteirista, produtor e editor britânico. Chaplin foi um dos atores da era do cinema mudo, notabilizado pelo uso de mímica e da comédia pastelão. É bastante conhecido pelos seus filmes O Imigrante, O Garoto, Em Busca do Ouro (este considerado por ele seu melhor filme), O Circo, Luzes da Cidade, Tempos Modernos, O Grande Ditador, Luzes da Ribalta, Um Rei em Nova Iorque e A Condessa de Hong Kong.",
     "data_adicionado" : "2019-02-23",
     "data_nascimento" : "1889",
+    "id" : 2,
     "nome" : "Charles Chaplin",
     "pais_origem" : "GBR",
     "premiacoes" : "Academy Oscar"
   } ],
   "slider_principal" : [ {
-	"id" : 0,
+    "id" : 0,
     "imagem_slider" : "slider1.jpg",
     "subtitulo_slider" : "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "titulo_slider" : "Aplicativo para administração de catálogo de filmes"
   }, {
-	"id" : 1,
+    "id" : 1,
     "imagem_slider" : "slider2.jpg",
     "subtitulo_slider" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "titulo_slider" : "Second slide label"
   }, {
-	"id" : 2,
+    "id" : 2,
     "imagem_slider" : "slider3.png",
     "subtitulo_slider" : "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "titulo_slider" : "Conan, o bárbaro"

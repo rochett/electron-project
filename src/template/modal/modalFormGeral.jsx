@@ -27,7 +27,7 @@ export default function ModalFormGeral({titleTag, formTag}) {
             case 'FormDiretor':
                 return <FormDiretor tableData="diretores" />;  
             case 'FormRoteirista':
-                return <FormRoteirista tableData="roteiristas" />;        
+                return <FormRoteirista tableData="roteiristas" />;         
             default:
                 return <FormPremiacao tableData="premiacoes" />;
         }

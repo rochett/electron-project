@@ -1,10 +1,15 @@
-import React from 'react';
-import { Col, Card, Form } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col, Card, Form, InputGroup, Modal } from 'react-bootstrap';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectAno from '../../components/select/selectAno';
 import SelectGeral from "../../components/select/selectGeral";
 import DatePicker from '../../components/calendar/datepicker';
+import FormPais from '../../form/pais/formPais';
 
 export default function FormGeneralFields({ titleTag }){   
+
+    const [show, setShow] = useState(false);
     
     return (
         
@@ -36,9 +41,14 @@ export default function FormGeneralFields({ titleTag }){
                     <DatePicker widthTag="2" />
                     <Form.Group as={Col} md="3" controlId="pais_origem" controlName="pais_origem">
                         <Form.Label>País de Origem</Form.Label>
-                        <Form.Control as="select" required size="sm">
-                            <SelectGeral tableData="pais_origem" valueTag="nome" />
-                        </Form.Control>                    
+                        <InputGroup className="mb-2" size="sm">
+                            <InputGroup.Prepend onClick={() => setShow(true)}>
+                                <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faCalendar} /></InputGroup.Text>
+                            </InputGroup.Prepend>
+                            <Form.Control as="select" required size="sm">
+                                <SelectGeral tableData="pais_origem" valueTag="nome" />
+                            </Form.Control>  
+                        </InputGroup>                   
                     </Form.Group>
                     <Form.Group as={Col} md="2" controlId="ano_estreia" controlName="ano_estreia">
                         <Form.Label>Estréia</Form.Label>
@@ -61,7 +71,19 @@ export default function FormGeneralFields({ titleTag }){
                     </Form.Group>
                 </Form.Row>
             </Card.Body>
-        </Card>
+
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}                
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title><FontAwesomeIcon icon={faCalendar} />&nbsp;Dados do País de Origem</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
+            </Modal>
+
+        </Card>        
         
     )
 
