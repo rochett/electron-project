@@ -16,7 +16,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId) {
     };
 
     // Upload file and metadata to the object 'images/mountains.jpg'
-    var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
+    var uploadTask = storageRef.child('images/' + tableData +'/' + file.name).put(file, metadata);
 
     // Listen for state changes, errors, and completion of the upload.
     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
@@ -59,7 +59,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId) {
             uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
                 console.log('File available at', downloadURL);
                 var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
-                writeUserData(dadosId, _dados, hoje, downloadURL);
+                writeUserData(dadosId, _dados, hoje, downloadURL, tableData);
             });
         });
 
@@ -69,25 +69,48 @@ export default function SaveDataMovie(tableData, _dados, dadosId) {
         icon: "success"
     });
 
-    function writeUserData(dadosId, _dados, hoje, downloadURL) {
-        firebase.database().ref(`${tableData}/` + dadosId).set({
-            id: dadosId,
-            titulo: _dados.titulo,
-            titulo_original: _dados.titulo_original,
-            sinopse: _dados.sinopse,
-            ano_lancamento: _dados.ano_lancamento,
-            trailer: _dados.trailer,
-            diretor: _dados.diretor,
-            genero: _dados.genero,
-            pais_origem: _dados.pais_origem,
-            premiacoes: _dados.premiacoes,
-            elenco: _dados.elenco,
-            roteirista: _dados.roteirista,
-            cartaz: `${downloadURL}`,
-            curiosidades: _dados.curiosidades,
-            comentario_trailer: _dados.comentario_trailer,
-            data_adicionado: `${hoje}`
-        });
+    function writeUserData(dadosId, _dados, hoje, downloadURL, tableData) {
+        switch(tableData) {
+            case 'filmes':
+                firebase.database().ref(`${tableData}/` + dadosId).set({
+                    id: dadosId,
+                    titulo: _dados.titulo,
+                    titulo_original: _dados.titulo_original,
+                    sinopse: _dados.sinopse,
+                    ano_lancamento: _dados.ano_lancamento,
+                    trailer: _dados.trailer,
+                    diretor: _dados.diretor,
+                    genero: _dados.genero,
+                    pais_origem: _dados.pais_origem,
+                    premiacoes: _dados.premiacoes,
+                    elenco: _dados.elenco,
+                    roteirista: _dados.roteirista,
+                    cartaz: `${downloadURL}`,
+                    curiosidades: _dados.curiosidades,
+                    comentario_trailer: _dados.comentario_trailer,
+                    data_adicionado: `${hoje}`
+                });
+                break;
+            case 'atores' || 'diretores':
+                firebase.database().ref(`${tableData}/` + dadosId).set({
+                    id: dadosId,
+                    nome: _dados.nome,
+                    nome_original: _dados.nome_original,
+                    biografia: _dados.biografia,
+                    ano_estreia: _dados.ano_estreia,
+                    ano_aposentadoria: _dados.ano_aposentadoria,
+                    data_nascimento: _dados.data_nascimento,
+                    pais_origem: _dados.pais_origem,
+                    premiacoes: _dados.premiacoes,
+                    foto: `${downloadURL}`,
+                    obra_maxima: _dados.obra_maxima,
+                    data_adicionado: `${hoje}`
+                });
+                break;
+            default:
+                break;    
+                    
+        }            
     }
 
 }

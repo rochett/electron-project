@@ -28,9 +28,21 @@ export default function FormDiretor({tableData}) {
     }
 
     const handleSubmit = event => {        
-        const dados = event.currentTarget;                     
+        const dados = event.currentTarget;
+        const _dados = {
+            nome: dados.nome.value,
+            nome_original: dados.nome_original.value,
+            biografia: dados.biografia.value,
+            ano_estreia: dados.ano_estreia.value,
+            ano_aposentadoria: dados.ano_aposentadoria.value,
+            data_nascimento: dados.data_nascimento.value,
+            pais_origem: dados.pais_origem.value,
+            premiacoes: dados.premiacoes.value,
+            obra_maxima: dados.obra_maxima.value,
+            image_upload: dados.imageUpload.files[0]
+        };                     
         var dadosId=selectGeral && selectGeral[selectGeral.length - 1].id + 1;                              
-        SaveData(tableData, dados, dadosId);                       
+        SaveData(tableData, _dados, dadosId);                       
         event.preventDefault();            
         event.currentTarget.reset();            
         var limpeza = document.getElementById("labelFile");

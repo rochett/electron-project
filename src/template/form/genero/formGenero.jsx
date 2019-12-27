@@ -3,7 +3,7 @@ import { Form, Tabs, Tab } from 'react-bootstrap';
 import ButtonsForm from '../../components/button/buttonsForm';
 import FormGeneral from '../../components/formgeral/formGeneral';
 import firebase from "firebase/app";
-import SaveDataGeneral from '../../function/saveDataGeneral';
+import SaveData from '../../function/saveData';
 
 export default function FormGenero({tableData}) {
 
@@ -16,9 +16,17 @@ export default function FormGenero({tableData}) {
     }, []);     
 
     const handleSubmit = event => {        
-        const dados = event.currentTarget;                     
+        const dados = event.currentTarget;
+        const _dados = {
+            titulo: dados.titulo.value,
+            titulo_original: dados.titulo_original.value,
+            descricao: dados.descricao.value,
+            ano_criacao: dados.ano_criacao.value,
+            pais_origem: dados.pais_origem.value,
+            obra_maxima: dados.obra_maxima.value,
+        };                     
         var dadosId=selectGeral && selectGeral[selectGeral.length - 1].id + 1;                              
-        SaveDataGeneral(tableData, dados, dadosId);                       
+        SaveData(tableData, _dados, dadosId);                       
         event.preventDefault();            
         event.currentTarget.reset();                             
     } 

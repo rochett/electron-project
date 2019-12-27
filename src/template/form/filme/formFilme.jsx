@@ -9,7 +9,7 @@ import MultiGeral from '../../components/multilist/multilistGeral';
 import firebase from "firebase/app";
 import '../../components/uploader/css/bootstrap.min.css';
 import '../../components/uploader/css/styleUpload.css';
-import SaveDataMovie from '../../function/saveDataMovie';
+import SaveData from '../../function/saveData';
 import UploadFile from '../../components/uploader/uploadFile';
 import TextGeral from '../../components/text/textGeral';
 
@@ -49,7 +49,7 @@ export default function FormFilme({ tableData }) {
             image_upload: dados.imageUpload.files[0]
         };
         var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
-        SaveDataMovie(tableData, _dados, dadosId);
+        SaveData(tableData, _dados, dadosId);
         event.preventDefault();
         event.currentTarget.reset();
         var limpeza = document.getElementById("labelFile");
