@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Card, Form, InputGroup, Modal } from 'react-bootstrap';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectAno from '../../components/select/selectAno';
 import SelectGeral from "../../components/select/selectGeral";
@@ -44,7 +44,7 @@ export default function FormGeneralFields({ titleTag }) {
                         <Form.Label>País de Origem</Form.Label>
                         <InputGroup className="mb-2" size="sm">
                             <InputGroup.Prepend onClick={() => setShow(true)}>
-                                <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faCalendar} /></InputGroup.Text>
+                                <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faGlobeAmericas} /></InputGroup.Text>
                             </InputGroup.Prepend>
                             <Form.Control as="select" required size="sm">
                                 <SelectGeral tableData="pais_origem" valueTag="nome" />
@@ -80,7 +80,7 @@ export default function FormGeneralFields({ titleTag }) {
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title><FontAwesomeIcon icon={faCalendar} />&nbsp;Dados do País de Origem</Modal.Title>
+                    <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
                 </Modal.Header>
                 <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
             </Modal>
