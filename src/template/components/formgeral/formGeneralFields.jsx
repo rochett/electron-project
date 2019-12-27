@@ -6,15 +6,16 @@ import SelectAno from '../../components/select/selectAno';
 import SelectGeral from "../../components/select/selectGeral";
 import DatePicker from '../../components/calendar/datepicker';
 import FormPais from '../../form/pais/formPais';
+import '../../../template/styles.css';
 
-export default function FormGeneralFields({ titleTag }){   
+export default function FormGeneralFields({ titleTag }) {
 
     const [show, setShow] = useState(false);
-    
+
     return (
-        
+
         <Card>
-            <Card.Header as="h5">{ titleTag }</Card.Header>
+            <Card.Header as="h5">{titleTag}</Card.Header>
             <Card.Body>
                 <Form.Row>
                     <Form.Group as={Col} md="6" controlId="nome" controlName="nome">
@@ -47,34 +48,35 @@ export default function FormGeneralFields({ titleTag }){
                             </InputGroup.Prepend>
                             <Form.Control as="select" required size="sm">
                                 <SelectGeral tableData="pais_origem" valueTag="nome" />
-                            </Form.Control>  
-                        </InputGroup>                   
+                            </Form.Control>
+                        </InputGroup>
                     </Form.Group>
                     <Form.Group as={Col} md="2" controlId="ano_estreia" controlName="ano_estreia">
                         <Form.Label>Estréia</Form.Label>
                         <Form.Control as="select" required size="sm">
                             <SelectAno />
-                        </Form.Control>                    
+                        </Form.Control>
                     </Form.Group>
                     <Form.Group as={Col} md="2" controlId="ano_aposentadoria" controlName="ano_aposentadoria">
                         <Form.Label>Aposentadoria</Form.Label>
                         <Form.Control as="select" required size="sm">
                             <option value="Em Atividade">Em Atividade</option>
                             <SelectAno />
-                        </Form.Control>                   
+                        </Form.Control>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="obra_maxima" controlName="obra_maxima">
                         <Form.Label>Obra Máxima</Form.Label>
                         <Form.Control as="select" required size="sm">
                             <SelectGeral tableData="filmes" valueTag="titulo" />
-                        </Form.Control>                   
+                        </Form.Control>
                     </Form.Group>
                 </Form.Row>
             </Card.Body>
 
             <Modal
                 show={show}
-                onHide={() => setShow(false)}                
+                onHide={() => setShow(false)}
+                dialogClassName="Modal-Medio"
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <Modal.Header closeButton>
@@ -83,8 +85,8 @@ export default function FormGeneralFields({ titleTag }){
                 <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
             </Modal>
 
-        </Card>        
-        
+        </Card>
+
     )
 
 }
