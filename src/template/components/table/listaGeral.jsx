@@ -12,5 +12,5 @@ export default function ListaGeral({ tableData, titulos }) {
         });
     }, []);
 
-    return <TableGeral characterData={snapshot} titulos={titulos} />
+    return <TableGeral characterData={snapshot} titulos={titulos} tableData={tableData} />
 }

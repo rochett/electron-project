@@ -4,13 +4,14 @@ import { faTrashAlt, faEdit, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import swal from 'sweetalert';
+import firebase from "firebase/app";
 
-export default function Table({ characterData: dados, titulos }) {
+export default function Table({ characterData: dados, titulos, tableData }) {
 
     function handleClickDelete(id) {
         swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
+            title: "Deseja realmente EXCLUIR?",
+            text: "Uma vez removida, não será possível recuperar a informação!",
             icon: "warning",
             //buttons: true,
             buttons: ["Cancelar", "Remover"],
@@ -18,7 +19,10 @@ export default function Table({ characterData: dados, titulos }) {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    swal(id + " Poof! Your imaginary file has been deleted!", {
+
+                    firebase.database().ref(`${tableData}/` + id).remove();     
+
+                    swal("O Registro " + id + " foi removido com sucesso!", {
                         icon: "success",
                     });
                     // } else {

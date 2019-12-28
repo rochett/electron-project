@@ -12,7 +12,8 @@ import ListMenuGeral from '../components/list/listMenu';
 
 export default function MenuPremiacoes({lastMovieTag}) {
 
-  const titles = [{ title: "Título", field: "titulo", search: false, iskey: true },
+  const titles = [{ id: "Id", field: "id", search: false, iskey: false, hidden: true },
+    { title: "Título", field: "titulo", search: false, iskey: true },
     { title: "Título Original", field: "titulo_original", search: false, iskey: false },
     { title: "Ano de Criação", field: "ano_criacao", search: false, iskey: false },
     { title: "Ano de Encerramento", field: "ano_encerramento", search: false, iskey: false },
