@@ -53,7 +53,7 @@ export default function FormGenPre({ tableData, titleTag }) {
     }
 
     const handleValidate = event => {
-        if (titulo && titulo_original && descricao && ano_criacao) {
+        if (titulo && titulo_original && descricao && ano_criacao && pais_origem && obra_maxima) {
             return true;
         } else {
             return false;
@@ -112,10 +112,12 @@ export default function FormGenPre({ tableData, titleTag }) {
                                         </InputGroup.Prepend>
                                         <Form.Control 
                                             as="select" 
-                                            required size="sm"
+                                            required 
+                                            size="sm"
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
-                                            >
+                                        >
+                                            <option value=""></option>    
                                             <SelectGeral tableData="pais_origem" valueTag="nome" />
                                         </Form.Control>
                                     </InputGroup>                                    
@@ -128,6 +130,7 @@ export default function FormGenPre({ tableData, titleTag }) {
                                         value={obra_maxima}
                                         onChange={(e) => setObraMaxima(e.target.value)}
                                     >
+                                        <option value=""></option>
                                         <SelectGeral tableData="filmes" valueTag="titulo" />
                                     </Form.Control>                                    
                                 </Form.Group>

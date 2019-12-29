@@ -76,7 +76,10 @@ export default function FormFilme({ tableData, titleTag }) {
     }
 
     const handleValidate = event => {
-        if (titulo && titulo_original && sinopse && ano_lancamento && atores && premiacoes) {
+        if (titulo && titulo_original && sinopse && ano_lancamento 
+            && atores && premiacoes && diretor && genero && trailer 
+            && pais_origem && curiosidades && comentario_trailer && roteiristas &&
+            document.getElementById("labelFile").innerHTML !== 'Nenhum Arquivo Selecionado') {
             return true;
         } else {
             return false;
@@ -144,6 +147,7 @@ export default function FormFilme({ tableData, titleTag }) {
                                         value={diretor}
                                         onChange={(e) => setDiretor(e.target.value)}
                                         >
+                                        <option value=""></option>    
                                         <SelectGeral tableData="diretores" valueTag="nome" />
                                     </Form.Control>
                                 </Form.Group>
@@ -160,6 +164,7 @@ export default function FormFilme({ tableData, titleTag }) {
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                             >
+                                            <option value=""></option>    
                                             <SelectGeral tableData="pais_origem" valueTag="nome" />
                                         </Form.Control>
                                     </InputGroup>                                    
@@ -173,6 +178,7 @@ export default function FormFilme({ tableData, titleTag }) {
                                         value={genero}
                                         onChange={(e) => setGenero(e.target.value)}
                                         >
+                                        <option value=""></option>    
                                         <SelectGeral tableData="generos" valueTag="titulo" />
                                     </Form.Control>
                                 </Form.Group>
@@ -182,7 +188,7 @@ export default function FormFilme({ tableData, titleTag }) {
                                     <Form.Control
                                         required
                                         type="number"
-                                        placeholder="Lançamento"
+                                        placeholder="Ano"
                                         size="sm"
                                         min="0"
                                         max="9999"

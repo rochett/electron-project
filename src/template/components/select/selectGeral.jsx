@@ -12,8 +12,8 @@ export default function SelectGeral({ tableData, valueTag, fieldTag }) {
     }, []);
 
     return (
-        <>
-            {
+        <>            
+            {                
                 fieldTag ? selectGeral && selectGeral.map((text, i) => <option key={i} value={text[valueTag]} >
                 {text[valueTag]}&nbsp;({text[fieldTag]})</option >) : selectGeral && selectGeral.map((text, i) => <option key={i} value={text[valueTag]} >
                 {text[valueTag]}</option >)

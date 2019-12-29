@@ -69,7 +69,9 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
     }
 
     const handleValidate = event => {
-        if (nome && nome_original && biografia && ano_estreia && data_nascimento && premiacoes) {
+        if (nome && nome_original && biografia && ano_estreia 
+            && data_nascimento && premiacoes && obra_maxima && biografia
+            && pais_origem && document.getElementById("labelFile").innerHTML !== 'Nenhum Arquivo Selecionado') {
             return true;
         } else {
             return false;
@@ -153,6 +155,7 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                                                 value={pais_origem}
                                                 onChange={(e) => setPaisOrigem(e.target.value)}
                                                 >
+                                                <option value=""></option>    
                                                 <SelectGeral tableData="pais_origem" valueTag="nome" />
                                             </Form.Control>
                                         </InputGroup>
@@ -190,6 +193,7 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                                         value={obra_maxima}
                                         onChange={(e) => setObraMaxima(e.target.value)}
                                         >
+                                        <option value=""></option>    
                                         <SelectGeral tableData="filmes" valueTag="titulo" />
                                     </Form.Control>
                                 </Form.Group>
