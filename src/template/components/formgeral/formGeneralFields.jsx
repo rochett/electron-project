@@ -6,7 +6,7 @@ import SelectAno from '../../components/select/selectAno';
 import SelectGeral from "../../components/select/selectGeral";
 import DatePicker from '../../components/calendar/datepicker';
 import FormPais from '../../form/pais/formPais';
-import '../../../template/styles.css';
+import '../../../template/styles.css'; 
 
 export default function FormGeneralFields({ titleTag }) {
 

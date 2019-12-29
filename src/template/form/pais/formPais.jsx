@@ -7,6 +7,7 @@ import SaveData from '../../function/saveData';
 import { faCheck, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from 'react-bootstrap';
+import swal from 'sweetalert';
 
 export default function FormPais({ tableData }) {
 
@@ -21,7 +22,8 @@ export default function FormPais({ tableData }) {
     }, []);
 
     const handleClick = event => {
-
+        var validacao = handleValidate();
+        if (validacao === true) {        
         const _dados = {
             nome: nome_pais,
             sigla: sigla
@@ -30,8 +32,22 @@ export default function FormPais({ tableData }) {
         SaveData(tableData, _dados, dadosId);
         event.preventDefault();
         handleClear();
-
+        } else {
+            swal({
+                title: "Erro!",
+                text: "Há campos não preenchidos!",
+                icon: "error"
+            });
+        }
     }
+
+    const handleValidate = event => {
+        if (nome_pais && sigla) {
+            return true;
+        } else {
+            return false;
+        }
+    }    
 
     const handleClear = event => {
         setNomePais('');

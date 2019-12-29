@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { faPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FormPremiacao from '../form/premiacao/formPremiacao';
 import FormFilme from '../form/filme/formFilme';
-import FormGenero from '../form/genero/formGenero';
-import FormAtor from '../form/ator/formAtor';
-import FormDiretor from '../form/diretor/formDiretor';
-import FormRoteirista from '../form/roteirista/formRoteirista';
+import FormGenPre from '../form/genPre/formGenPre';
+import FormAtorDirRot from '../form/atorDirRot/formAtorDirRot';
 import '../../template/styles.css';
 
 export default function ModalFormGeral({titleTag, formTag}) {
@@ -17,19 +14,19 @@ export default function ModalFormGeral({titleTag, formTag}) {
     function renderSwitch({formTag}) {
         switch(formTag) {
             case 'FormPremiacao':
-                return <FormPremiacao tableData="premiacoes" />;
+                return <FormGenPre tableData="premiacoes" titleTag="Premiação" />;
             case 'FormFilme':
-                return <FormFilme tableData="filmes" />;  
+                return <FormFilme tableData="filmes" titleTag="Filme" />;  
             case 'FormGenero':
-                return <FormGenero tableData="generos" />; 
+                return <FormGenPre tableData="generos" titleTag="Gênero" />; 
             case 'FormAtor':
-                return <FormAtor tableData="atores" />;
+                return <FormAtorDirRot tableData="atores" titleTag="Ator" />;
             case 'FormDiretor':
-                return <FormDiretor tableData="diretores" />;  
+                return <FormAtorDirRot tableData="diretores" titleTag="Diretor" />;  
             case 'FormRoteirista':
-                return <FormRoteirista tableData="roteiristas" />;         
+                return <FormAtorDirRot tableData="roteiristas" titleTag="Roteirista" />;         
             default:
-                return <FormPremiacao tableData="premiacoes" />;
+                return <FormGenPre tableData="premiacoes" titleTag="Premiação" />;
         }
     }
 

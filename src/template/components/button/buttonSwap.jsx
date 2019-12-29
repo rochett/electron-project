@@ -32,10 +32,12 @@ export default function ButtonSwap({titleTag}) {
 
         var display = document.getElementById(titleTag);
         if (display.value && erro !=='S') {
-            display.innerHTML += ',' + opts;    
+            display.value += ',' + opts;                           
         } else {
-            display.innerHTML += opts;           
+            display.value += opts;      
         }
+
+        document.getElementById(titleTag).focus();
         
     }
 
@@ -44,10 +46,11 @@ export default function ButtonSwap({titleTag}) {
     }
 
     const handleBackClick = event => {
-        var myControl = document.getElementById(titleTag);
-        var myArray = (myControl.value.split(','));        
+        var myControl = document.getElementById(titleTag);        
+        var myArray = (myControl.value.split(','));               
         var resultText = myControl;
-        resultText.innerHTML = myArray.slice(0, (myArray.length - 1));        
+        resultText.value = myArray.slice(0, (myArray.length - 1));  
+        myControl.focus();      
     }
 
     return (
