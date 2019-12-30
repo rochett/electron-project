@@ -13,19 +13,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import swal from 'sweetalert';
 import ButtonSwap from '../../components/button/buttonSwap';
 
-export default function FormAtorDirRot({ tableData, titleTag }) {
+export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }) {
 
     const [show, setShow] = useState(false);
     const [selectGeral, setSelectGeral] = useState([]);
-    const [nome, setNome] = useState('');
-    const [nome_original, setNomeOriginal] = useState('');
-    const [biografia, setBiografia] = useState('');
-    const [ano_estreia, setAnoEstreia] = useState('');
-    const [ano_aposentadoria, setAnoAposentadoria] = useState('');
-    const [data_nascimento, setDataNascimento] = useState('');    
-    const [pais_origem, setPaisOrigem] = useState('');
-    const [premiacoes, setPremiacoes] = useState('');
-    const [obra_maxima, setObraMaxima] = useState('');    
+    const [nome, setNome] = useState(dadosReg.nome ? dadosReg.nome : '');
+    const [nome_original, setNomeOriginal] = useState(dadosReg.nome_original ? dadosReg.nome_original : '');
+    const [biografia, setBiografia] = useState(dadosReg.biografia ? dadosReg.biografia : '');
+    const [ano_estreia, setAnoEstreia] = useState(dadosReg.ano_estreia ? dadosReg.ano_estreia : '');
+    const [ano_aposentadoria, setAnoAposentadoria] = useState(dadosReg.ano_aposentadoria ? dadosReg.ano_aposentadoria : '');
+    const [data_nascimento, setDataNascimento] = useState(dadosReg.data_nascimento ? dadosReg.data_nascimento : '');
+    const [pais_origem, setPaisOrigem] = useState(dadosReg.pais_origem ? dadosReg.pais_origem : '');
+    const [premiacoes, setPremiacoes] = useState(dadosReg.premiacoes ? dadosReg.premiacoes : '');
+    const [obra_maxima, setObraMaxima] = useState(dadosReg.obra_maxima ? dadosReg.obra_maxima : '');
 
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
@@ -42,7 +42,7 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
 
     const handleClick = event => {
         var validacao = handleValidate();
-        if (validacao === true) {             
+        if (validacao === true) {
             const _dados = {
                 nome: nome,
                 nome_original: nome_original,
@@ -55,30 +55,37 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                 obra_maxima: obra_maxima,
                 image_upload: document.getElementById("image_upload").files[0]
             };
-            var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+            var dadosId = 0;
+            if (idForm < 0) {
+                dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+            } else {
+                dadosId = idForm;
+            }
             SaveData(tableData, _dados, dadosId);
-            event.preventDefault();                          
-            handleClear();
+            if (idForm < 0) {
+                event.preventDefault();
+                handleClear();
+            }
         } else {
             swal({
                 title: "Erro!",
                 text: "Há campos não preenchidos!",
                 icon: "error"
             });
-        }    
+        }
     }
 
     const handleValidate = event => {
-        if (nome && nome_original && biografia && ano_estreia 
+        if (nome && nome_original && biografia && ano_estreia
             && data_nascimento && premiacoes && obra_maxima && biografia
             && pais_origem && document.getElementById("labelFile").innerHTML !== 'Nenhum Arquivo Selecionado') {
             return true;
         } else {
             return false;
         }
-    }    
+    }
 
-    const handleClear = event => {            
+    const handleClear = event => {
         setNome('');
         setNomeOriginal('');
         setBiografia('');
@@ -90,7 +97,7 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
         setObraMaxima('');
         document.getElementById("image_upload").value = '';
         document.getElementById("labelFile").innerHTML = 'Nenhum Arquivo Selecionado';
-    }   
+    }
 
     return (
 
@@ -104,14 +111,14 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                             <Form.Row>
                                 <Form.Group as={Col} md="6" controlId="nome">
                                     <Form.Label>Nome</Form.Label>
-                                        <Form.Control
-                                            required
-                                            type="text"
-                                            placeholder="Nome"
-                                            size="sm"
-                                            value={nome}
-                                            onChange={(e) => setNome(e.target.value)}
-                                        />
+                                    <Form.Control
+                                        required
+                                        type="text"
+                                        placeholder="Nome"
+                                        size="sm"
+                                        value={nome}
+                                        onChange={(e) => setNome(e.target.value)}
+                                    />
                                 </Form.Group>
                                 <Form.Group as={Col} md="6" controlId="nome_original">
                                     <Form.Label>Nome Original</Form.Label>
@@ -127,38 +134,38 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                             </Form.Row>
 
                             <Form.Row>
-                            <Form.Group as={Col} md="2" controlId="data_nascimento">
-                                <Form.Label>Nascimento</Form.Label>
-                                <InputGroup className="mb-2" size="sm">
-                                    <InputGroup.Prepend>
-                                        <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faCalendar} /></InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <Form.Control
-                                        required
-                                        type="date"
-                                        placeholder="dd/mm/aaaa"
-                                        size="sm"
-                                        value={data_nascimento}
-                                        onChange={(e) => setDataNascimento(e.target.value)}
-                                    />
-                                </InputGroup>                                    
-                            </Form.Group>
+                                <Form.Group as={Col} md="2" controlId="data_nascimento">
+                                    <Form.Label>Nascimento</Form.Label>
+                                    <InputGroup className="mb-2" size="sm">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faCalendar} /></InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            required
+                                            type="date"
+                                            placeholder="dd/mm/aaaa"
+                                            size="sm"
+                                            value={data_nascimento}
+                                            onChange={(e) => setDataNascimento(e.target.value)}
+                                        />
+                                    </InputGroup>
+                                </Form.Group>
                                 <Form.Group as={Col} md="3" controlId="pais_origem">
                                     <Form.Label>País de Origem</Form.Label>
-                                        <InputGroup className="mb-2" size="sm">
-                                            <InputGroup.Prepend onClick={() => setShow(true)}>
-                                                <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faGlobeAmericas} /></InputGroup.Text>
-                                            </InputGroup.Prepend>
-                                            <Form.Control 
-                                                as="select" 
-                                                required size="sm"
-                                                value={pais_origem}
-                                                onChange={(e) => setPaisOrigem(e.target.value)}
-                                                >
-                                                <option value=""></option>    
-                                                <SelectGeral tableData="pais_origem" valueTag="nome" />
-                                            </Form.Control>
-                                        </InputGroup>
+                                    <InputGroup className="mb-2" size="sm">
+                                        <InputGroup.Prepend onClick={() => setShow(true)}>
+                                            <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faGlobeAmericas} /></InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            as="select"
+                                            required size="sm"
+                                            value={pais_origem}
+                                            onChange={(e) => setPaisOrigem(e.target.value)}
+                                        >
+                                            <option value=""></option>
+                                            <SelectGeral tableData="pais_origem" valueTag="nome" />
+                                        </Form.Control>
+                                    </InputGroup>
                                 </Form.Group>
                                 <Form.Group as={Col} md="2" controlId="ano_estreia">
                                     <Form.Label>Ano de Estréia</Form.Label>
@@ -171,11 +178,11 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                                         max="9999"
                                         value={ano_estreia}
                                         onChange={(e) => setAnoEstreia(e.target.value)}
-                                    />                                    
-                                </Form.Group>   
+                                    />
+                                </Form.Group>
                                 <Form.Group as={Col} md="2" controlId="ano_aposentadoria">
                                     <Form.Label>Ano de Aposentadoria</Form.Label>
-                                    <Form.Control                                        
+                                    <Form.Control
                                         type="number"
                                         placeholder="Aposentadoria"
                                         size="sm"
@@ -183,17 +190,17 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                                         max="9999"
                                         value={ano_aposentadoria}
                                         onChange={(e) => setAnoAposentadoria(e.target.value)}
-                                    />                                    
-                                </Form.Group>   
+                                    />
+                                </Form.Group>
                                 <Form.Group as={Col} md="3" controlId="obra_maxima">
                                     <Form.Label>Obra Máxima</Form.Label>
-                                    <Form.Control 
-                                        as="select" 
+                                    <Form.Control
+                                        as="select"
                                         required size="sm"
                                         value={obra_maxima}
                                         onChange={(e) => setObraMaxima(e.target.value)}
-                                        >
-                                        <option value=""></option>    
+                                    >
+                                        <option value=""></option>
                                         <SelectGeral tableData="filmes" valueTag="titulo" />
                                     </Form.Control>
                                 </Form.Group>
@@ -221,17 +228,17 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="biografia">
-                                    <Form.Label>Informe a Biografia do(a) { titleTag }</Form.Label>
-                                    <Form.Control 
-                                    as="textarea" 
-                                    rows="4" 
-                                    style={{ resize: 'none' }} 
-                                    size="sm" 
-                                    required 
-                                    value={biografia}
-                                    onChange={(e) => setBiografia(e.target.value)}
+                                    <Form.Label>Informe a Biografia do(a) {titleTag}</Form.Label>
+                                    <Form.Control
+                                        as="textarea"
+                                        rows="4"
+                                        style={{ resize: 'none' }}
+                                        size="sm"
+                                        required
+                                        value={biografia}
+                                        onChange={(e) => setBiografia(e.target.value)}
                                     />
-                                </Form.Group>                                
+                                </Form.Group>
                             </Form.Row>
                         </Card.Body>
                     </Card>
@@ -246,10 +253,10 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
                                 <Form.Group as={Col} md="5" controlId="premiacoes-a">
                                     <Form.Label>Premiações</Form.Label>
                                     <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
-                                        <SelectGeral 
-                                            tableData="premiacoes" 
-                                            valueTag="titulo" 
-                                            fieldTag="ano_criacao" 
+                                        <SelectGeral
+                                            tableData="premiacoes"
+                                            valueTag="titulo"
+                                            fieldTag="ano_criacao"
                                         />
                                     </Form.Control>
                                 </Form.Group>
@@ -260,15 +267,15 @@ export default function FormAtorDirRot({ tableData, titleTag }) {
 
                                 <Form.Group as={Col} md="6" controlId="premiacoes">
                                     <Form.Label>Listagem de Premiações</Form.Label>
-                                    <Form.Control 
-                                    as="textarea" 
-                                    rows="6" 
-                                    style={{ resize: 'none', multiline: 'true' }} 
-                                    size="sm" 
-                                    required 
-                                    value={premiacoes}  
-                                    onChange={(e) => setPremiacoes(e.target.value)}
-                                    onFocus={(e) => setPremiacoes(e.target.value)}/>
+                                    <Form.Control
+                                        as="textarea"
+                                        rows="6"
+                                        style={{ resize: 'none', multiline: 'true' }}
+                                        size="sm"
+                                        required
+                                        value={premiacoes}
+                                        onChange={(e) => setPremiacoes(e.target.value)}
+                                        onFocus={(e) => setPremiacoes(e.target.value)} />
                                 </Form.Group>
                             </Form.Row>
                         </Card.Body>
