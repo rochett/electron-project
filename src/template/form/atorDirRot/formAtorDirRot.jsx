@@ -20,8 +20,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
     const [nome, setNome] = useState(dadosReg.nome ? dadosReg.nome : '');
     const [nome_original, setNomeOriginal] = useState(dadosReg.nome_original ? dadosReg.nome_original : '');
     const [biografia, setBiografia] = useState(dadosReg.biografia ? dadosReg.biografia : '');
-    const [ano_estreia, setAnoEstreia] = useState(dadosReg.ano_estreia ? dadosReg.ano_estreia : '');
-    const [ano_aposentadoria, setAnoAposentadoria] = useState(dadosReg.ano_aposentadoria ? dadosReg.ano_aposentadoria : '');
+    const [ano_estreia, setAnoEstreia] = useState(dadosReg.ano_estreia ? parseInt(dadosReg.ano_estreia) : '');
+    const [ano_aposentadoria, setAnoAposentadoria] = useState(dadosReg.ano_aposentadoria ? parseInt(dadosReg.ano_aposentadoria) : '');
     const [data_nascimento, setDataNascimento] = useState(dadosReg.data_nascimento ? dadosReg.data_nascimento : '');
     const [pais_origem, setPaisOrigem] = useState(dadosReg.pais_origem ? dadosReg.pais_origem : '');
     const [premiacoes, setPremiacoes] = useState(dadosReg.premiacoes ? dadosReg.premiacoes : '');

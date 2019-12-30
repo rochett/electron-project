@@ -19,7 +19,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
     const [titulo, setTitulo] = useState(dadosReg.titulo ? dadosReg.titulo : '');
     const [titulo_original, setTituloOriginal] = useState(dadosReg.titulo_original ? dadosReg.titulo_original : '');
     const [sinopse, setSinopse] = useState(dadosReg.sinopse ? dadosReg.sinopse : '');
-    const [ano_lancamento, setAnoLancamento] = useState(dadosReg.ano_lancamento ? dadosReg.ano_lancamento : '');
+    const [ano_lancamento, setAnoLancamento] = useState(dadosReg.ano_lancamento ? parseInt(dadosReg.ano_lancamento) : '');
     const [trailer, setTrailer] = useState(dadosReg.trailer ? dadosReg.trailer : '');
     const [diretor, setDiretor] = useState(dadosReg.diretor ? dadosReg.diretor : '');
     const [genero, setGenero] = useState(dadosReg.genero ? dadosReg.genero : '');

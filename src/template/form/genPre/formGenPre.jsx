@@ -12,45 +12,45 @@ import FormPais from '../pais/formPais';
 import '../../../template/styles.css';
 
 export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
-    
+
     const [show, setShow] = useState(false);
     const [selectGeral, setSelectGeral] = useState([]);
     const [titulo, setTitulo] = useState(dadosReg.titulo ? dadosReg.titulo : '');
     const [titulo_original, setTituloOriginal] = useState(dadosReg.titulo_original ? dadosReg.titulo_original : '');
-    const [ano_criacao, setAnoCriacao] = useState(dadosReg.ano_criacao ? parseInt(dadosReg.ano_criacao) : '');
     const [pais_origem, setPaisOrigem] = useState(dadosReg.pais_origem ? dadosReg.pais_origem : '');
     const [obra_maxima, setObraMaxima] = useState(dadosReg.obra_maxima ? dadosReg.obra_maxima : '');
-    const [descricao, setDescricao] = useState(dadosReg.descricao ? dadosReg.descricao : '');   
-    
+    const [ano_criacao, setAnoCriacao] = useState(dadosReg.ano_criacao ? parseInt(dadosReg.ano_criacao) : '');
+    const [descricao, setDescricao] = useState(dadosReg.descricao ? dadosReg.descricao : '');
+
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
             setSelectGeral(_selectGeral.val());
         });
-    }, []);                   
+    }, []);
 
-    const handleClick = event => {       
+    const handleClick = event => {
         var validacao = handleValidate();
-        if (validacao === true) {        
+        if (validacao === true) {
             const _dados = {
                 titulo: titulo,
                 titulo_original: titulo_original,
-                ano_criacao: ano_criacao,
-                obra_maxima: obra_maxima,
                 pais_origem: pais_origem,
-                descricao: descricao            
+                obra_maxima: obra_maxima,
+                ano_criacao: ano_criacao,
+                descricao: descricao
             };
-            var dadosId = 0;                 
+            var dadosId = 0;
             if (idForm < 0) {
                 dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
             } else {
-                dadosId = idForm; 
-            }            
-            SaveData(tableData, _dados, dadosId);            
-            if (idForm < 0 ) {
+                dadosId = idForm;
+            }
+            SaveData(tableData, _dados, dadosId);
+            if (idForm < 0) {
                 event.preventDefault();
                 handleClear();
-            } 
-        } else {            
+            }
+        } else {
             swal({
                 title: "Erro!",
                 text: "Há campos não preenchidos!",
@@ -65,21 +65,21 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
         } else {
             return false;
         }
-    }    
+    }
 
     const handleClear = event => {
         setTitulo('');
         setTituloOriginal('');
-        setAnoCriacao('');
-        setObraMaxima('');
         setPaisOrigem('');
+        setObraMaxima('');
+        setAnoCriacao('');
         setDescricao('');
 
-    }   
+    }
 
     return (
         <>
-           
+
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">
                     <hr></hr>
@@ -109,7 +109,7 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                         onChange={(e) => setTituloOriginal(e.target.value)}
                                     />
                                 </Form.Group>
-                            </Form.Row>                               
+                            </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} md="5" controlId="pais_origem">
                                     <Form.Label>País de Origem</Form.Label>
@@ -117,29 +117,29 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                         <InputGroup.Prepend onClick={() => setShow(true)}>
                                             <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faGlobeAmericas} /></InputGroup.Text>
                                         </InputGroup.Prepend>
-                                        <Form.Control 
-                                            as="select" 
-                                            required 
+                                        <Form.Control
+                                            as="select"
+                                            required
                                             size="sm"
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
-                                            <option value=""></option>    
+                                            <option value=""></option>
                                             <SelectGeral tableData="pais_origem" valueTag="nome" />
                                         </Form.Control>
-                                    </InputGroup>                                    
+                                    </InputGroup>
                                 </Form.Group>
                                 <Form.Group as={Col} md="5" controlId="obra_maxima">
                                     <Form.Label>Obra Máxima</Form.Label>
-                                    <Form.Control 
-                                        as="select" 
+                                    <Form.Control
+                                        as="select"
                                         required size="sm"
                                         value={obra_maxima}
                                         onChange={(e) => setObraMaxima(e.target.value)}
                                     >
                                         <option value=""></option>
                                         <SelectGeral tableData="filmes" valueTag="titulo" />
-                                    </Form.Control>                                    
+                                    </Form.Control>
                                 </Form.Group>
                                 <Form.Group as={Col} md="2" controlId="ano_criacao">
                                     <Form.Label>Ano de Criação</Form.Label>
@@ -152,20 +152,20 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                         max="9999"
                                         value={ano_criacao}
                                         onChange={(e) => setAnoCriacao(e.target.value)}
-                                    />                                    
-                                </Form.Group>                                
-                             </Form.Row>
+                                    />
+                                </Form.Group>
+                            </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} md="12" controlId="descricao">
                                     <Form.Label>Descrição</Form.Label>
-                                    <Form.Control as="textarea" rows="4" 
-                                        style={{ resize: 'none', multiline: 'true' }} 
-                                        size="sm" required 
+                                    <Form.Control as="textarea" rows="4"
+                                        style={{ resize: 'none', multiline: 'true' }}
+                                        size="sm" required
                                         value={descricao}
                                         onChange={(e) => setDescricao(e.target.value)}
-                                        />
+                                    />
                                 </Form.Group>
-                            </Form.Row>                         
+                            </Form.Row>
                         </Card.Body>
 
                         <Modal
@@ -178,12 +178,12 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                 <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
                             </Modal.Header>
                             <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
-                        </Modal>    
+                        </Modal>
 
                     </Card>
                 </Tab>
             </Tabs>
-         
+
             <br></br>
 
             <div className="row" width="100%">
