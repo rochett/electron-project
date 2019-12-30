@@ -11,39 +11,46 @@ import SelectGeral from "../../components/select/selectGeral";
 import FormPais from '../pais/formPais';
 import '../../../template/styles.css';
 
-export default function FormGenPre({ tableData, titleTag }) {
+export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
     
     const [show, setShow] = useState(false);
     const [selectGeral, setSelectGeral] = useState([]);
-    const [titulo, setTitulo] = useState('');
-    const [titulo_original, setTituloOriginal] = useState('');
-    const [ano_criacao, setAnoCriacao] = useState('');
-    const [pais_origem, setPaisOrigem] = useState('');
-    const [obra_maxima, setObraMaxima] = useState('');
-    const [descricao, setDescricao] = useState('');
-
+    const [titulo, setTitulo] = useState(dadosReg.titulo ? dadosReg.titulo : '');
+    const [titulo_original, setTituloOriginal] = useState(dadosReg.titulo_original ? dadosReg.titulo_original : '');
+    const [ano_criacao, setAnoCriacao] = useState(dadosReg.ano_criacao ? parseInt(dadosReg.ano_criacao) : '');
+    const [pais_origem, setPaisOrigem] = useState(dadosReg.pais_origem ? dadosReg.pais_origem : '');
+    const [obra_maxima, setObraMaxima] = useState(dadosReg.obra_maxima ? dadosReg.obra_maxima : '');
+    const [descricao, setDescricao] = useState(dadosReg.descricao ? dadosReg.descricao : '');   
+    
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
             setSelectGeral(_selectGeral.val());
         });
-    }, []);
+    }, []);                   
 
-    const handleClick = event => {
+    const handleClick = event => {       
         var validacao = handleValidate();
         if (validacao === true) {        
-        const _dados = {
-            titulo: titulo,
-            titulo_original: titulo_original,
-            ano_criacao: ano_criacao,
-            obra_maxima: obra_maxima,
-            pais_origem: pais_origem,
-            descricao: descricao            
-        };
-        var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
-        SaveData(tableData, _dados, dadosId);
-        event.preventDefault();
-        handleClear();
-        } else {
+            const _dados = {
+                titulo: titulo,
+                titulo_original: titulo_original,
+                ano_criacao: ano_criacao,
+                obra_maxima: obra_maxima,
+                pais_origem: pais_origem,
+                descricao: descricao            
+            };
+            var dadosId = 0;                 
+            if (idForm < 0) {
+                dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+            } else {
+                dadosId = idForm; 
+            }            
+            SaveData(tableData, _dados, dadosId);            
+            if (idForm < 0 ) {
+                event.preventDefault();
+                handleClear();
+            } 
+        } else {            
             swal({
                 title: "Erro!",
                 text: "Há campos não preenchidos!",
@@ -68,7 +75,7 @@ export default function FormGenPre({ tableData, titleTag }) {
         setPaisOrigem('');
         setDescricao('');
 
-    }
+    }   
 
     return (
         <>

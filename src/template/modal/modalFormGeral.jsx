@@ -14,19 +14,19 @@ export default function ModalFormGeral({titleTag, formTag}) {
     function renderSwitch({formTag}) {
         switch(formTag) {
             case 'FormPremiacao':
-                return <FormGenPre tableData="premiacoes" titleTag="Premiação" />;
+                return <FormGenPre tableData="premiacoes" titleTag="Premiação" idForm="-1" dadosReg="" />;
             case 'FormFilme':
-                return <FormFilme tableData="filmes" titleTag="Filme" />;  
+                return <FormFilme tableData="filmes" titleTag="Filme" idForm="-1" dadosReg="" />;  
             case 'FormGenero':
-                return <FormGenPre tableData="generos" titleTag="Gênero" />; 
+                return <FormGenPre tableData="generos" titleTag="Gênero" idForm="-1" dadosReg="" />; 
             case 'FormAtor':
-                return <FormAtorDirRot tableData="atores" titleTag="Ator" />;
+                return <FormAtorDirRot tableData="atores" titleTag="Ator" idForm="-1" dadosReg="" />;
             case 'FormDiretor':
-                return <FormAtorDirRot tableData="diretores" titleTag="Diretor" />;  
+                return <FormAtorDirRot tableData="diretores" titleTag="Diretor" idForm="-1" dadosReg="" />;  
             case 'FormRoteirista':
-                return <FormAtorDirRot tableData="roteiristas" titleTag="Roteirista" />;         
+                return <FormAtorDirRot tableData="roteiristas" titleTag="Roteirista" idForm="-1" dadosReg="" />;         
             default:
-                return <FormGenPre tableData="premiacoes" titleTag="Premiação" />;
+                return <FormGenPre tableData="premiacoes" titleTag="Premiação" idForm="-1" dadosReg="" />;
         }
     }
 
