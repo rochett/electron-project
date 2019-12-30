@@ -12,5 +12,9 @@ export default function ListaGeral({ tableData, titulos }) {
         });
     }, []);
 
-    return <TableGeral characterData={snapshot} titulos={titulos} tableData={tableData} />
+    var filtered = snapshot && snapshot.filter(function (el) {
+        return el != null;
+    });
+
+    return <TableGeral characterData={filtered} titulos={titulos} tableData={tableData} />
 }
