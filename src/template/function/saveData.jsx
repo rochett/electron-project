@@ -2,57 +2,61 @@ import firebase from "firebase/app";
 import moment from 'moment';
 import swal from 'sweetalert';
 
-export default function SaveDataMovie(tableData, _dados, dadosId) {
+export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
 
   const tablesWithoutImage = ['generos', 'premiacoes', 'pais_origem'];
 
-  if (!tablesWithoutImage.includes(tableData)) {
+  if (!tablesWithoutImage.includes(tableData)) {   
 
-    var storageRef = firebase.storage().ref();
-    var file = _dados.image_upload;
-    var metadata = {
-      contentType: 'image/jpeg'
-    };
-    var uploadTask = storageRef.child('images/' + tableData + '/' + file.name).put(file, metadata);
+    if (imagemAtual !== _dados.nome_imagem) {
+    
+      var storageRef = firebase.storage().ref();
+      var file = _dados.image_upload;
+      var metadata = {
+        contentType: 'image/jpeg'
+      };
+      var uploadTask = storageRef.child('images/' + tableData + '/' + file.name).put(file, metadata);
 
-    uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-      function (snapshot) {
-        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
-        switch (snapshot.state) {
-          case firebase.storage.TaskState.PAUSED: // or 'paused'
-            console.log('Upload is paused');
-            break;
-          case firebase.storage.TaskState.RUNNING: // or 'running'
-            console.log('Upload is running');
-            break;
-          default:
-            break;
-        }
-      }, function (error) {
-        switch (error.code) {
-          case 'storage/unauthorized':
-            break;
-          case 'storage/canceled':
-            break;
-          case 'storage/unknown':
-            break;
-          default:
-            break;
+      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+        function (snapshot) {
+          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log('Upload is ' + progress + '% done');
+          switch (snapshot.state) {
+            case firebase.storage.TaskState.PAUSED: // or 'paused'
+              console.log('Upload is paused');
+              break;
+            case firebase.storage.TaskState.RUNNING: // or 'running'
+              console.log('Upload is running');
+              break;
+            default:
+              break;
+          }
+        }, function (error) {
+          switch (error.code) {
+            case 'storage/unauthorized':
+              break;
+            case 'storage/canceled':
+              break;
+            case 'storage/unknown':
+              break;
+            default:
+              break;
 
-        }
-      }, function () {
-        // Upload completed successfully, now we can get the download URL
-        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-          console.log('File available at', downloadURL);
-          var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
-          writeUserData(dadosId, _dados, hoje, downloadURL, tableData);
+          }
+        }, function () {
+          // Upload completed successfully, now we can get the download URL
+          uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+            console.log('File available at', downloadURL);
+            var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
+            writeUserData(dadosId, _dados, hoje, downloadURL, tableData, imagemAtual);
+          });
         });
-      });
+    }
   } else {
     var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
     var _downloadURL = '';
-    writeUserData(dadosId, _dados, hoje, _downloadURL, tableData);
+    imagemAtual = '';
+    writeUserData(dadosId, _dados, hoje, _downloadURL, tableData, imagemAtual);
   }
 
   swal({
@@ -61,7 +65,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId) {
     icon: "success"
   });
 
-  function writeUserData(dadosId, _dados, hoje, downloadURL, tableData) {
+  function writeUserData(dadosId, _dados, hoje, downloadURL, tableData, imagemAtual) {
     if (tableData === 'filmes') {
       firebase.database().ref(`${tableData}/` + dadosId).set({
         id: dadosId,
@@ -113,6 +117,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId) {
             premiacoes: _dados.premiacoes,
             foto: `${downloadURL}`,
             obra_maxima: _dados.obra_maxima,
+            nome_imagem: imagemAtual,
             data_adicionado: `${hoje}`
           });
         }

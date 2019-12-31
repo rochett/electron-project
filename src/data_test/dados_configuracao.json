@@ -299,7 +299,8 @@
     "data_adicionado" : "2019-12-27",
     "data_nascimento" : "1936-01-28",
     "foto" : "https://firebasestorage.googleapis.com/v0/b/supercinema-a476c.appspot.com/o/images%2Fatores%2FAlan%20Alda.jpg?alt=media&token=12ac017d-9548-4ca7-a352-4e582d537230",
-    "id" : 24,
+    "nome_imagem" : "Alan Alda.jpg",
+	"id" : 24,
     "nome" : "Alan Alda",
     "nome_original" : "Alphonso Joseph D'Abruzzo",
     "obra_maxima" : "O Exterminador do Futuro",
@@ -334,7 +335,7 @@
     "filmes" : "O Poderoso Chefão (1972), O Poderoso Chefão II (1974), Drácula de Bram Stocker (1992)",
     "id" : 2,
     "nome" : "Francis Ford Coppola",
-    "pais_origem" : "EUA",
+    "pais_origem" : "Estados Unidos da América",
     "premiacoes" : "Academy Oscar"
   } ],
   "filmes" : [ {
@@ -381,7 +382,7 @@
     "elenco" : "Bruce Willis, Sylvester Stallone",
     "genero" : "Ficção Científica",
     "id" : 2,
-    "pais_origem" : "EUA",
+    "pais_origem" : "Estados Unidos da América",
     "premiacoes" : "Oscar",
     "roteirista" : "Charles Chaplin",
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
@@ -398,7 +399,7 @@
     "elenco" : "Bruce Willis,Sylvester Stallone,Christopher Reeve,Aaron Eckhart",
     "genero" : "Ficção Científica,Fantasia",
     "id" : 3,
-    "pais_origem" : "EUA",
+    "pais_origem" : "Estados Unidos da América",
     "premiacoes" : "Academy Oscar",
     "roteirista" : "Ridley Scott",
     "sinopse" : "A inteligência artificial SkyNet se torna consciente e domina o planeta, após uma guerra devastadora contra a humanidade",
@@ -430,7 +431,7 @@
     "data_adicionado" : "2019-12-25",
     "diretor" : "Ridley Scott",
     "elenco" : "Tom Cruise,Anthony Hopkins,Keanu Reeves,Aaron Eckhart",
-    "genero" : "Ficção Científica,Fantasia",
+    "genero" : "Ficção Científica",
     "id" : 5,
     "pais_origem" : "Estados Unidos da América",
     "premiacoes" : "Oscar",
@@ -917,11 +918,11 @@
     "titulo" : "Prêmio do Sind. dos Atores",
     "titulo_original" : "Screen Actors Guild Award"
   }, {
-    "ano_criacao" : "1949",
-    "data_adicionado" : "2019-12-25",
+    "ano_criacao" : 1949,
+    "data_adicionado" : "2019-12-31",
     "descricao" : "O Emmy Award, ou simplesmente Emmy, é o maior e mais prestigioso prêmio atribuído a programas e profissionais de televisão. É equivalente ao Oscar (para o cinema), o Tony (para o teatro), e ao Grammy (para a música). Os prêmios são apresentados em diferentes cerimônias realizadas durante cada ano. Os dois eventos que recebem maior cobertura dos meios de comunicação são os Emmy do Primetime e os Prêmios Emmy do Daytime que reconhecem o trabalho de destaque na programação americana do horário nobre e entretenimento diurno, respectivamente. Além das categorias tradicionais, profissionais de trás das câmeras também são premiados - estes em uma cerimônia à parte, geralmente realizada dias antes, o Creative Arts Emmys. Também existem premiações específicas, com cerimônias próprias, para programação esportiva (Sports Emmys), jornalismo (News and Documentary Emmys), tecnologia (Technology and Engineering Emmys), programação regional (Regional Emmys) e produção audiovisual escolar e universitária. Além desses, a IATAS realiza os Prêmios Emmy Internacional que são concedidos à programação de televisão produzida e, inicialmente, exibida fora dos Estados Unidos, cuja premiação geralmente ocorre no final do ano. Existem três organizações relacionadas, mas autônomas, presentes nos Prémios Emmy: \n Academia de Artes & Ciências Televisivas que premia o entretenimento de horário nobre/primetime (excluindo o desporto);\n Academia Nacional de Artes & Ciências Televisivas que reconhece o horário diurno, desporto, notícias, e programação de documentários; e\n Academia Internacional das Artes & Ciências Televisivas que honra programas de origem estrangeira (fora dos Estados Unidos).",
     "id" : 5,
-    "obra_maxima" : "O Exterminador do Futuro",
+    "obra_maxima" : "Conan, o bárbaro",
     "pais_origem" : "Estados Unidos da América",
     "titulo" : "Prêmio Emmy",
     "titulo_original" : "Emmy Award"
@@ -935,11 +936,11 @@
     "titulo" : "Festival de Berlim",
     "titulo_original" : "Internationale Filmfestspiele Berlin, IFB"
   }, {
-    "ano_criacao" : "1984",
-    "data_adicionado" : "2019-12-25",
+    "ano_criacao" : 1984,
+    "data_adicionado" : "2019-12-31",
     "descricao" : "Os Prêmios Independent Spirit, às vezes traduzido como Prêmio Espírito Independente, (no original, em inglês: Film Independent Spirit Awards (abreviado também como \"Spirit Awards\" e originalmente conhecido como FINDIE ou Friends of Independents Awards)) são concedidos anualmente desde 1984 a cineastas independentes. Os vencedores eram tipicamente premiados com pirâmides de vidro acrílico contendo cordas suspensas representando os pequenos orçamentos de filmes independentes. Desde 2006, os vencedores recebem um troféu de metal que representa um pássaro com asas abertas pousado sobre um pilar, que contém os cadarços do projeto anterior trançados envolto de si. Em 1986, o evento foi renomeado para Independent Spirit Awards. Atualmente chamada de Film Independent Spirit Awards, a premiação é organizada pela Film Independent, organização de artes sem fins lucrativos que também produz o Festival de Cinema de Los Angeles e cuja missão é defender a independência criativa na narrativa visual e apoiar uma comunidade de artistas que incorporam diversidade, inovação e singularidade de visão. No mês de novembro, seus membros votam para determinar os vencedores dos prêmios, os quais são entregues no ano posterior. Conhecidos por sua credibilidade, tornou-se um termômetro para o Oscar quando se refere a filmes independentes na corrida.​ A cerimônia de premiação é realizada dentro de uma tenda na praia de Santa Mônica, Califórnia, geralmente no dia antes do Oscar (desde 1999, originalmente no sábado anterior), e transmitida ao vivo pela rede de televisão IFC, assim como pela Hollywood Suite para o Canadá e pela A&E à América Latina.",
     "id" : 7,
-    "obra_maxima" : "O Exterminador do Futuro",
+    "obra_maxima" : "Duro de Matar",
     "pais_origem" : "Estados Unidos da América",
     "titulo" : "Prêmios Independent Spirit",
     "titulo_original" : "Film Independent Spirit Awards"
