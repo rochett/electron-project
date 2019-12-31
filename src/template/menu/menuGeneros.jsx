@@ -10,12 +10,13 @@ import DateDiff from '../components/calendar/dates';
 import CharLimit from '../components/characters/charLimit';
 import ListMenuGeral from '../components/list/listMenu';
 
-export default function MenuGeneros({lastMovieTag}) {
+export default function MenuGeneros({ lastMovieTag }) {
 
   const titles = [{ id: "Id", field: "id", search: false, iskey: false, hidden: true },
   { title: "Título", field: "titulo", search: false, iskey: true },
   { title: "Título Original", field: "titulo_original", search: false, iskey: false },
   { title: "Ano de Criação", field: "ano_criacao", search: false, iskey: false },
+  { title: "Obra Inaugural", field: "obra_maxima", search: false, iskey: false },
   { title: "Descrição", field: "descricao", search: true, iskey: false }];
 
   return (
@@ -42,7 +43,7 @@ export default function MenuGeneros({lastMovieTag}) {
             </div>
           </div>
         </Card.Body>
-        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 
+        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic}
           &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
       </Card>
     </>

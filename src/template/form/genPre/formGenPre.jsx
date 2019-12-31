@@ -130,7 +130,7 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                     </InputGroup>
                                 </Form.Group>
                                 <Form.Group as={Col} md="5" controlId="obra_maxima">
-                                    <Form.Label>Obra Máxima</Form.Label>
+                                    <Form.Label>Obra Inaugural</Form.Label>
                                     <Form.Control
                                         as="select"
                                         required size="sm"
