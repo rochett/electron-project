@@ -49,6 +49,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
     const handleClick = event => {
         var validacao = handleValidate();
         if (validacao === true) {
+            var imagemAtual = dadosReg.nome_imagem;  
+            var imagemBanco = dadosReg.foto; 
             const _dados = {
                 nome: nome,
                 nome_original: nome_original,
@@ -67,9 +69,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                 dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
             } else {
                 dadosId = idForm;
-            }
-            var imagemAtual = document.getElementById("labelFile").innerHTML;
-            SaveData(tableData, _dados, dadosId, imagemAtual);
+            }                     
+            SaveData(tableData, _dados, dadosId, imagemAtual, imagemBanco);
             if (idForm < 0) {
                 event.preventDefault();
                 handleClear();

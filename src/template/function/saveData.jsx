@@ -2,16 +2,17 @@ import firebase from "firebase/app";
 import moment from 'moment';
 import swal from 'sweetalert';
 
-export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
+export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual, imagemBanco) {
 
   const tablesWithoutImage = ['generos', 'premiacoes', 'pais_origem'];
+  const hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
 
-  if (!tablesWithoutImage.includes(tableData)) {   
+  if (!tablesWithoutImage.includes(tableData)) {    
 
-    if (imagemAtual !== _dados.nome_imagem) {
+    if (imagemAtual !== _dados.nome_imagem) {           
     
       var storageRef = firebase.storage().ref();
-      var file = _dados.image_upload;
+      var file = _dados.image_upload;      
       var metadata = {
         contentType: 'image/jpeg'
       };
@@ -46,17 +47,17 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
         }, function () {
           // Upload completed successfully, now we can get the download URL
           uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-            console.log('File available at', downloadURL);
-            var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
-            writeUserData(dadosId, _dados, hoje, downloadURL, tableData, imagemAtual);
+            console.log('File available at', downloadURL);                       
+            writeUserData(dadosId, _dados, hoje, downloadURL, tableData);
           });
         });
+    } else {                               
+        var _downloadURL = imagemBanco;        
+        writeUserData(dadosId, _dados, hoje, _downloadURL, tableData);
     }
   } else {
-    var hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
-    var _downloadURL = '';
-    imagemAtual = '';
-    writeUserData(dadosId, _dados, hoje, _downloadURL, tableData, imagemAtual);
+      var downloadURL_ = '';
+      writeUserData(dadosId, _dados, hoje, downloadURL_, tableData);
   }
 
   swal({
@@ -65,7 +66,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
     icon: "success"
   });
 
-  function writeUserData(dadosId, _dados, hoje, downloadURL, tableData, imagemAtual) {
+  function writeUserData(dadosId, _dados, hoje, downloadURL, tableData) {
     if (tableData === 'filmes') {
       firebase.database().ref(`${tableData}/` + dadosId).set({
         id: dadosId,
@@ -83,6 +84,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
         cartaz: `${downloadURL}`,
         curiosidades: _dados.curiosidades,
         comentario_trailer: _dados.comentario_trailer,
+        nome_imagem: _dados.nome_imagem,
         data_adicionado: `${hoje}`
       });
     } else {
@@ -104,7 +106,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
             nome: _dados.nome,
             sigla: _dados.sigla
           });
-        } else {
+        } else {          
           firebase.database().ref(`${tableData}/` + dadosId).set({
             id: dadosId,
             nome: _dados.nome,
@@ -117,7 +119,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual) {
             premiacoes: _dados.premiacoes,
             foto: `${downloadURL}`,
             obra_maxima: _dados.obra_maxima,
-            nome_imagem: imagemAtual,
+            nome_imagem: _dados.nome_imagem,
             data_adicionado: `${hoje}`
           });
         }

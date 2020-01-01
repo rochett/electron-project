@@ -68,12 +68,12 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
     }
 
     const handleClear = event => {
-        setTitulo('');
-        setTituloOriginal('');
-        setPaisOrigem('');
-        setObraMaxima('');
-        setAnoCriacao('');
-        setDescricao('');
+        setTitulo(dadosReg.titulo ? dadosReg.titulo : '');
+        setTituloOriginal(dadosReg.titulo_original ? dadosReg.titulo_original : '');
+        setPaisOrigem(dadosReg.pais_origem ? dadosReg.pais_origem : '');
+        setObraMaxima(dadosReg.obra_maxima ? dadosReg.obra_maxima : '');
+        setAnoCriacao(dadosReg.ano_criacao ? parseInt(dadosReg.ano_criacao) : '');
+        setDescricao(dadosReg.descricao ? dadosReg.descricao : '');
 
     }
 

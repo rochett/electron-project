@@ -43,9 +43,17 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
         retorno.innerHTML = fileName;
     }
 
+    const handleImageClick = event => {        
+        if (document.getElementById("labelFile").innerHTML === 'Nenhum Arquivo Selecionado') {        
+            document.getElementById("labelFile").innerHTML = dadosReg.nome_imagem ? dadosReg.nome_imagem : 'Nenhum Arquivo Selecionado';                    
+        }
+    }
+
     const handleClick = event => {
         var validacao = handleValidate();
         if (validacao === true) {
+            var imagemAtual = dadosReg.nome_imagem;
+            var imagemBanco = dadosReg.cartaz; 
             const _dados = {
                 titulo: titulo,
                 titulo_original: titulo_original,
@@ -60,6 +68,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 roteirista: roteiristas,
                 curiosidades: curiosidades,
                 comentario_trailer: comentario_trailer,
+                nome_imagem:  document.getElementById("labelFile").innerHTML,
                 image_upload: document.getElementById("image_upload").files[0]
             };
             var dadosId = 0;
@@ -67,8 +76,8 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
             } else {
                 dadosId = idForm;
-            }
-            SaveData(tableData, _dados, dadosId);
+            }            
+            SaveData(tableData, _dados, dadosId, imagemAtual, imagemBanco);
             if (idForm < 0) {
                 event.preventDefault();
                 handleClear();
@@ -94,27 +103,27 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
     }
 
     const handleClear = event => {
-        setTitulo('');
-        setTituloOriginal('');
-        setSinopse('');
-        setAnoLancamento('');
-        setTrailer('');
-        setDiretor('');
-        setGenero('');
-        setPaisOrigem('');
-        setPremiacoes('');
-        setAtores('');
-        setRoteiristas('');
-        setCuriosidades('');
-        setComentarioTrailer('');
+        setTitulo(dadosReg.titulo ? dadosReg.titulo : '');
+        setTituloOriginal(dadosReg.titulo_original ? dadosReg.titulo_original : '');
+        setSinopse(dadosReg.sinopse ? dadosReg.sinopse : '');
+        setAnoLancamento(dadosReg.ano_lancamento ? parseInt(dadosReg.ano_lancamento) : '');
+        setTrailer(dadosReg.trailer ? dadosReg.trailer : '');
+        setDiretor(dadosReg.diretor ? dadosReg.diretor : '');
+        setGenero(dadosReg.genero ? dadosReg.genero : '');
+        setPaisOrigem(dadosReg.pais_origem ? dadosReg.pais_origem : '');
+        setPremiacoes(dadosReg.premiacoes ? dadosReg.premiacoes : '');
+        setAtores(dadosReg.elenco ? dadosReg.elenco : '');
+        setRoteiristas(dadosReg.roteirista ? dadosReg.roteirista : '');
+        setCuriosidades(dadosReg.curiosidades ? dadosReg.curiosidades : '');
+        setComentarioTrailer(dadosReg.comentario_trailer ? dadosReg.comentario_trailer : '');
         document.getElementById("image_upload").value = '';
-        document.getElementById("labelFile").innerHTML = 'Nenhum Arquivo Selecionado';
+        document.getElementById("labelFile").innerHTML = dadosReg.nome_imagem ? dadosReg.nome_imagem : 'Nenhum Arquivo Selecionado';
     }
 
     return (
 
         <>
-            <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
+            <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example"  onSelect={handleImageClick}>
                 <Tab eventKey="ficha" title="Ficha Técnica">
                     <hr></hr>
                     <Card>
