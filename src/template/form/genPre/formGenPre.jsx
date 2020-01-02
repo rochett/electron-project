@@ -15,6 +15,7 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
 
     const [show, setShow] = useState(false);
     const [selectGeral, setSelectGeral] = useState([]);
+    const [selectDadosGeral, setSelectDadosGeral] = useState([]);
     const [titulo, setTitulo] = useState(dadosReg.titulo ? dadosReg.titulo : '');
     const [titulo_original, setTituloOriginal] = useState(dadosReg.titulo_original ? dadosReg.titulo_original : '');
     const [pais_origem, setPaisOrigem] = useState(dadosReg.pais_origem ? dadosReg.pais_origem : '');
@@ -25,6 +26,12 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
             setSelectGeral(_selectGeral.val());
+        });
+    }, []);
+
+    useEffect(() => {
+        firebase.database().ref('pais_origem/').on('value', function (_selectDadosGeral) {
+            setSelectDadosGeral(_selectDadosGeral.val());
         });
     }, []);
 
@@ -125,7 +132,10 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
                                             <option value=""></option>
-                                            <SelectGeral tableData="pais_origem" valueTag="nome" />
+                                            { 
+                                                selectDadosGeral && selectDadosGeral.map((text, i) => <option key={i} value={text.nome} >
+                                                {text.nome}</option >)
+                                            }
                                         </Form.Control>
                                     </InputGroup>
                                 </Form.Group>

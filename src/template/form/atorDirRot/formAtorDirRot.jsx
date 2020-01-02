@@ -17,6 +17,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
 
     const [show, setShow] = useState(false);
     const [selectGeral, setSelectGeral] = useState([]);
+    const [selectDadosGeral, setSelectDadosGeral] = useState([]);
     const [nome, setNome] = useState(dadosReg.nome ? dadosReg.nome : '');
     const [nome_original, setNomeOriginal] = useState(dadosReg.nome_original ? dadosReg.nome_original : '');
     const [biografia, setBiografia] = useState(dadosReg.biografia ? dadosReg.biografia : '');
@@ -30,6 +31,12 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
             setSelectGeral(_selectGeral.val());
+        });
+    }, []);
+
+    useEffect(() => {
+        firebase.database().ref('pais_origem/').on('value', function (_selectDadosGeral) {
+            setSelectDadosGeral(_selectDadosGeral.val());
         });
     }, []);
 
@@ -172,7 +179,10 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
                                             <option value=""></option>
-                                            <SelectGeral tableData="pais_origem" valueTag="nome" />
+                                            { 
+                                                selectDadosGeral && selectDadosGeral.map((text, i) => <option key={i} value={text.nome} >
+                                                {text.nome}</option >)
+                                            }
                                         </Form.Control>
                                     </InputGroup>
                                 </Form.Group>
