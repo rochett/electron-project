@@ -23,15 +23,15 @@ export default function FormPais({ tableData }) {
 
     const handleClick = event => {
         var validacao = handleValidate();
-        if (validacao === true) {        
-        const _dados = {
-            nome: nome_pais,
-            sigla: sigla
-        };
-        var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
-        SaveData(tableData, _dados, dadosId);
-        event.preventDefault();
-        handleClear();
+        if (validacao === true) {
+            const _dados = {
+                nome: nome_pais,
+                sigla: sigla
+            };
+            var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+            SaveData(tableData, _dados, dadosId);
+            event.preventDefault();
+            handleClear();
         } else {
             swal({
                 title: "Erro!",
@@ -47,7 +47,7 @@ export default function FormPais({ tableData }) {
         } else {
             return false;
         }
-    }    
+    }
 
     const handleClear = event => {
         setNomePais('');
@@ -63,7 +63,7 @@ export default function FormPais({ tableData }) {
                         <Card.Header as="h5">País</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="9" controlId="nome_pais" controlName="nome_pais">
+                                <Form.Group as={Col} md="9" controlId="nome_pais">
                                     <Form.Label>Nome</Form.Label>
                                     <Form.Control
                                         required
@@ -74,7 +74,7 @@ export default function FormPais({ tableData }) {
                                         onChange={(e) => setNomePais(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="3" controlId="sigla" controlName="sigla">
+                                <Form.Group as={Col} md="3" controlId="sigla">
                                     <Form.Label>Sigla</Form.Label>
                                     <Form.Control
                                         required

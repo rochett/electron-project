@@ -32,6 +32,12 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
     const [comentario_trailer, setComentarioTrailer] = useState(dadosReg.comentario_trailer ? dadosReg.comentario_trailer : '');
 
     useEffect(() => {
+        if (idForm > -1) {
+            document.getElementById("labelFile").innerHTML = dadosReg.nome_imagem ? dadosReg.nome_imagem : 'Nenhum Arquivo Selecionado';
+        }
+    }, []);
+
+    useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
             setSelectGeral(_selectGeral.val());
         });
@@ -50,17 +56,11 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
         retorno.innerHTML = fileName;
     }
 
-    const handleImageClick = event => {        
-        if (document.getElementById("labelFile").innerHTML === 'Nenhum Arquivo Selecionado') {        
-            document.getElementById("labelFile").innerHTML = dadosReg.nome_imagem ? dadosReg.nome_imagem : 'Nenhum Arquivo Selecionado';                    
-        }
-    }
-
     const handleClick = event => {
         var validacao = handleValidate();
         if (validacao === true) {
             var imagemAtual = dadosReg.nome_imagem;
-            var imagemBanco = dadosReg.cartaz; 
+            var imagemBanco = dadosReg.cartaz;
             const _dados = {
                 titulo: titulo,
                 titulo_original: titulo_original,
@@ -75,7 +75,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 roteirista: roteiristas,
                 curiosidades: curiosidades,
                 comentario_trailer: comentario_trailer,
-                nome_imagem:  document.getElementById("labelFile").innerHTML,
+                nome_imagem: document.getElementById("labelFile").innerHTML,
                 image_upload: document.getElementById("image_upload").files[0]
             };
             var dadosId = 0;
@@ -83,7 +83,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
             } else {
                 dadosId = idForm;
-            }            
+            }
             SaveData(tableData, _dados, dadosId, imagemAtual, imagemBanco);
             if (idForm < 0) {
                 event.preventDefault();
@@ -130,7 +130,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
     return (
 
         <>
-            <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example"  onSelect={handleImageClick}>
+            <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">
                     <hr></hr>
                     <Card>
@@ -186,12 +186,12 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                             required size="sm"
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
-                                        >   
+                                        >
                                             <option value=""></option>
-                                            { 
+                                            {
                                                 selectDadosGeral && selectDadosGeral.map((text, i) => <option key={i} value={text.nome} >
-                                                {text.nome}</option >)
-                                            }                                            
+                                                    {text.nome}</option >)
+                                            }
                                         </Form.Control>
                                     </InputGroup>
                                 </Form.Group>
@@ -203,7 +203,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                         required size="sm"
                                         value={genero}
                                         onChange={(e) => setGenero(e.target.value)}
-                                    >                                            
+                                    >
                                         <option value=""></option>
                                         <SelectGeral tableData="generos" valueTag="titulo" />
                                     </Form.Control>
@@ -395,7 +395,6 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                             placeholder="URL Trailer"
                                             size="sm"
                                             controlId="trailer"
-                                            controlName="trailer"
                                             value={trailer}
                                             onChange={(e) => setTrailer(e.target.value)}
                                         />

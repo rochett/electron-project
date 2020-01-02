@@ -26,7 +26,13 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
     const [data_nascimento, setDataNascimento] = useState(dadosReg.data_nascimento ? dadosReg.data_nascimento : '');
     const [pais_origem, setPaisOrigem] = useState(dadosReg.pais_origem ? dadosReg.pais_origem : '');
     const [premiacoes, setPremiacoes] = useState(dadosReg.premiacoes ? dadosReg.premiacoes : '');
-    const [obra_maxima, setObraMaxima] = useState(dadosReg.obra_maxima ? dadosReg.obra_maxima : '');    
+    const [obra_maxima, setObraMaxima] = useState(dadosReg.obra_maxima ? dadosReg.obra_maxima : '');
+
+    useEffect(() => {
+        if (idForm > -1) {
+            document.getElementById("labelFile").innerHTML = dadosReg.nome_imagem ? dadosReg.nome_imagem : 'Nenhum Arquivo Selecionado';
+        }
+    }, []);
 
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
@@ -47,17 +53,11 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
         retorno.innerHTML = fileName;
     }
 
-    const handleImageClick = event => {        
-        if (document.getElementById("labelFile").innerHTML === 'Nenhum Arquivo Selecionado') {        
-            document.getElementById("labelFile").innerHTML = dadosReg.nome_imagem ? dadosReg.nome_imagem : 'Nenhum Arquivo Selecionado';                    
-        }
-    }
-
     const handleClick = event => {
         var validacao = handleValidate();
         if (validacao === true) {
-            var imagemAtual = dadosReg.nome_imagem;  
-            var imagemBanco = dadosReg.foto; 
+            var imagemAtual = dadosReg.nome_imagem;
+            var imagemBanco = dadosReg.foto;
             const _dados = {
                 nome: nome,
                 nome_original: nome_original,
@@ -68,7 +68,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                 pais_origem: pais_origem,
                 premiacoes: premiacoes,
                 obra_maxima: obra_maxima,
-                nome_imagem:  document.getElementById("labelFile").innerHTML, 
+                nome_imagem: document.getElementById("labelFile").innerHTML,
                 image_upload: document.getElementById("image_upload").files[0]
             };
             var dadosId = 0;
@@ -76,7 +76,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                 dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
             } else {
                 dadosId = idForm;
-            }                     
+            }
             SaveData(tableData, _dados, dadosId, imagemAtual, imagemBanco);
             if (idForm < 0) {
                 event.preventDefault();
@@ -118,7 +118,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
     return (
 
         <>
-            <Tabs defaultActiveKey="ator" id="uncontrolled-tab-example"  onSelect={handleImageClick}>
+            <Tabs defaultActiveKey="ator" id="uncontrolled-tab-example">
                 <Tab eventKey="ator" title="Ator/Atriz">
                     <hr></hr>
                     <Card>
@@ -179,9 +179,9 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
                                             <option value=""></option>
-                                            { 
+                                            {
                                                 selectDadosGeral && selectDadosGeral.map((text, i) => <option key={i} value={text.nome} >
-                                                {text.nome}</option >)
+                                                    {text.nome}</option >)
                                             }
                                         </Form.Control>
                                     </InputGroup>
