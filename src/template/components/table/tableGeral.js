@@ -8,6 +8,7 @@ import FormGenPre from '../../form/genPre/formGenPre';
 import FormAtorDirRot from '../../form/atorDirRot/formAtorDirRot';
 import FormFilme from '../../form/filme/formFilme';
 import '../../../template/styles.css';
+import moment from 'moment';
 import firebase from "firebase/app";
 
 export default function Table({ characterData: dados, titulos, tableData }) {
@@ -115,7 +116,19 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 Exibindo {start} a {to}, de {total}&nbsp;linhas
       </p>
         );
-    }
+    } 
+
+    function dataFormatter(cell, row) {       
+        return (            
+            row.data_nascimento ? (moment(`${cell}`).format('DD/MM/YYYY')).toString() : `${cell}`
+        );
+      }
+
+      function cellFormatter(cell, row) {        
+        return (            
+            `${cell}`
+        );
+      }
 
     const options = {
         noDataText: 'A consulta não encontrou resultados.',
@@ -134,10 +147,11 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 options={options}
                 hover
                 striped
-                pagination >
+                pagination>
 
-                {titulos.map(t => (
-                    <TableHeaderColumn hidden={t.hidden} key={t.title + t.field} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo(a) ${t.title}` }} dataField={t.field} dataSort>
+                {titulos.map(t => (                    
+                    <TableHeaderColumn hidden={t.hidden} key={t.title + t.field} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo(a) ${t.title}` }}                     
+                    dataField={t.field} dataFormat={ t.title === 'Data de Nascimento' ? dataFormatter : cellFormatter } dataSort>
                         {t.title}
                     </TableHeaderColumn>
                 ))}

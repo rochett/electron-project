@@ -15,7 +15,7 @@ export default function MenuAtores({lastMovieTag}) {
   const titles = [{ id: "Id", field: "id", search: false, iskey: false, hidden: true },
     { title: "Nome", field: "nome", search: false, iskey: true },
     { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
-    { title: "Filmes", field: "filmes", search: true, iskey: false },
+    { title: "Ano de Estréia", field: "ano_estreia", search: true, iskey: false },
     { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
     { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
    
