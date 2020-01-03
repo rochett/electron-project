@@ -4,21 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap-table/css/react-bootstrap-table.css';
 import './index.css';
 import App from './App.jsx';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+// import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
-function Init() {
+// function Init() {
 
-    return (
-        <Router>
-            <Switch>
-                <Route path="/:modal?" component={App} />
-            </Switch>
-        </Router>
-    );
-}
+//     return (
+//         <Router>
+//             <Switch>
+//                 <Route path="/:modal?" component={App} />
+//             </Switch>
+//         </Router>
+//     );
+// }
 
-ReactDOM.render(<Init />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.unregister();
