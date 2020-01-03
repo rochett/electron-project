@@ -10,14 +10,14 @@ import DateDiff from '../components/calendar/dates';
 import CharLimit from '../components/characters/charLimit';
 import ListMenuGeral from '../components/list/listMenu';
 
-export default function MenuRoteiristas({lastMovieTag}) {
+export default function MenuRoteiristas({ lastMovieTag }) {
 
   const titles = [{ id: "Id", field: "id", search: false, iskey: false, hidden: true },
-    { title: "Nome", field: "nome", search: false, iskey: true },
-    { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
-    { title: "País de Origem", field: "pais_origem", search: false, iskey: false },
-    { title: "Ano de Estréia", field: "ano_estreia", search: true, iskey: false },
-    { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
+  { title: "Nome", field: "nome", search: false, iskey: true },
+  { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
+  { title: "País de Origem", field: "pais_origem", search: false, iskey: false },
+  { title: "Ano de Estréia", field: "ano_estreia", search: true, iskey: false },
+  { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
 
   return (
     <>
@@ -43,8 +43,8 @@ export default function MenuRoteiristas({lastMovieTag}) {
             </div>
           </div>
         </Card.Body>
-        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 
-          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
+        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic}
+          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /></Card.Footer>
       </Card>
     </>
   );

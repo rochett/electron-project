@@ -52,6 +52,7 @@
         "react-modal": "^3.11.1",
         "react-onclickoutside": "^6.9.0",
         "react-popper": "^1.3.7",
+        "react-router-dom": "^5.1.2",
         "react-youtube": "^7.9.0",
         "reactstrap": "^8.1.1",
         "remover-acentos": "0.0.6",

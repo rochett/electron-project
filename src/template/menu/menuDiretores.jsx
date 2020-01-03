@@ -44,7 +44,7 @@ export default function MenuDiretores({ lastMovieTag }) {
           </div>
         </Card.Body>
         <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic}
-          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
+          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /></Card.Footer>
       </Card>
     </>
   );

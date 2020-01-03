@@ -26,7 +26,10 @@ function createWindow() {
         //width: 900, height: 680 
         alwaysOnTop: true
     });
-    mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
+
+    const url = isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`;
+
+    mainWindow.loadURL(url);
     if (isDev) {
         // Open the DevTools.
         //BrowserWindow.addDevToolsExtension('<location to your react chrome extension>');
@@ -82,6 +85,21 @@ function createWindow() {
                     child.show()
                     child.removeMenu()
                 })
+            }
+
+        },
+        {
+            label: 'Modal',
+            click() {
+
+                // let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false, movable: true })
+                // child.loadURL(`file://${__dirname}/modal.html`)
+                // child.once('ready-to-show', () => {
+                //     child.show()
+                //     child.removeMenu()
+                // })
+
+                mainWindow.loadURL(`${url}#modalFormGeral`)
             }
 
         }

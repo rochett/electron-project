@@ -40,7 +40,6 @@ export default function App() {
   const lastPrizeElement = getTableData('premiacoes');
   const lastDirectorElement = getTableData('diretores');
 
-
   return (
 
     <div className="container-fluid">

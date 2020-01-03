@@ -10,13 +10,13 @@ import DateDiff from '../components/calendar/dates';
 import CharLimit from '../components/characters/charLimit';
 import ListMenuGeral from '../components/list/listMenu';
 
-export default function MenuFilmes({lastMovieTag}) {
+export default function MenuFilmes({ lastMovieTag }) {
 
   const titles = [{ id: "Id", field: "id", search: false, iskey: false, hidden: true },
-    { title: "Título", field: "titulo", search: false, iskey: true },
-    { title: "Título Original", field: "titulo_original", search: true, iskey: false },
-    { title: "Ano de Lançamento", field: "ano_lancamento", search: false, iskey: false },
-    { title: "País de Origem", field: "pais_origem", search: true, iskey: false }];  
+  { title: "Título", field: "titulo", search: false, iskey: true },
+  { title: "Título Original", field: "titulo_original", search: true, iskey: false },
+  { title: "Ano de Lançamento", field: "ano_lancamento", search: false, iskey: false },
+  { title: "País de Origem", field: "pais_origem", search: true, iskey: false }];
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function MenuFilmes({lastMovieTag}) {
             <CharLimit lastMovieTag={lastMovieTag} limitTag="140" valueTag="sinopse" />
           </Card.Text>
         </Card.Body>
-        <ListMenuGeral lastMovieTag={lastMovieTag} valueTag="elenco" regTag="diretor" regLimitTag="2" />        
+        <ListMenuGeral lastMovieTag={lastMovieTag} valueTag="elenco" regTag="diretor" regLimitTag="2" />
         <Card.Body>
           <div className="row" width="100%">
             <div className="col-6">
@@ -42,8 +42,8 @@ export default function MenuFilmes({lastMovieTag}) {
             </div>
           </div>
         </Card.Body>
-          <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic} 
-          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /> dias atrás</Card.Footer>
+        <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic}
+          &nbsp;<DateDiff lastMovieTag={lastMovieTag} /></Card.Footer>
       </Card>
     </>
   );
