@@ -125,24 +125,26 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                         <Card.Header as="h5">{titleTag}</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="nome">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Nome</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Nome"
                                         size="sm"
+                                        id="nome"
                                         value={nome}
                                         onChange={(e) => setNome(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="6" controlId="nome_original">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Nome Original</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Nome Original"
                                         size="sm"
+                                        id="nome_original"
                                         value={nome_original}
                                         onChange={(e) => setNomeOriginal(e.target.value)}
                                     />
@@ -150,7 +152,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                             </Form.Row>
 
                             <Form.Row>
-                                <Form.Group as={Col} md="2" controlId="data_nascimento">
+                                <Form.Group as={Col} md="2">
                                     <Form.Label>Nascimento</Form.Label>
                                     <InputGroup className="mb-2" size="sm">
                                         <InputGroup.Prepend>
@@ -161,12 +163,13 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                             type="date"
                                             placeholder="dd/mm/aaaa"
                                             size="sm"
+                                            id="data_nascimento"
                                             value={data_nascimento}
                                             onChange={(e) => setDataNascimento(e.target.value)}
                                         />
                                     </InputGroup>
                                 </Form.Group>
-                                <Form.Group as={Col} md="3" controlId="pais_origem">
+                                <Form.Group as={Col} md="3">
                                     <Form.Label>País de Origem</Form.Label>
                                     <InputGroup className="mb-2" size="sm">
                                         <InputGroup.Prepend onClick={() => setShow(true)}>
@@ -175,6 +178,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                         <Form.Control
                                             as="select"
                                             required size="sm"
+                                            id="pais_origem"
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
@@ -186,36 +190,39 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                         </Form.Control>
                                     </InputGroup>
                                 </Form.Group>
-                                <Form.Group as={Col} md="2" controlId="ano_estreia">
+                                <Form.Group as={Col} md="2">
                                     <Form.Label>Ano de Estréia</Form.Label>
                                     <Form.Control
                                         required
                                         type="number"
                                         placeholder="Ano de Estréia"
                                         size="sm"
+                                        id="ano_estreia"
                                         min="0"
                                         max="9999"
                                         value={ano_estreia}
                                         onChange={(e) => setAnoEstreia(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="2" controlId="ano_aposentadoria">
+                                <Form.Group as={Col} md="2">
                                     <Form.Label>Ano de Aposentadoria</Form.Label>
                                     <Form.Control
                                         type="number"
                                         placeholder="Aposentadoria"
                                         size="sm"
+                                        id="ano_aposentadoria"
                                         min="0"
                                         max="9999"
                                         value={ano_aposentadoria}
                                         onChange={(e) => setAnoAposentadoria(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="3" controlId="obra_maxima">
+                                <Form.Group as={Col} md="3">
                                     <Form.Label>Obra Máxima</Form.Label>
                                     <Form.Control
                                         as="select"
                                         required size="sm"
+                                        id="obra_maxima"
                                         value={obra_maxima}
                                         onChange={(e) => setObraMaxima(e.target.value)}
                                     >
@@ -246,13 +253,14 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                         <Card.Header as="h5">Biografia</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="biografia">
+                                <Form.Group as={Col} md="12">
                                     <Form.Label>Informe a Biografia do(a) {titleTag}</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="4"
                                         style={{ resize: 'none' }}
                                         size="sm"
+                                        id="biografia"
                                         required
                                         value={biografia}
                                         onChange={(e) => setBiografia(e.target.value)}
@@ -269,9 +277,14 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                         <Card.Header as="h5">Listagem de Premiações</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="premiacoes-a">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>Premiações</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
+                                    <Form.Control
+                                        as="select"
+                                        size="sm"
+                                        id="premiacoes-a"
+                                        style={{ height: '136px' }}
+                                        multiple>
                                         <SelectGeral
                                             tableData="premiacoes"
                                             valueTag="titulo"
@@ -280,17 +293,18 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
+                                <Form.Group as={Col} md="1" id="validationCustom01">
                                     <ButtonSwap titleTag="premiacoes" />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="6" controlId="premiacoes">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Listagem de Premiações</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="6"
                                         style={{ resize: 'none', multiline: 'true' }}
                                         size="sm"
+                                        id="premiacoes"
                                         required
                                         value={premiacoes}
                                         onChange={(e) => setPremiacoes(e.target.value)}

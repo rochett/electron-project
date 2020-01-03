@@ -137,24 +137,26 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">Ficha Técnica</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="titulo">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Título</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Título"
                                         size="sm"
+                                        id="titulo"
                                         value={titulo}
                                         onChange={(e) => setTitulo(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="6" controlId="titulo_original">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Título Original</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Título Original"
                                         size="sm"
+                                        id="titulo_original"
                                         value={titulo_original}
                                         onChange={(e) => setTituloOriginal(e.target.value)}
                                     />
@@ -162,11 +164,12 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                             </Form.Row>
 
                             <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="diretor">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>Direção</Form.Label>
                                     <Form.Control
                                         as="select"
                                         required size="sm"
+                                        id="diretor"
                                         value={diretor}
                                         onChange={(e) => setDiretor(e.target.value)}
                                     >
@@ -175,7 +178,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="3" controlId="pais_origem">
+                                <Form.Group as={Col} md="3">
                                     <Form.Label>País de Origem</Form.Label>
                                     <InputGroup className="mb-2" size="sm">
                                         <InputGroup.Prepend onClick={() => setShow(true)}>
@@ -184,6 +187,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                         <Form.Control
                                             as="select"
                                             required size="sm"
+                                            id="pais_origem"
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
@@ -196,11 +200,12 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                     </InputGroup>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="3" controlId="genero">
+                                <Form.Group as={Col} md="3">
                                     <Form.Label>Gênero</Form.Label>
                                     <Form.Control
                                         as="select"
                                         required size="sm"
+                                        id="genero"
                                         value={genero}
                                         onChange={(e) => setGenero(e.target.value)}
                                     >
@@ -209,7 +214,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="1" controlId="lancamento">
+                                <Form.Group as={Col} md="1">
                                     <Form.Label>Lançamento</Form.Label>
                                     <Form.Control
                                         required
@@ -218,6 +223,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                         size="sm"
                                         min="0"
                                         max="9999"
+                                        id="lancamento"
                                         value={ano_lancamento}
                                         onChange={(e) => setAnoLancamento(e.target.value)}
                                     />
@@ -246,9 +252,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">Listagem de Elenco</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="atores-a">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>Atores/Atrizes</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
+                                    <Form.Control
+                                        as="select"
+                                        size="sm"
+                                        id="atores-a"
+                                        style={{ height: '136px' }}
+                                        multiple>
                                         <SelectGeral
                                             tableData="atores"
                                             valueTag="nome"
@@ -257,17 +268,18 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
+                                <Form.Group as={Col} md="1" id="validationCustom01">
                                     <ButtonSwap titleTag="atores" />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="6" controlId="atores">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Listagem de Elenco</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="6"
                                         style={{ resize: 'none', multiline: 'true' }}
                                         size="sm"
+                                        id="atores"
                                         required
                                         value={atores}
                                         onChange={(e) => setAtores(e.target.value)}
@@ -284,9 +296,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">Listagem de Roteiristas</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="roteiristas-a">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>Roteiristas</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
+                                    <Form.Control
+                                        as="select"
+                                        size="sm"
+                                        id="roteiristas-a"
+                                        style={{ height: '136px' }}
+                                        multiple>
                                         <SelectGeral
                                             tableData="roteiristas"
                                             valueTag="nome"
@@ -295,17 +312,18 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="1" controlId="validationCustom01">
+                                <Form.Group as={Col} md="1" id="validationCustom01">
                                     <ButtonSwap titleTag="roteiristas" />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="6" controlId="roteiristas">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Listagem de Roteiristas</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="6"
                                         style={{ resize: 'none', multiline: 'true' }}
                                         size="sm"
+                                        id="roteiristas"
                                         required
                                         value={roteiristas}
                                         onChange={(e) => setRoteiristas(e.target.value)}
@@ -322,13 +340,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">Sinopse</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="sinopse">
+                                <Form.Group as={Col} md="12">
                                     <Form.Label>Informe a Sinopse do {titleTag}</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="4"
                                         style={{ resize: 'none' }}
                                         size="sm"
+                                        id="sinopse"
                                         required
                                         value={sinopse}
                                         onChange={(e) => setSinopse(e.target.value)}
@@ -345,9 +364,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">Listagem de Premiações</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="premiacoes-a">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>Premiações</Form.Label>
-                                    <Form.Control as="select" size="sm" style={{ height: '136px' }} multiple>
+                                    <Form.Control
+                                        as="select"
+                                        size="sm"
+                                        id="premiacoes-a"
+                                        style={{ height: '136px' }}
+                                        multiple>
                                         <SelectGeral
                                             tableData="premiacoes"
                                             valueTag="titulo"
@@ -360,13 +384,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                     <ButtonSwap titleTag="premiacoes" />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="6" controlId="premiacoes">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Listagem de Premiações</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="6"
                                         style={{ resize: 'none', multiline: 'true' }}
                                         size="sm"
+                                        id="premiacoes"
                                         required
                                         value={premiacoes}
                                         onChange={(e) => setPremiacoes(e.target.value)}
@@ -383,7 +408,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">Trailer</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="trailer">
+                                <Form.Group as={Col} md="12">
                                     <Form.Label>URL Trailer</Form.Label>
                                     <InputGroup className="mb-3" size="sm">
                                         <InputGroup.Prepend>
@@ -394,7 +419,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                             type="text"
                                             placeholder="URL Trailer"
                                             size="sm"
-                                            controlId="trailer"
+                                            id="trailer"
                                             value={trailer}
                                             onChange={(e) => setTrailer(e.target.value)}
                                         />
@@ -402,13 +427,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="biografia">
+                                <Form.Group as={Col} md="12">
                                     <Form.Label>Comentário sobre o Trailer</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="4"
                                         style={{ resize: 'none' }}
                                         size="sm"
+                                        id="comentario_trailer"
                                         required
                                         value={comentario_trailer}
                                         onChange={(e) => setComentarioTrailer(e.target.value)}
@@ -426,13 +452,14 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Body>
                             <UploadFile handleChange={handleChange} />
                             <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="biografia">
+                                <Form.Group as={Col} md="12">
                                     <Form.Label>Curiosidades sobre o {titleTag}</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="4"
                                         style={{ resize: 'none' }}
                                         size="sm"
+                                        id="curiosidades"
                                         required
                                         value={curiosidades}
                                         onChange={(e) => setCuriosidades(e.target.value)}

@@ -94,31 +94,33 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                         <Card.Header as="h5">{titleTag}</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="titulo">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Título</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Título"
                                         size="sm"
+                                        id="titulo"
                                         value={titulo}
                                         onChange={(e) => setTitulo(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="6" controlId="titulo_original">
+                                <Form.Group as={Col} md="6">
                                     <Form.Label>Título Original</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Título Original"
                                         size="sm"
+                                        id="titulo_original"
                                         value={titulo_original}
                                         onChange={(e) => setTituloOriginal(e.target.value)}
                                     />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
-                                <Form.Group as={Col} md="5" controlId="pais_origem">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>País de Origem</Form.Label>
                                     <InputGroup className="mb-2" size="sm">
                                         <InputGroup.Prepend onClick={() => setShow(true)}>
@@ -128,22 +130,24 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                             as="select"
                                             required
                                             size="sm"
+                                            id="pais_origem"
                                             value={pais_origem}
                                             onChange={(e) => setPaisOrigem(e.target.value)}
                                         >
                                             <option value=""></option>
-                                            { 
+                                            {
                                                 selectDadosGeral && selectDadosGeral.map((text, i) => <option key={i} value={text.nome} >
-                                                {text.nome}</option >)
+                                                    {text.nome}</option >)
                                             }
                                         </Form.Control>
                                     </InputGroup>
                                 </Form.Group>
-                                <Form.Group as={Col} md="5" controlId="obra_maxima">
+                                <Form.Group as={Col} md="5">
                                     <Form.Label>Obra Inaugural</Form.Label>
                                     <Form.Control
                                         as="select"
                                         required size="sm"
+                                        id="obra_maxima"
                                         value={obra_maxima}
                                         onChange={(e) => setObraMaxima(e.target.value)}
                                     >
@@ -151,7 +155,7 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                         <SelectGeral tableData="filmes" valueTag="titulo" />
                                     </Form.Control>
                                 </Form.Group>
-                                <Form.Group as={Col} md="2" controlId="ano_criacao">
+                                <Form.Group as={Col} md="2">
                                     <Form.Label>Ano de Criação</Form.Label>
                                     <Form.Control
                                         required
@@ -160,17 +164,20 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                         size="sm"
                                         min="0"
                                         max="9999"
+                                        id="ano_criacao"
                                         value={ano_criacao}
                                         onChange={(e) => setAnoCriacao(e.target.value)}
                                     />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
-                                <Form.Group as={Col} md="12" controlId="descricao">
+                                <Form.Group as={Col} md="12">
                                     <Form.Label>Descrição</Form.Label>
                                     <Form.Control as="textarea" rows="4"
                                         style={{ resize: 'none', multiline: 'true' }}
-                                        size="sm" required
+                                        size="sm"
+                                        id="descricao"
+                                        required
                                         value={descricao}
                                         onChange={(e) => setDescricao(e.target.value)}
                                     />

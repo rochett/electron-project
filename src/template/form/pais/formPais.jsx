@@ -63,24 +63,26 @@ export default function FormPais({ tableData }) {
                         <Card.Header as="h5">País</Card.Header>
                         <Card.Body>
                             <Form.Row>
-                                <Form.Group as={Col} md="9" controlId="nome_pais">
+                                <Form.Group as={Col} md="9">
                                     <Form.Label>Nome</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Nome"
                                         size="sm"
+                                        id="nome_pais"
                                         value={nome_pais}
                                         onChange={(e) => setNomePais(e.target.value)}
                                     />
                                 </Form.Group>
-                                <Form.Group as={Col} md="3" controlId="sigla">
+                                <Form.Group as={Col} md="3">
                                     <Form.Label>Sigla</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
                                         placeholder="Sigla"
                                         size="sm"
+                                        id="sigla"
                                         value={sigla}
                                         onChange={(e) => setSigla(e.target.value)}
                                     />
