@@ -119,8 +119,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
 
         <>
             <Tabs defaultActiveKey="ator" id="uncontrolled-tab-example">
-                <Tab eventKey="ator" title="Ator/Atriz">
-                    <hr></hr>
+                <Tab eventKey="ator" title="Ator/Atriz">    
+                    <br></br>               
                     <Card>
                         <Card.Header as="h5">{titleTag}</Card.Header>
                         <Card.Body>
@@ -231,24 +231,12 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                     </Form.Control>
                                 </Form.Group>
                             </Form.Row>
-                        </Card.Body>
-
-                        <Modal
-                            show={show}
-                            onHide={() => setShow(false)}
-                            dialogClassName="Modal-Medio"
-                            aria-labelledby="example-custom-modal-styling-title"
-                        >
-                            <Modal.Header closeButton>
-                                <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
-                        </Modal>
+                        </Card.Body>                        
                     </Card>
                 </Tab>
 
-                <Tab eventKey="biografia" title="Biografia">
-                    <hr></hr>
+                <Tab eventKey="biografia" title="Biografia">                    
+                    <br></br>                                       
                     <Card>
                         <Card.Header as="h5">Biografia</Card.Header>
                         <Card.Body>
@@ -271,8 +259,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                     </Card>
                 </Tab>
 
-                <Tab eventKey="premiacao" title="Premiações">
-                    <hr></hr>
+                <Tab eventKey="premiacao" title="Premiações">                   
+                    <br></br>               
                     <Card>
                         <Card.Header as="h5">Listagem de Premiações</Card.Header>
                         <Card.Body>
@@ -315,8 +303,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                     </Card>
                 </Tab>
 
-                <Tab eventKey="foto" title="Foto">
-                    <hr></hr>
+                <Tab eventKey="foto" title="Foto">                    
+                    <br></br>                                       
                     <Card>
                         <Card.Header as="h5">Foto</Card.Header>
                         <Card.Body>
@@ -336,6 +324,18 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                     <Button type="button" variant="danger" onClick={handleClear} ><FontAwesomeIcon icon={faSyncAlt} />&nbsp;Limpar</Button>
                 </div>
             </div>
+
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="Modal-Medio"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /></Modal.Body>
+            </Modal>
 
         </>
 

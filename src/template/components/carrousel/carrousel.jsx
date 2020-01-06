@@ -20,7 +20,7 @@ export default function ControlledCarousel() {
   }, []);
 
   return (
-    <Carousel activeIndex={index} direction={direction} onSelect={handleSelect}>
+    <Carousel activeIndex={index} direction={direction} onSelect={handleSelect} style={{ marginTop: '56px' }}>
       {
         carrossel && carrossel.map((text, i) => <Carousel.Item key={i} > <img
 

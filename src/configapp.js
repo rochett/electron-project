@@ -12,7 +12,7 @@ export const titulo_secao = {
   trailer: { titulo: 'Trailers', imagem: require('./image/bestmoviesofalltime.jpg') },
   cartaz: { titulo: 'Cartazes', imagem: require('./image/it2_poster.jpg') },
   curiosidade: 'Curiosidades',
-  rodape: 'Super Cinema 1.0',
+  rodape: 'SuperCinema 1.0',
   comentario_rodape: 'Desenvolvido por Rochett Tavares - Copyright© 2019 / ' + ano + ' - Todos os Direitos Reservados',
-  ult_adic: 'Último Adicionado/Editado:',
+  ult_adic: 'Última Atualização:',
 }

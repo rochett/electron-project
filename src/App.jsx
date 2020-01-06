@@ -8,6 +8,7 @@ import MenuGeneros from './template/menu/menuGeneros';
 import MenuRoteiristas from './template/menu/menuRoteiristas';
 import MenuPremiacoes from './template/menu/menuPremiacoes';
 import MenuCartaz from './template/menu/menuCartaz';
+import NavBar from './template/components/navBar/navBar';
 import { CardDeck } from 'react-bootstrap';
 import CControlledCarousel from './template/components/carrousel/carrousel';
 import FooterApp from './template/components/footer/footerapp';
@@ -18,7 +19,7 @@ import { config } from "./config";
 
 firebase.initializeApp(config);
 
-export default function App() {
+export default function App() {  
 
   var getTableData = function (tableData) {
 
@@ -43,6 +44,8 @@ export default function App() {
   return (
 
     <div className="container-fluid">
+
+      <NavBar />          
 
       <CControlledCarousel />
 

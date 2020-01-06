@@ -9,11 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from 'react-bootstrap';
 import swal from 'sweetalert';
 
-export default function FormPais({ tableData }) {
+export default function FormPais({ tableData, titleTag, idForm, dadosReg }) {
 
     const [selectGeral, setSelectGeral] = useState([]);
-    const [nome_pais, setNomePais] = useState('');
-    const [sigla, setSigla] = useState('');
+    const [nome_pais, setNomePais] = useState(dadosReg.nome ? dadosReg.nome : '');
+    const [sigla, setSigla] = useState(dadosReg.sigla ? dadosReg.sigla : '');
 
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
@@ -28,10 +28,17 @@ export default function FormPais({ tableData }) {
                 nome: nome_pais,
                 sigla: sigla
             };
-            var dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+            var dadosId = 0;
+            if (idForm < 0) {
+                dadosId = selectGeral && selectGeral[selectGeral.length - 1].id + 1;
+            } else {
+                dadosId = idForm;
+            }
             SaveData(tableData, _dados, dadosId);
-            event.preventDefault();
-            handleClear();
+            if (idForm < 0) {
+                event.preventDefault();
+                handleClear();
+            }
         } else {
             swal({
                 title: "Erro!",
@@ -50,15 +57,15 @@ export default function FormPais({ tableData }) {
     }
 
     const handleClear = event => {
-        setNomePais('');
-        setSigla('');
+        setNomePais(dadosReg.nome ? dadosReg.nome : '');
+        setSigla(dadosReg.sigla ? dadosReg.sigla : '');
     }
 
     return (
         <>
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">País</Card.Header>
                         <Card.Body>

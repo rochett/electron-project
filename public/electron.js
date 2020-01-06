@@ -41,17 +41,18 @@ function createWindow() {
 
     var menu = Menu.buildFromTemplate([
         {
-            label: 'Menu',
+            label: 'Ferramentas',
             submenu: [
                 {
-                    label: 'Adjust Notification Value',
+                    label: 'Google',
 
                     click() {
 
                         let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false })
-                        child.loadURL('https://github.com')
+                        child.loadURL('https://google.com')
                         child.once('ready-to-show', () => {
                             child.show()
+                            child.removeMenu()
                         })
 
                         //fun(); - executar prorama externo via electron

@@ -88,8 +88,8 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
         <>
 
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
-                <Tab eventKey="ficha" title="Ficha Técnica">
-                    <hr></hr>
+                <Tab eventKey="ficha" title="Ficha Técnica">   
+                    <br></br>                 
                     <Card>
                         <Card.Header as="h5">{titleTag}</Card.Header>
                         <Card.Body>
@@ -184,19 +184,6 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                                 </Form.Group>
                             </Form.Row>
                         </Card.Body>
-
-                        <Modal
-                            show={show}
-                            onHide={() => setShow(false)}
-                            dialogClassName="Modal-Medio"
-                            aria-labelledby="example-custom-modal-styling-title"
-                        >
-                            <Modal.Header closeButton>
-                                <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
-                        </Modal>
-
                     </Card>
                 </Tab>
             </Tabs>
@@ -211,6 +198,18 @@ export default function FormGenPre({ tableData, titleTag, idForm, dadosReg }) {
                     <Button type="button" variant="danger" onClick={handleClear} ><FontAwesomeIcon icon={faSyncAlt} />&nbsp;Limpar</Button>
                 </div>
             </div>
+
+            <Modal
+                            show={show}
+                            onHide={() => setShow(false)}
+                            dialogClassName="Modal-Medio"
+                            aria-labelledby="example-custom-modal-styling-title"
+                        >
+                            <Modal.Header closeButton>
+                                <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body><FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /></Modal.Body>
+                        </Modal>
 
         </>
     );

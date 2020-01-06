@@ -1,20 +1,20 @@
 .Cabecalho-Jumbotron {
-    background-color: #343a40;
-    color: white;
+    background-color: #343a40!important;
+    color: white!important;
 }
 .Margem-Jumbotron {
-    margin-left:0;
+    margin-left:0!important;
 }
 .Icon-Menu {
     float:right;
     margin-top:5px;
 }
 .Modal-Largo {
-    width: 90%;
+    width: 90%!important;
     max-width: none!important;
 }
 .Modal-Medio {
-    margin-top: 70px;
-    width: 45%;
+    margin-top: 70px!important;
+    width: 45%!important;
     max-width: none!important;
 }

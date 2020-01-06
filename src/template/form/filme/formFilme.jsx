@@ -11,6 +11,7 @@ import UploadFile from '../../components/uploader/uploadFile';
 import swal from 'sweetalert';
 import ButtonSwap from '../../components/button/buttonSwap';
 import FormPais from '../../form/pais/formPais';
+import '../../styles.css';
 
 export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
 
@@ -132,7 +133,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
         <>
             <Tabs defaultActiveKey="ficha" id="uncontrolled-tab-example">
                 <Tab eventKey="ficha" title="Ficha Técnica">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Ficha Técnica</Card.Header>
                         <Card.Body>
@@ -230,24 +231,11 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                 </Form.Group>
                             </Form.Row>
                         </Card.Body>
-
-                        <Modal
-                            show={show}
-                            onHide={() => setShow(false)}
-                            dialogClassName="Modal-Medio"
-                            aria-labelledby="example-custom-modal-styling-title"
-                        >
-                            <Modal.Header closeButton>
-                                <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body><FormPais tableData="pais_origem" /></Modal.Body>
-                        </Modal>
-
                     </Card>
                 </Tab>
 
-                <Tab eventKey="elenco" title="Elenco">
-                    <hr></hr>
+                <Tab eventKey="elenco" title="Elenco"> 
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Listagem de Elenco</Card.Header>
                         <Card.Body>
@@ -291,7 +279,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 </Tab>
 
                 <Tab eventKey="roteiro" title="Roteiro">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Listagem de Roteiristas</Card.Header>
                         <Card.Body>
@@ -335,7 +323,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 </Tab>
 
                 <Tab eventKey="sinopse" title="Sinopse">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Sinopse</Card.Header>
                         <Card.Body>
@@ -359,7 +347,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 </Tab>
 
                 <Tab eventKey="premiacao" title="Premiações">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Listagem de Premiações</Card.Header>
                         <Card.Body>
@@ -403,7 +391,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 </Tab>
 
                 <Tab eventKey="trailer" title="Trailer">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Trailer</Card.Header>
                         <Card.Body>
@@ -446,7 +434,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 </Tab>
 
                 <Tab eventKey="cartaz" title="Cartaz/Curiosidades">
-                    <hr></hr>
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Cartaz/Curiosidades</Card.Header>
                         <Card.Body>
@@ -482,6 +470,18 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                     <Button type="button" variant="danger" onClick={handleClear} ><FontAwesomeIcon icon={faSyncAlt} />&nbsp;Limpar</Button>
                 </div>
             </div>
+
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="Modal-Medio"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
+                </Modal.Header>
+                <Modal.Body><FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /></Modal.Body>
+            </Modal>
 
         </>
 

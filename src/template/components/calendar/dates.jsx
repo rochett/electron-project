@@ -9,7 +9,7 @@ export default function DateDiff({ lastMovieTag }) {
 
     return (
         <>
-            {dateDiff === 0 ? 'Hoje' : dateDiff === 1 ? 'Ontem' : dateDiff + ' dia(s) atrás'}
+            {dateDiff === 0 ? 'Hoje' : dateDiff === 1 ? 'Ontem' : dateDiff + ' dias atrás'}
         </>
     )
 

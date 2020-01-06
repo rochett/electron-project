@@ -7,6 +7,7 @@ import swal from 'sweetalert';
 import FormGenPre from '../../form/genPre/formGenPre';
 import FormAtorDirRot from '../../form/atorDirRot/formAtorDirRot';
 import FormFilme from '../../form/filme/formFilme';
+import FormPais from '../../form/pais/formPais';
 import '../../../template/styles.css';
 import moment from 'moment';
 import firebase from "firebase/app";
@@ -26,7 +27,7 @@ export default function Table({ characterData: dados, titulos, tableData }) {
     }, []);
 
     function handleClickEdit(id, tableData) {
-        var titleForm = '';
+        var titleForm = '';        
         switch (tableData) {
             case 'premiacoes':
                 titleForm = 'Premiação';
@@ -46,6 +47,9 @@ export default function Table({ characterData: dados, titulos, tableData }) {
             case 'roteiristas':
                 titleForm = 'Roteirista';
                 break;
+            case 'pais_origem':
+                titleForm = 'País de Origem';
+                break;    
             default:
                 titleForm = 'Premiação';
                 break;
@@ -75,6 +79,8 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 return <FormAtorDirRot tableData="diretores" titleTag="Diretor" idForm={idForm} dadosReg={returnData} />;
             case 'roteiristas':
                 return <FormAtorDirRot tableData="roteiristas" titleTag="Roteirista" idForm={idForm} dadosReg={returnData} />;
+            case 'pais_origem':
+                return <FormPais tableData="pais_origem" titleTag="País" idForm={idForm} dadosReg={returnData} />;    
             default:
                 return <FormGenPre tableData="premiacoes" titleTag="Premiação" id={idForm} dadosReg={returnData} />;
         }
