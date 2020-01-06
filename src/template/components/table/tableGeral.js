@@ -8,8 +8,10 @@ import FormGenPre from '../../form/genPre/formGenPre';
 import FormAtorDirRot from '../../form/atorDirRot/formAtorDirRot';
 import FormFilme from '../../form/filme/formFilme';
 import FormPais from '../../form/pais/formPais';
+import ShowData from '../../form/showData/showData';
 import '../../../template/styles.css';
 import moment from 'moment';
+//import removeAccents from 'remover-acentos';
 import firebase from "firebase/app";
 
 export default function Table({ characterData: dados, titulos, tableData }) {
@@ -19,6 +21,7 @@ export default function Table({ characterData: dados, titulos, tableData }) {
     const [idForm, setIdForm] = useState('');
     const [selectGeral, setSelectGeral] = useState([]);
     const [returnData, setReturnData] = useState([]);
+    const [showList, setShowList] = useState(false);
 
     useEffect(() => {
         firebase.database().ref(`${tableData}/`).on('value', function (_selectGeral) {
@@ -26,8 +29,13 @@ export default function Table({ characterData: dados, titulos, tableData }) {
         });
     }, []);
 
+    function handleClickShow() {
+        setShow(true);
+        setShowList(false);
+    }
+
     function handleClickEdit(id, tableData) {
-        var titleForm = '';        
+        var titleForm = '';
         switch (tableData) {
             case 'premiacoes':
                 titleForm = 'Premiação';
@@ -49,7 +57,7 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 break;
             case 'pais_origem':
                 titleForm = 'País de Origem';
-                break;    
+                break;
             default:
                 titleForm = 'Premiação';
                 break;
@@ -57,6 +65,7 @@ export default function Table({ characterData: dados, titulos, tableData }) {
         setTitleTagForm(titleForm);
         setShow(true);
         setIdForm(id);
+        setShowList(true);
 
         var regData = selectGeral.filter(function (item) {
             return item.id === id;
@@ -80,7 +89,7 @@ export default function Table({ characterData: dados, titulos, tableData }) {
             case 'roteiristas':
                 return <FormAtorDirRot tableData="roteiristas" titleTag="Roteirista" idForm={idForm} dadosReg={returnData} />;
             case 'pais_origem':
-                return <FormPais tableData="pais_origem" titleTag="País" idForm={idForm} dadosReg={returnData} />;    
+                return <FormPais tableData="pais_origem" titleTag="País" idForm={idForm} dadosReg={returnData} />;
             default:
                 return <FormGenPre tableData="premiacoes" titleTag="Premiação" id={idForm} dadosReg={returnData} />;
         }
@@ -111,7 +120,7 @@ export default function Table({ characterData: dados, titulos, tableData }) {
             <>
                 <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Editar</Tooltip>}><Button variant="primary" onClick={() => handleClickEdit(row.id, tableData)}><FontAwesomeIcon icon={faEdit} /></Button></OverlayTrigger>&nbsp;
                 <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Excluir</Tooltip>}><Button variant="danger" onClick={() => handleClickDelete(row.id)}><FontAwesomeIcon icon={faTrashAlt} /></Button></OverlayTrigger>&nbsp;
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Visualizar</Tooltip>}><Button variant="warning"><FontAwesomeIcon icon={faEye} /></Button></OverlayTrigger>
+                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Visualizar</Tooltip>}><Button variant="warning" onClick={() => handleClickShow()}><FontAwesomeIcon icon={faEye} /></Button></OverlayTrigger>
             </>
         );
     }
@@ -122,19 +131,19 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 Exibindo {start} a {to}, de {total}&nbsp;linhas
       </p>
         );
-    } 
+    }
 
-    function dataFormatter(cell, row) {       
-        return (            
+    function dataFormatter(cell, row) {
+        return (
             row.data_nascimento ? (moment(`${cell}`).format('DD/MM/YYYY')).toString() : `${cell}`
         );
-      }
+    }
 
-      function cellFormatter(cell, row) {        
-        return (            
+    function cellFormatter(cell, row) {
+        return (
             `${cell}`
         );
-      }
+    }
 
     const options = {
         noDataText: 'A consulta não encontrou resultados.',
@@ -155,9 +164,9 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 striped
                 pagination>
 
-                {titulos.map(t => (                    
-                    <TableHeaderColumn hidden={t.hidden} key={t.title + t.field} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo(a) ${t.title}` }}                     
-                    dataField={t.field} dataFormat={ t.title === 'Data de Nascimento' ? dataFormatter : cellFormatter } dataSort>
+                {titulos.map(t => (
+                    <TableHeaderColumn hidden={t.hidden} key={t.title + t.field} isKey={t.iskey} filter={t.search === false ? {} : { type: 'TextFilter', placeholder: `Pesquisar pelo(a) ${t.title}` }}
+                        dataField={t.field} dataFormat={t.title === 'Data de Nascimento' ? dataFormatter : cellFormatter} dataSort>
                         {t.title}
                     </TableHeaderColumn>
                 ))}
@@ -173,7 +182,13 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 <Modal.Header closeButton>
                     <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;Dados do(a) {titleTagForm}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>{renderSwitch({ tableData })}</Modal.Body>
+                <Modal.Body>
+                    {
+                        showList === true ? renderSwitch({ tableData }) :
+                            <ShowData />
+                    }
+
+                </Modal.Body>
             </Modal>
         </>
     )
