@@ -8,10 +8,11 @@ import UploadFile from '../../components/uploader/uploadFile';
 import FormPais from '../../form/pais/formPais';
 import '../../../template/styles.css';
 import SelectGeral from "../../components/select/selectGeral";
-import { faGlobeAmericas, faCheck, faSyncAlt, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faGlobeAmericas, faCheck, faSyncAlt, faCalendar, faPlus, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import swal from 'sweetalert';
 import ButtonSwap from '../../components/button/buttonSwap';
+import FormGenPre from '../../form/genPre/formGenPre';
 
 export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }) {
 
@@ -45,6 +46,18 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
             setSelectDadosGeral(_selectDadosGeral.val());
         });
     }, []);
+
+    const [showPais, setShowPais] = useState(false);
+
+    function handlePremiacaoShow() {
+        setShow(true);
+        setShowPais(false);
+    }
+
+    function handlePaisShow() {
+        setShow(true);
+        setShowPais(true);
+    }
 
     //Preenchendo o nome do arquivo no select
     const handleChange = event => {
@@ -119,8 +132,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
 
         <>
             <Tabs defaultActiveKey="ator" id="uncontrolled-tab-example">
-                <Tab eventKey="ator" title="Ator/Atriz">    
-                    <br></br>               
+                <Tab eventKey="ator" title="Ator/Atriz">
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">{titleTag}</Card.Header>
                         <Card.Body>
@@ -172,7 +185,7 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                 <Form.Group as={Col} md="3">
                                     <Form.Label>País de Origem</Form.Label>
                                     <InputGroup className="mb-2" size="sm">
-                                        <InputGroup.Prepend onClick={() => setShow(true)}>
+                                        <InputGroup.Prepend onClick={() => handlePaisShow()}>
                                             <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faGlobeAmericas} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
@@ -231,12 +244,12 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                                     </Form.Control>
                                 </Form.Group>
                             </Form.Row>
-                        </Card.Body>                        
+                        </Card.Body>
                     </Card>
                 </Tab>
 
-                <Tab eventKey="biografia" title="Biografia">                    
-                    <br></br>                                       
+                <Tab eventKey="biografia" title="Biografia">
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Biografia</Card.Header>
                         <Card.Body>
@@ -259,10 +272,13 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                     </Card>
                 </Tab>
 
-                <Tab eventKey="premiacao" title="Premiações">                   
-                    <br></br>               
+                <Tab eventKey="premiacao" title="Premiações">
+                    <br></br>
                     <Card>
-                        <Card.Header as="h5">Listagem de Premiações</Card.Header>
+                        <Card.Header as="h5">Listagem de Premiações
+                        <Button type="button" variant="primary" size="sm" className="Button-New"
+                                onClick={() => handlePremiacaoShow()} ><FontAwesomeIcon icon={faPlus} /></Button>
+                        </Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="5">
@@ -303,8 +319,8 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
                     </Card>
                 </Tab>
 
-                <Tab eventKey="foto" title="Foto">                    
-                    <br></br>                                       
+                <Tab eventKey="foto" title="Foto">
+                    <br></br>
                     <Card>
                         <Card.Header as="h5">Foto</Card.Header>
                         <Card.Body>
@@ -328,13 +344,20 @@ export default function FormAtorDirRot({ tableData, titleTag, idForm, dadosReg }
             <Modal
                 show={show}
                 onHide={() => setShow(false)}
-                dialogClassName="Modal-Medio"
+                dialogClassName={showPais === true ? 'Modal-Medio' : 'Modal-Largo'}
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
+                    <Modal.Title><FontAwesomeIcon icon={showPais === true ? faGlobeAmericas : faVideo} />&nbsp;
+                        {showPais === true ? 'Dados do País de Origem' : 'Dados da Premiação'}
+                    </Modal.Title>
                 </Modal.Header>
-                <Modal.Body><FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /></Modal.Body>
+                <Modal.Body>
+                    {
+                        showPais === true ? <FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /> :
+                            <FormGenPre tableData="premiacoes" titleTag="Premiação" idForm="-1" dadosReg="" />
+                    }
+                </Modal.Body>
             </Modal>
 
         </>

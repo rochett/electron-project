@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Card, Form, Tabs, Tab, InputGroup, Modal, Button } from 'react-bootstrap';
-import { faVideo, faGlobeAmericas, faCheck, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { faVideo, faGlobeAmericas, faCheck, faSyncAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SelectGeral from "../../components/select/selectGeral";
 import firebase from "firebase/app";
@@ -11,6 +11,7 @@ import UploadFile from '../../components/uploader/uploadFile';
 import swal from 'sweetalert';
 import ButtonSwap from '../../components/button/buttonSwap';
 import FormPais from '../../form/pais/formPais';
+import FormGenPre from '../../form/genPre/formGenPre';
 import '../../styles.css';
 
 export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
@@ -49,6 +50,18 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
             setSelectDadosGeral(_selectDadosGeral.val());
         });
     }, []);
+
+    const [showPais, setShowPais] = useState(false);
+
+    function handlePremiacaoShow() {
+        setShow(true);
+        setShowPais(false);
+    }
+
+    function handlePaisShow() {
+        setShow(true);
+        setShowPais(true);
+    }
 
     //Preenchendo o nome do arquivo no select
     const handleChange = event => {
@@ -182,7 +195,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                                 <Form.Group as={Col} md="3">
                                     <Form.Label>País de Origem</Form.Label>
                                     <InputGroup className="mb-2" size="sm">
-                                        <InputGroup.Prepend onClick={() => setShow(true)}>
+                                        <InputGroup.Prepend onClick={() => handlePaisShow()}>
                                             <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faGlobeAmericas} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
@@ -234,7 +247,7 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                     </Card>
                 </Tab>
 
-                <Tab eventKey="elenco" title="Elenco"> 
+                <Tab eventKey="elenco" title="Elenco">
                     <br></br>
                     <Card>
                         <Card.Header as="h5">Listagem de Elenco</Card.Header>
@@ -349,7 +362,10 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
                 <Tab eventKey="premiacao" title="Premiações">
                     <br></br>
                     <Card>
-                        <Card.Header as="h5">Listagem de Premiações</Card.Header>
+                        <Card.Header as="h5">Listagem de Premiações
+                        <Button type="button" variant="primary" size="sm" className="Button-New"
+                                onClick={() => handlePremiacaoShow()} ><FontAwesomeIcon icon={faPlus} /></Button>
+                        </Card.Header>
                         <Card.Body>
                             <Form.Row>
                                 <Form.Group as={Col} md="5">
@@ -474,13 +490,20 @@ export default function FormFilme({ tableData, titleTag, idForm, dadosReg }) {
             <Modal
                 show={show}
                 onHide={() => setShow(false)}
-                dialogClassName="Modal-Medio"
+                dialogClassName={showPais === true ? 'Modal-Medio' : 'Modal-Largo'}
                 aria-labelledby="example-custom-modal-styling-title"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title><FontAwesomeIcon icon={faGlobeAmericas} />&nbsp;Dados do País de Origem</Modal.Title>
+                    <Modal.Title><FontAwesomeIcon icon={showPais === true ? faGlobeAmericas : faVideo} />&nbsp;
+                        {showPais === true ? 'Dados do País de Origem' : 'Dados da Premiação'}
+                    </Modal.Title>
                 </Modal.Header>
-                <Modal.Body><FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /></Modal.Body>
+                <Modal.Body>
+                    {
+                        showPais === true ? <FormPais tableData="pais_origem" titleTag="País" idForm="-1" dadosReg="" /> :
+                            <FormGenPre tableData="premiacoes" titleTag="Premiação" idForm="-1" dadosReg="" />
+                    }
+                </Modal.Body>
             </Modal>
 
         </>
