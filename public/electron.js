@@ -24,7 +24,8 @@ let mainWindow;
 function createWindow() {
     mainWindow = new BrowserWindow({
         //width: 900, height: 680 
-        alwaysOnTop: true
+        alwaysOnTop: true,
+        autoHideMenuBar: true
     });
 
     const url = isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`;
@@ -37,76 +38,77 @@ function createWindow() {
     }
     mainWindow.on('closed', () => mainWindow = null);
     mainWindow.maximize();
+    mainWindow.removeMenu();
     //mainWindow.setFullScreen(true)
 
-    var menu = Menu.buildFromTemplate([
-        {
-            label: 'Ferramentas',
-            submenu: [
-                {
-                    label: 'Google',
+    // var menu = Menu.buildFromTemplate([
+    //     {
+    //         label: 'Ferramentas',
+    //         submenu: [
+    //             {
+    //                 label: 'Google',
 
-                    click() {
+    //                 click() {
 
-                        let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false })
-                        child.loadURL('https://google.com')
-                        child.once('ready-to-show', () => {
-                            child.show()
-                            child.removeMenu()
-                        })
+    //                     let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false })
+    //                     child.loadURL('https://google.com')
+    //                     child.once('ready-to-show', () => {
+    //                         child.show()
+    //                         child.removeMenu()
+    //                     })
 
-                        //fun(); - executar prorama externo via electron
+    //                     //fun(); - executar prorama externo via electron
 
-                    }
+    //                 }
 
-                },
-                {
-                    label: 'CoinMarketCap',
-                    click() {
-                        dialog.showMessageBox(BrowserWindow.getFocusedWindow(), { message: 'teste' });
-                    }
+    //             },
+    //             {
+    //                 label: 'CoinMarketCap',
+    //                 click() {
+    //                     dialog.showMessageBox(BrowserWindow.getFocusedWindow(), { message: 'teste' });
+    //                 }
 
-                },
-                { type: 'separator' },
-                {
-                    label: 'Exit',
-                    click() {
-                        app.quit()
-                    }
-                }
-            ]
-        },
-        {
-            label: 'Info',
-            click() {
+    //             },
+    //             { type: 'separator' },
+    //             {
+    //                 label: 'Exit',
+    //                 click() {
+    //                     app.quit()
+    //                 }
+    //             }
+    //         ]
+    //     },
+    //     {
+    //         label: 'Info',
+    //         click() {
 
-                let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false, movable: true })
-                child.loadURL(`file://${__dirname}/modal.html`)
-                child.once('ready-to-show', () => {
-                    child.show()
-                    child.removeMenu()
-                })
-            }
+    //             let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false, movable: true })
+    //             child.loadURL(`file://${__dirname}/modal.html`)
+    //             child.once('ready-to-show', () => {
+    //                 child.show()
+    //                 child.removeMenu()
+    //             })
+    //         }
 
-        },
-        {
-            label: 'Modal',
-            click() {
+    //     },
+    //     {
+    //         label: 'Modal',
+    //         click() {
 
-                // let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false, movable: true })
-                // child.loadURL(`file://${__dirname}/modal.html`)
-                // child.once('ready-to-show', () => {
-                //     child.show()
-                //     child.removeMenu()
-                // })
+    //             // let child = new BrowserWindow({ parent: BrowserWindow.getFocusedWindow(), modal: true, show: false, maximizable: false, skipTaskbar: false, movable: true })
+    //             // child.loadURL(`file://${__dirname}/modal.html`)
+    //             // child.once('ready-to-show', () => {
+    //             //     child.show()
+    //             //     child.removeMenu()
+    //             // })
 
-                mainWindow.loadURL(`${url}#modalFormGeral`)
-            }
+    //             mainWindow.loadURL(`${url}#modalFormGeral`)
+    //         }
 
-        }
-    ])
+    //     }
+    // ])
 
-    Menu.setApplicationMenu(menu);
+    // Menu.setApplicationMenu(menu);
 
 }
 
