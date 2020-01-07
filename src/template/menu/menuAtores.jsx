@@ -13,27 +13,27 @@ import FormAtorDirRot from '../form/atorDirRot/formAtorDirRot';
 
 export default function MenuAtores({ lastMovieTag }) {
 
-  const [show, setShow] = useState(false);  
+  const [show, setShow] = useState(false);
   const [showList, setShowList] = useState(false);
-  
+
   function handleNewShow() {
-    setShow(true);    
+    setShow(true);
     setShowList(false);
-  }  
+  }
 
   function handleListShow() {
     setShow(true);
-    setShowList(true);    
-  }  
+    setShowList(true);
+  }
 
   const titles = [{ id: "Id", field: "id", search: false, iskey: false, hidden: true },
-  { title: "Nome", field: "nome", search: false, iskey: true },
+  { title: "Nome", field: "nome", search: true, iskey: true },
   { title: "Data de Nascimento", field: "data_nascimento", search: false, iskey: false },
   { title: "Ano de Estréia", field: "ano_estreia", search: true, iskey: false },
   { title: "País de Origem", field: "pais_origem", search: true, iskey: false },
   { title: "Premiações", field: "premiacoes", search: true, iskey: false }];
 
-  const tableData='Atores';
+  const tableData = 'Atores';
 
   return (
     <>
@@ -49,40 +49,40 @@ export default function MenuAtores({ lastMovieTag }) {
           </Card.Text>
         </Card.Body>
         <ListMenuGeral tableData="filmes" valueTag="titulo" fieldTag="elenco" filterTag={lastMovieTag && lastMovieTag.nome} regLimitTag="3" />
-        <Card.Body>          
+        <Card.Body>
           <div className="row">
             <div className="col-6">
               <Button variant="primary" onClick={() => handleNewShow()}>
-                    <FontAwesomeIcon icon={faPlus} />&nbsp;Novo
+                <FontAwesomeIcon icon={faPlus} />&nbsp;Novo
               </Button>
             </div>
             <div className="col-6" align="right">
               <Button variant="primary" onClick={() => handleListShow()}>
-                    <FontAwesomeIcon icon={faList} />&nbsp;Lista
+                <FontAwesomeIcon icon={faList} />&nbsp;Lista
               </Button>
-            </div>  
-          </div>  
-        </Card.Body>        
+            </div>
+          </div>
+        </Card.Body>
         <Card.Footer className="text-muted" align="center">{titulo_secao.ult_adic}
           &nbsp;<DateDiff lastMovieTag={lastMovieTag} /></Card.Footer>
-      </Card> 
+      </Card>
 
       <Modal
-          show={show}
-          onHide={() => setShow(false)}
-          dialogClassName="Modal-Largo"
-          aria-labelledby="example-custom-modal-styling-title"
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="Modal-Largo"
+        aria-labelledby="example-custom-modal-styling-title"
       >
-          <Modal.Header closeButton>
-              <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;
-              { showList === true ? 'Listagem' : 'Cadastro' } de {tableData}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {
-              showList === true ? <ListaGeral tableData={removeAccents(tableData).toLowerCase()} titulos={titles} /> : 
+        <Modal.Header closeButton>
+          <Modal.Title><FontAwesomeIcon icon={faVideo} />&nbsp;
+              {showList === true ? 'Listagem' : 'Cadastro'} de {tableData}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {
+            showList === true ? <ListaGeral tableData={removeAccents(tableData).toLowerCase()} titulos={titles} /> :
               <FormAtorDirRot tableData={removeAccents(tableData).toLowerCase()} titleTag="Ator" idForm="-1" dadosReg="" />
-            }            
-          </Modal.Body>          
+          }
+        </Modal.Body>
       </Modal>
 
     </>

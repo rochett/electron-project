@@ -58,6 +58,9 @@ export default function Table({ characterData: dados, titulos, tableData }) {
             case 'pais_origem':
                 titleForm = 'País de Origem';
                 break;
+            case 'series':
+                titleForm = 'Séries';
+                break;
             default:
                 titleForm = 'Premiação';
                 break;
@@ -88,6 +91,8 @@ export default function Table({ characterData: dados, titulos, tableData }) {
                 return <FormAtorDirRot tableData="diretores" titleTag="Diretor" idForm={idForm} dadosReg={returnData} />;
             case 'roteiristas':
                 return <FormAtorDirRot tableData="roteiristas" titleTag="Roteirista" idForm={idForm} dadosReg={returnData} />;
+            case 'series':
+                return <FormFilme tableData="series" titleTag="Série" idForm={idForm} dadosReg={returnData} />;
             case 'pais_origem':
                 return <FormPais tableData="pais_origem" titleTag="País" idForm={idForm} dadosReg={returnData} />;
             default:
@@ -118,9 +123,9 @@ export default function Table({ characterData: dados, titulos, tableData }) {
     function actionButtons(a, row) {
         return (
             <>
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Editar</Tooltip>}><Button variant="primary" onClick={() => handleClickEdit(row.id, tableData)}><FontAwesomeIcon icon={faEdit} /></Button></OverlayTrigger>&nbsp;
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Excluir</Tooltip>}><Button variant="danger" onClick={() => handleClickDelete(row.id)}><FontAwesomeIcon icon={faTrashAlt} /></Button></OverlayTrigger>&nbsp;
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Visualizar</Tooltip>}><Button variant="warning" onClick={() => handleClickShow()}><FontAwesomeIcon icon={faEye} /></Button></OverlayTrigger>
+                <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-disabled">Editar</Tooltip>}><Button variant="primary" onClick={() => handleClickEdit(row.id, tableData)}><FontAwesomeIcon icon={faEdit} /></Button></OverlayTrigger>&nbsp;
+                <OverlayTrigger placement="right" overlay={<Tooltip id="tooltip-disabled">Excluir</Tooltip>}><Button variant="danger" onClick={() => handleClickDelete(row.id)}><FontAwesomeIcon icon={faTrashAlt} /></Button></OverlayTrigger>&nbsp;
+                <OverlayTrigger placement="right" overlay={<Tooltip id="tooltip-disabled">Visualizar</Tooltip>}><Button variant="warning" onClick={() => handleClickShow()}><FontAwesomeIcon icon={faEye} /></Button></OverlayTrigger>
             </>
         );
     }

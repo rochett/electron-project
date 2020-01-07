@@ -7,12 +7,12 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual, i
   const tablesWithoutImage = ['generos', 'premiacoes', 'pais_origem'];
   const hoje = (moment(new Date()).format('YYYY-MM-DD')).toString();
 
-  if (!tablesWithoutImage.includes(tableData)) {    
+  if (!tablesWithoutImage.includes(tableData)) {
 
-    if (imagemAtual !== _dados.nome_imagem) {           
-    
+    if (imagemAtual !== _dados.nome_imagem) {
+
       var storageRef = firebase.storage().ref();
-      var file = _dados.image_upload;      
+      var file = _dados.image_upload;
       var metadata = {
         contentType: 'image/jpeg'
       };
@@ -47,17 +47,17 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual, i
         }, function () {
           // Upload completed successfully, now we can get the download URL
           uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-            console.log('File available at', downloadURL);                       
+            console.log('File available at', downloadURL);
             writeUserData(dadosId, _dados, hoje, downloadURL, tableData);
           });
         });
-    } else {                               
-        var _downloadURL = imagemBanco;        
-        writeUserData(dadosId, _dados, hoje, _downloadURL, tableData);
+    } else {
+      var _downloadURL = imagemBanco;
+      writeUserData(dadosId, _dados, hoje, _downloadURL, tableData);
     }
   } else {
-      var downloadURL_ = '';
-      writeUserData(dadosId, _dados, hoje, downloadURL_, tableData);
+    var downloadURL_ = '';
+    writeUserData(dadosId, _dados, hoje, downloadURL_, tableData);
   }
 
   swal({
@@ -67,7 +67,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual, i
   });
 
   function writeUserData(dadosId, _dados, hoje, downloadURL, tableData) {
-    if (tableData === 'filmes') {
+    if (tableData === 'filmes' || tableData === 'series') {
       firebase.database().ref(`${tableData}/` + dadosId).set({
         id: dadosId,
         titulo: _dados.titulo,
@@ -106,7 +106,7 @@ export default function SaveDataMovie(tableData, _dados, dadosId, imagemAtual, i
             nome: _dados.nome,
             sigla: _dados.sigla
           });
-        } else {          
+        } else {
           firebase.database().ref(`${tableData}/` + dadosId).set({
             id: dadosId,
             nome: _dados.nome,

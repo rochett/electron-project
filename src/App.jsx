@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import MenuFilmes from './template/menu/menuFilmes';
 import MenuAtores from './template/menu/menuAtores';
-import MenuVideo from './template/menu/menuVideo';
+// import MenuVideo from './template/menu/menuVideo';
 import MenuDiretores from './template/menu/menuDiretores';
 import MenuGeneros from './template/menu/menuGeneros';
 import MenuRoteiristas from './template/menu/menuRoteiristas';
 import MenuPremiacoes from './template/menu/menuPremiacoes';
 import MenuCartaz from './template/menu/menuCartaz';
+import MenuSeries from './template/menu/menuSeries';
 import NavBar from './template/components/navBar/navBar';
 import { CardDeck } from 'react-bootstrap';
 import CControlledCarousel from './template/components/carrousel/carrousel';
@@ -19,7 +20,7 @@ import { config } from "./config";
 
 firebase.initializeApp(config);
 
-export default function App() {  
+export default function App() {
 
   var getTableData = function (tableData) {
 
@@ -40,12 +41,13 @@ export default function App() {
   const lastWriterElement = getTableData('roteiristas');
   const lastPrizeElement = getTableData('premiacoes');
   const lastDirectorElement = getTableData('diretores');
+  const lastSerieElement = getTableData('series');
 
   return (
 
     <div className="container-fluid">
 
-      <NavBar />          
+      <NavBar />
 
       <CControlledCarousel />
 
@@ -59,7 +61,9 @@ export default function App() {
 
         <MenuDiretores lastMovieTag={lastDirectorElement} />
 
-        <MenuVideo lastMovieTag={lastMovieElement} />
+        {/* <MenuVideo lastMovieTag={lastMovieElement} /> */}
+
+        <MenuCartaz lastMovieTag={lastMovieElement} />
 
       </CardDeck>
 
@@ -67,7 +71,7 @@ export default function App() {
 
       <CardDeck>
 
-        <MenuCartaz lastMovieTag={lastMovieElement} />
+        <MenuSeries lastMovieTag={lastSerieElement} />
 
         <MenuRoteiristas lastMovieTag={lastWriterElement} />
 
