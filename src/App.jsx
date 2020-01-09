@@ -17,6 +17,7 @@ import firebase from "firebase/app";
 import "firebase/database";
 import "firebase/storage";
 import { config } from "./config";
+import Gallery from './template/components/carrousel/imageSlider';
 
 firebase.initializeApp(config);
 
@@ -80,6 +81,10 @@ export default function App() {
         <MenuPremiacoes lastMovieTag={lastPrizeElement} />
 
       </CardDeck>
+
+      <div><hr></hr></div>
+
+      <Gallery />
 
       <div><hr></hr></div>
 
