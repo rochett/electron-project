@@ -3,6 +3,7 @@ import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "react-alice-carousel/lib/alice-carousel.css";
 import Image from 'react-bootstrap/Image';
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import firebase from "firebase/app";
 
 export default function Gallery() {
@@ -34,19 +35,21 @@ export default function Gallery() {
     }
 
     return (
-        <AliceCarousel
-            items={filtered && filtered.map((text, i) => <Image src={text.cartaz} key={i} width="170" height="250" rounded title={text.titulo} />)}
-            responsive={responsive}
-            autoPlayInterval={4000}
-            autoPlayDirection="rtl"
-            autoPlay={true}
-            fadeOutAnimation={true}
-            mouseTrackingEnabled={true}
-            playButtonEnabled={false}
-            disableAutoPlayOnAction={false}
-            dotsDisabled={true}
-            onResized={handleOnSlideChange}
-            buttonsDisabled={true}
-        />
+        <>
+            <AliceCarousel
+                items={filtered && filtered.map((text, i) => <OverlayTrigger placement="top" overlay={<Tooltip id="tooltip-disabled">{text.titulo}</Tooltip>}><Image src={text.cartaz} key={i} width="170" height="250" rounded /></OverlayTrigger>)}
+                responsive={responsive}
+                autoPlayInterval={4000}
+                autoPlayDirection="rtl"
+                autoPlay={true}
+                fadeOutAnimation={true}
+                mouseTrackingEnabled={true}
+                playButtonEnabled={false}
+                disableAutoPlayOnAction={false}
+                dotsDisabled={true}
+                onResized={handleOnSlideChange}
+                buttonsDisabled={true}
+            />
+        </>
     );
 }
